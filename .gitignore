@@ -1,0 +1,8 @@
+.idea
+
+/deps
+/bin
+/obj
+
+*.DotSettings
+*.DotSettings.*
