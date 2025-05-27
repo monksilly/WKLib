@@ -1,4 +1,7 @@
-<img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3195790/logo.png" width="320" style="margin-let:auto;margin-right:auto;display:block;"><h1 align="center">WKLib</h1>
+<p align="center">
+    <img src="https://i.postimg.cc/J09J1K7D/WKLib-Logo-Final.png" width="320">
+</p>
+<h1 align="center">WKLib</h1>
 <p align="center"><a href="#project-description">Project Description</a> - <a href="#key-features">Key Features</a> - <a href="#documentation">Documentation</a> - <a href="#contact">Contact</a></p>
 
 ## Project Description

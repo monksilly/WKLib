@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using WK_Lib.API;
 using WK_Lib.Loaders;
 
@@ -26,7 +27,7 @@ public class WorldLoaderPatcher
         // Intercept generation coroutine to inject a custom sequence
         public static bool Prefix(WorldLoader __instance, ref IEnumerator __result, WorldLoader.GenerationParameters genParams)
         {
-            var customObjs = new List<UnityEngine.GameObject>(LevelLoader.LoadAll());
+            var customObjs = new List<GameObject>(LevelLoader.LoadAll());
             
             if (customObjs.Count > 0)
             {
