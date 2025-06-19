@@ -1,14 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <!--
-      Default plugin folder; each dev needs to override this
-    -->
-    <DeployDir Condition="'$(DeployDir)' == ''">
-      D:\SteamLibrary\steamapps\common\White Knuckle\BepInEx\plugins\WKLib
-    </DeployDir>
-  </PropertyGroup>
-  
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>WKLib</AssemblyName>
@@ -21,7 +11,7 @@
       https://nuget.bepinex.dev/v3/index.json;
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
-    <RootNamespace>WK_Lib</RootNamespace>
+    <RootNamespace>WKLib</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -61,16 +51,9 @@
       <HintPath>deps\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Internal\" />
-  </ItemGroup>
 
-  <Target Name="PostBuildCopyMod" AfterTargets="Build">
-    <Message Text="Copying $(AssemblyName).dll → $(DeployDir)" Importance="high" />
-    <Copy
-            SourceFiles="$(TargetDir)$(AssemblyName).dll"
-            DestinationFolder="$(DeployDir)"
-            SkipUnchangedFiles="true" />
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /Y /D &quot;$(TargetPath)&quot; &quot;F:\Modding Stuff\White Knuckle\CustomGamemodes\deps\&quot;" />
+    <Exec Command="xcopy /Y /D &quot;$(TargetPath)&quot; &quot;D:\SteamLibrary\steamapps\common\White Knuckle\BepInEx\plugins\WKLib\&quot;" />
   </Target>
 </Project>

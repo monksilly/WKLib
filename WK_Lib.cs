@@ -1,8 +1,8 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using WK_Lib.API;
+using WKLib.Utilities;
 
-namespace WK_Lib;
+namespace WKLib;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class WkLib : BaseUnityPlugin
@@ -12,13 +12,6 @@ public class WkLib : BaseUnityPlugin
         // Initialize Logger
         WKLog.Initialize(Logger);
         
-        // Setup Loaders & Patches
-        
-        Loaders.LevelLoader.Setup();
-        Loaders.AssetBundleLoader.Setup();
-        Patchers.HarmonyPatcher.ApplyAll();
-        
-        
-        Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_NAME} v{MyPluginInfo.PLUGIN_VERSION} is loaded!");
+        WKLog.Info($"Plugin {MyPluginInfo.PLUGIN_NAME} v{MyPluginInfo.PLUGIN_VERSION} is loaded!");
     }
 }
