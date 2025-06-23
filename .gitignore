@@ -7,3 +7,4 @@
 *.DotSettings
 *.DotSettings.*
 docs
+!docs/CNAME
