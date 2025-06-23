@@ -1,0 +1,243 @@
+\doxysection{WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder Class Reference}
+\hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{}\label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+
+
+A fluent builder class for creating and configuring an M\+\_\+\+Gamemode instance.~\newline
+ It allows setting various properties of a gamemode such as regions, name, intro text, and gameplay flags in a chainable manner before finally building the M\+\_\+\+Gamemode object.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a25c05d9e1cb669829e4cdddf2ae187f0}{With\+Regions}} (List$<$ M\+\_\+\+Region $>$ regions)
+\begin{DoxyCompactList}\small\item\em Sets the list of regions for this gamemode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a66ef04aa99ec24c733cea78708838f7c}{With\+Name}} (string mode\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the displayed name of the gamemode (which can also serves as the capsule name) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a956725a19fad91fd8c619df347cc99fe}{With\+Intro\+Text}} (string intro\+Text)
+\begin{DoxyCompactList}\small\item\em Sets the intro text for the gamemode~\newline
+ This text is shown when loaded into the gamemode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_adffa38159db3d11e537a883a2bcd209f}{Is\+Endless}} (bool is\+Endless)
+\begin{DoxyCompactList}\small\item\em Sets whether the gamemode should be endless. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_ac6cc77a9c5a6fbab43d8da9a48f8f3f2}{Has\+Perks}} (bool has\+Perks)
+\begin{DoxyCompactList}\small\item\em Sets whether perks are available in this gamemode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a7fc7990a71c590f109a4ea0c44407889}{Has\+Revives}} (bool has\+Revives)
+\begin{DoxyCompactList}\small\item\em Sets whether revives are available in this gamemode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a59fd3848c230a6aaaba7f186083b1722}{With\+Capsule\+Sprite}} (Sprite sprite)
+\begin{DoxyCompactList}\small\item\em Provides a Sprite to use for the gamemode\textquotesingle{}s capsule art. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_ac01b3bd0e4b559c6932ece59a9b71ac7}{With\+Screen\+Art}} (Sprite sprite)
+\begin{DoxyCompactList}\small\item\em Provides a Sprite to use for the gamemode\textquotesingle{}s screen art. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a8a6e4af52e139b9d699e2743d636c01f}{With\+Start\+Items}} (List$<$ M\+\_\+\+Gamemode.\+Spawn\+Item $>$ spawn\+Items)
+\begin{DoxyCompactList}\small\item\em Sets the list of items players will start with when entering this gamemode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_aef831a5eea62a116a93842047b76bacf}{With\+Game\+Type}} (string game\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the game type for the gamemode based on a string input. \end{DoxyCompactList}\item 
+M\+\_\+\+Gamemode \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a7df9540a4d727c564797dc3f5b2afde7}{Build}} ()
+\begin{DoxyCompactList}\small\item\em Constructs and returns a new M\+\_\+\+Gamemode instance based on the properties configured in this builder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A fluent builder class for creating and configuring an M\+\_\+\+Gamemode instance.~\newline
+ It allows setting various properties of a gamemode such as regions, name, intro text, and gameplay flags in a chainable manner before finally building the M\+\_\+\+Gamemode object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a7df9540a4d727c564797dc3f5b2afde7}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!Build@{Build}}
+\index{Build@{Build}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a7df9540a4d727c564797dc3f5b2afde7} 
+M\+\_\+\+Gamemode WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+Build (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs and returns a new M\+\_\+\+Gamemode instance based on the properties configured in this builder. 
+
+\begin{DoxyReturn}{Returns}
+A new M\+\_\+\+Gamemode object populated with the specified settings
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_ac6cc77a9c5a6fbab43d8da9a48f8f3f2}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!HasPerks@{HasPerks}}
+\index{HasPerks@{HasPerks}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{HasPerks()}{HasPerks()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_ac6cc77a9c5a6fbab43d8da9a48f8f3f2} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+Has\+Perks (\begin{DoxyParamCaption}\item[{bool}]{has\+Perks}{}\end{DoxyParamCaption})}
+
+
+
+Sets whether perks are available in this gamemode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em has\+Perks} & A boolean value indicating if perks are enabled\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a7fc7990a71c590f109a4ea0c44407889}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!HasRevives@{HasRevives}}
+\index{HasRevives@{HasRevives}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{HasRevives()}{HasRevives()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a7fc7990a71c590f109a4ea0c44407889} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+Has\+Revives (\begin{DoxyParamCaption}\item[{bool}]{has\+Revives}{}\end{DoxyParamCaption})}
+
+
+
+Sets whether revives are available in this gamemode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em has\+Revives} & A boolean value indicating if revives are enabled\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_adffa38159db3d11e537a883a2bcd209f}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!IsEndless@{IsEndless}}
+\index{IsEndless@{IsEndless}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{IsEndless()}{IsEndless()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_adffa38159db3d11e537a883a2bcd209f} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+Is\+Endless (\begin{DoxyParamCaption}\item[{bool}]{is\+Endless}{}\end{DoxyParamCaption})}
+
+
+
+Sets whether the gamemode should be endless. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Endless} & A boolean value indicating if the gamemode is endless\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a59fd3848c230a6aaaba7f186083b1722}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!WithCapsuleSprite@{WithCapsuleSprite}}
+\index{WithCapsuleSprite@{WithCapsuleSprite}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{WithCapsuleSprite()}{WithCapsuleSprite()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a59fd3848c230a6aaaba7f186083b1722} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+With\+Capsule\+Sprite (\begin{DoxyParamCaption}\item[{Sprite}]{sprite}{}\end{DoxyParamCaption})}
+
+
+
+Provides a Sprite to use for the gamemode\textquotesingle{}s capsule art. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The Sprite to set as the capsule art\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_aef831a5eea62a116a93842047b76bacf}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!WithGameType@{WithGameType}}
+\index{WithGameType@{WithGameType}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{WithGameType()}{WithGameType()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_aef831a5eea62a116a93842047b76bacf} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+With\+Game\+Type (\begin{DoxyParamCaption}\item[{string}]{game\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Sets the game type for the gamemode based on a string input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Type} & A string representing the desired game type (e.\+g., "{}endless"{}, "{}standard"{}, "{}playlist"{}, "{}playlist-\/shuffle"{}, "{}single"{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+
+
+The string input is case-\/insensitive and mapped to the corresponding M\+\_\+\+Gamemode.\+Game\+Type enum value~\newline
+ If an unknown string is provided, the existing \+\_\+game\+Type value is retained (auto-\/chosen) \Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a956725a19fad91fd8c619df347cc99fe}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!WithIntroText@{WithIntroText}}
+\index{WithIntroText@{WithIntroText}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{WithIntroText()}{WithIntroText()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a956725a19fad91fd8c619df347cc99fe} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+With\+Intro\+Text (\begin{DoxyParamCaption}\item[{string}]{intro\+Text}{}\end{DoxyParamCaption})}
+
+
+
+Sets the intro text for the gamemode~\newline
+ This text is shown when loaded into the gamemode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intro\+Text} & The introductory text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a66ef04aa99ec24c733cea78708838f7c}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!WithName@{WithName}}
+\index{WithName@{WithName}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{WithName()}{WithName()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a66ef04aa99ec24c733cea78708838f7c} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+With\+Name (\begin{DoxyParamCaption}\item[{string}]{mode\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the displayed name of the gamemode (which can also serves as the capsule name) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode\+Name} & The desired name for the gamemode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a25c05d9e1cb669829e4cdddf2ae187f0}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!WithRegions@{WithRegions}}
+\index{WithRegions@{WithRegions}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{WithRegions()}{WithRegions()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a25c05d9e1cb669829e4cdddf2ae187f0} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+With\+Regions (\begin{DoxyParamCaption}\item[{List$<$ M\+\_\+\+Region $>$}]{regions}{}\end{DoxyParamCaption})}
+
+
+
+Sets the list of regions for this gamemode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em regions} & A List$<$\+T$>$ of M\+\_\+\+Region instances to be used in the gamemode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_ac01b3bd0e4b559c6932ece59a9b71ac7}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!WithScreenArt@{WithScreenArt}}
+\index{WithScreenArt@{WithScreenArt}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{WithScreenArt()}{WithScreenArt()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_ac01b3bd0e4b559c6932ece59a9b71ac7} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+With\+Screen\+Art (\begin{DoxyParamCaption}\item[{Sprite}]{sprite}{}\end{DoxyParamCaption})}
+
+
+
+Provides a Sprite to use for the gamemode\textquotesingle{}s screen art. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The Sprite to set as the screen art\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a8a6e4af52e139b9d699e2743d636c01f}\index{WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}!WithStartItems@{WithStartItems}}
+\index{WithStartItems@{WithStartItems}!WKLib.Gamemodes.Builders.GamemodeBuilder@{WKLib.Gamemodes.Builders.GamemodeBuilder}}
+\doxysubsubsection{\texorpdfstring{WithStartItems()}{WithStartItems()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder_a8a6e4af52e139b9d699e2743d636c01f} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Gamemode\+Builder.\+With\+Start\+Items (\begin{DoxyParamCaption}\item[{List$<$ M\+\_\+\+Gamemode.\+Spawn\+Item $>$}]{spawn\+Items}{}\end{DoxyParamCaption})}
+
+
+
+Sets the list of items players will start with when entering this gamemode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spawn\+Items} & A List$<$\+T$>$ of M\+\_\+\+Gamemode.\+Spawn\+Item defining the initial inventory\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder}{Gamemode\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Gamemodes/\+Builders/\mbox{\hyperlink{GamemodeBuilder_8cs}{Gamemode\+Builder.\+cs}}\end{DoxyCompactItemize}

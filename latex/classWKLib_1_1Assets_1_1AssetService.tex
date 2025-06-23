@@ -1,0 +1,149 @@
+\doxysection{WKLib.\+Assets.\+Asset\+Service Class Reference}
+\hypertarget{classWKLib_1_1Assets_1_1AssetService}{}\label{classWKLib_1_1Assets_1_1AssetService}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+
+
+Loads and caches Asset\+Bundles and assets, scoped by Mod\+Context to avoid collisions.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_aceca659650c8533c7d101afdde34252d}{Asset\+Service}} (\mbox{\hyperlink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context}} mod\+Context)
+\item 
+async Task$<$ Asset\+Bundle $>$ \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_ac68a0a8801cbf4df8749a61f7ba31f93}{Load\+Bundle\+Relative\+Async}} (string relative\+Path, IProgress$<$ float $>$ progress=null)
+\begin{DoxyCompactList}\small\item\em Loads an Asset\+Bundle given a path relative to the mod assembly folder.~\newline
+ Caches under a key combining Mod\+ID and bundle name. \begin{DoxyReturn}{Returns}
+Asset\+Bundle \texorpdfstring{$\vert$}{|} null
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_ad489b049f592f1d0b7877a123fad99b6}{Unload\+Bundle\+Relative}} (string relative\+Path, bool unload\+All\+Loaded\+Objects=false)
+\begin{DoxyCompactList}\small\item\em Unloads a specific bundle for this mod. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_aff18dcaec08796cad85638d414c8c90d}{Unload\+All\+Bundles}} (bool unload\+All\+Loaded\+Objects=false)
+\begin{DoxyCompactList}\small\item\em Unloads all bundles loaded by this mod. \end{DoxyCompactList}\item 
+async Task$<$ Dictionary$<$ string, M\+\_\+\+Level $>$ $>$ \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_ab000f5f348d6a815c59372c79aeba4a4}{Load\+All\+Levels\+From\+Bundle}} (Asset\+Bundle bundle, IProgress$<$ float $>$ progress=null)
+\begin{DoxyCompactList}\small\item\em Given a loaded Asset\+Bundle, iterate over every "{}.\+prefab"{} asset name, Load it as a Game\+Object, check for an M\+\_\+\+Level component; if found, add to the returned list.~\newline
+ Also logs each M\+\_\+\+Level found via \doxylink{classWKLib_1_1Utilities_1_1WKLog_a3cb5ab414da39e8ba8d8c0632589674f}{WKLog.\+Debug}("{}\+Level\+Name"{}).~\newline
+ If you want to register each prefab in CL\+\_\+\+Asset\+Manager.\+instance.\+asset\+Database.\+level\+Prefabs, this method will do it automatically. \end{DoxyCompactList}\item 
+List$<$ M\+\_\+\+Level $>$ \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_a99c4e0c913ae051dc14dce3f94913618}{Find\+Levels\+By\+Name}} (string name\+Contains)
+\begin{DoxyCompactList}\small\item\em Returns all M\+\_\+\+Level instances whose prefab names contain the given substring. (Uses CL\+\_\+\+Asset\+Manager.\+instance.\+asset\+Database.\+level\+Prefabs) \end{DoxyCompactList}\item 
+async Task$<$ M\+\_\+\+Gamemode $>$ \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_ac6ae893baeb21640920e8dd9fa20cd99}{Load\+Game\+Mode\+From\+Bundle}} (Asset\+Bundle bundle, string asset\+Name, IProgress$<$ float $>$ progress=null)
+\begin{DoxyCompactList}\small\item\em Loads a gamemode from an asset bundle. \end{DoxyCompactList}\item 
+Sprite \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_ac432ab6abea58d7f48ee9080c2b58959}{Load\+Png\+As\+Sprite\+Relative}} (string relative\+Png\+Path)
+\begin{DoxyCompactList}\small\item\em Loads a PNG as a Sprite relative to the mod folder. \begin{DoxyReturn}{Returns}
+Sprite \texorpdfstring{$\vert$}{|} null 
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+Sprite \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_a437d5784886fd64acd18def9cf743b69}{Load\+Png\+As\+Sprite}} (string png\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Convenience\+: Create a Sprite from a PNG filename. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Loads and caches Asset\+Bundles and assets, scoped by Mod\+Context to avoid collisions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_aceca659650c8533c7d101afdde34252d}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!AssetService@{AssetService}}
+\index{AssetService@{AssetService}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{AssetService()}{AssetService()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_aceca659650c8533c7d101afdde34252d} 
+WKLib.\+Assets.\+Asset\+Service.\+Asset\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context}}}]{mod\+Context}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_a99c4e0c913ae051dc14dce3f94913618}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!FindLevelsByName@{FindLevelsByName}}
+\index{FindLevelsByName@{FindLevelsByName}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{FindLevelsByName()}{FindLevelsByName()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_a99c4e0c913ae051dc14dce3f94913618} 
+List$<$ M\+\_\+\+Level $>$ WKLib.\+Assets.\+Asset\+Service.\+Find\+Levels\+By\+Name (\begin{DoxyParamCaption}\item[{string}]{name\+Contains}{}\end{DoxyParamCaption})}
+
+
+
+Returns all M\+\_\+\+Level instances whose prefab names contain the given substring. (Uses CL\+\_\+\+Asset\+Manager.\+instance.\+asset\+Database.\+level\+Prefabs) 
+
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_ab000f5f348d6a815c59372c79aeba4a4}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!LoadAllLevelsFromBundle@{LoadAllLevelsFromBundle}}
+\index{LoadAllLevelsFromBundle@{LoadAllLevelsFromBundle}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{LoadAllLevelsFromBundle()}{LoadAllLevelsFromBundle()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_ab000f5f348d6a815c59372c79aeba4a4} 
+async Task$<$ Dictionary$<$ string, M\+\_\+\+Level $>$ $>$ WKLib.\+Assets.\+Asset\+Service.\+Load\+All\+Levels\+From\+Bundle (\begin{DoxyParamCaption}\item[{Asset\+Bundle}]{bundle}{, }\item[{IProgress$<$ float $>$}]{progress}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Given a loaded Asset\+Bundle, iterate over every "{}.\+prefab"{} asset name, Load it as a Game\+Object, check for an M\+\_\+\+Level component; if found, add to the returned list.~\newline
+ Also logs each M\+\_\+\+Level found via \doxylink{classWKLib_1_1Utilities_1_1WKLog_a3cb5ab414da39e8ba8d8c0632589674f}{WKLog.\+Debug}("{}\+Level\+Name"{}).~\newline
+ If you want to register each prefab in CL\+\_\+\+Asset\+Manager.\+instance.\+asset\+Database.\+level\+Prefabs, this method will do it automatically. 
+
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_ac68a0a8801cbf4df8749a61f7ba31f93}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!LoadBundleRelativeAsync@{LoadBundleRelativeAsync}}
+\index{LoadBundleRelativeAsync@{LoadBundleRelativeAsync}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{LoadBundleRelativeAsync()}{LoadBundleRelativeAsync()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_ac68a0a8801cbf4df8749a61f7ba31f93} 
+async Task$<$ Asset\+Bundle $>$ WKLib.\+Assets.\+Asset\+Service.\+Load\+Bundle\+Relative\+Async (\begin{DoxyParamCaption}\item[{string}]{relative\+Path}{, }\item[{IProgress$<$ float $>$}]{progress}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Loads an Asset\+Bundle given a path relative to the mod assembly folder.~\newline
+ Caches under a key combining Mod\+ID and bundle name. \begin{DoxyReturn}{Returns}
+Asset\+Bundle \texorpdfstring{$\vert$}{|} null
+\end{DoxyReturn}
+
+
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_ac6ae893baeb21640920e8dd9fa20cd99}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!LoadGameModeFromBundle@{LoadGameModeFromBundle}}
+\index{LoadGameModeFromBundle@{LoadGameModeFromBundle}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{LoadGameModeFromBundle()}{LoadGameModeFromBundle()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_ac6ae893baeb21640920e8dd9fa20cd99} 
+async Task$<$ M\+\_\+\+Gamemode $>$ WKLib.\+Assets.\+Asset\+Service.\+Load\+Game\+Mode\+From\+Bundle (\begin{DoxyParamCaption}\item[{Asset\+Bundle}]{bundle}{, }\item[{string}]{asset\+Name}{, }\item[{IProgress$<$ float $>$}]{progress}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Loads a gamemode from an asset bundle. 
+
+\begin{DoxyReturn}{Returns}
+M\+\_\+\+Gamemode \texorpdfstring{$\vert$}{|} null
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_a437d5784886fd64acd18def9cf743b69}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!LoadPngAsSprite@{LoadPngAsSprite}}
+\index{LoadPngAsSprite@{LoadPngAsSprite}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{LoadPngAsSprite()}{LoadPngAsSprite()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_a437d5784886fd64acd18def9cf743b69} 
+Sprite WKLib.\+Assets.\+Asset\+Service.\+Load\+Png\+As\+Sprite (\begin{DoxyParamCaption}\item[{string}]{png\+File\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Convenience\+: Create a Sprite from a PNG filename. 
+
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_ac432ab6abea58d7f48ee9080c2b58959}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!LoadPngAsSpriteRelative@{LoadPngAsSpriteRelative}}
+\index{LoadPngAsSpriteRelative@{LoadPngAsSpriteRelative}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{LoadPngAsSpriteRelative()}{LoadPngAsSpriteRelative()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_ac432ab6abea58d7f48ee9080c2b58959} 
+Sprite WKLib.\+Assets.\+Asset\+Service.\+Load\+Png\+As\+Sprite\+Relative (\begin{DoxyParamCaption}\item[{string}]{relative\+Png\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Loads a PNG as a Sprite relative to the mod folder. \begin{DoxyReturn}{Returns}
+Sprite \texorpdfstring{$\vert$}{|} null 
+\end{DoxyReturn}
+
+
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_aff18dcaec08796cad85638d414c8c90d}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!UnloadAllBundles@{UnloadAllBundles}}
+\index{UnloadAllBundles@{UnloadAllBundles}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{UnloadAllBundles()}{UnloadAllBundles()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_aff18dcaec08796cad85638d414c8c90d} 
+void WKLib.\+Assets.\+Asset\+Service.\+Unload\+All\+Bundles (\begin{DoxyParamCaption}\item[{bool}]{unload\+All\+Loaded\+Objects}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Unloads all bundles loaded by this mod. 
+
+\Hypertarget{classWKLib_1_1Assets_1_1AssetService_ad489b049f592f1d0b7877a123fad99b6}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!UnloadBundleRelative@{UnloadBundleRelative}}
+\index{UnloadBundleRelative@{UnloadBundleRelative}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
+\doxysubsubsection{\texorpdfstring{UnloadBundleRelative()}{UnloadBundleRelative()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Assets_1_1AssetService_ad489b049f592f1d0b7877a123fad99b6} 
+void WKLib.\+Assets.\+Asset\+Service.\+Unload\+Bundle\+Relative (\begin{DoxyParamCaption}\item[{string}]{relative\+Path}{, }\item[{bool}]{unload\+All\+Loaded\+Objects}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Unloads a specific bundle for this mod. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\mbox{\hyperlink{AssetService_8cs}{Asset\+Service.\+cs}}\end{DoxyCompactItemize}

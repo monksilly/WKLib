@@ -1,0 +1,101 @@
+\doxysection{WKLib.\+Gamemodes.\+Builders.\+Region\+Builder Class Reference}
+\hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{}\label{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}\index{WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}}
+
+
+A fluent builder class for creating and configuring an M\+\_\+\+Region instance~\newline
+ It simplifies the process of defining a region with its name, subregions, and other properties.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a5cf8f8ab3459be64250808c6179710e0}{With\+Name}} (string region\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the name for the region. This name will be used for both display and internal identification. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a461530ed9183dee7e4619a19dceaead4}{With\+Subregions}} (List$<$ M\+\_\+\+Subregion $>$ subregions)
+\begin{DoxyCompactList}\small\item\em Sets the list of subregions that belong to this region. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder}} \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a82aaa3e606bfab9664d652115e213700}{With\+Starting\+Level}} (bool has\+Starting\+Level)
+\begin{DoxyCompactList}\small\item\em Sets whether the region should attempt to include a default starting level. \end{DoxyCompactList}\item 
+M\+\_\+\+Region \mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_ad78cd0d688af30cc813a311f1b49090e}{Build}} ()
+\begin{DoxyCompactList}\small\item\em Constructs and returns a new M\+\_\+\+Region instance based on the properties configured in this builder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A fluent builder class for creating and configuring an M\+\_\+\+Region instance~\newline
+ It simplifies the process of defining a region with its name, subregions, and other properties. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_ad78cd0d688af30cc813a311f1b49090e}\index{WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}!Build@{Build}}
+\index{Build@{Build}!WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_ad78cd0d688af30cc813a311f1b49090e} 
+M\+\_\+\+Region WKLib.\+Gamemodes.\+Builders.\+Region\+Builder.\+Build (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs and returns a new M\+\_\+\+Region instance based on the properties configured in this builder. 
+
+\begin{DoxyReturn}{Returns}
+A new M\+\_\+\+Region object populated with the specified settings
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a5cf8f8ab3459be64250808c6179710e0}\index{WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}!WithName@{WithName}}
+\index{WithName@{WithName}!WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}}
+\doxysubsubsection{\texorpdfstring{WithName()}{WithName()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a5cf8f8ab3459be64250808c6179710e0} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Region\+Builder.\+With\+Name (\begin{DoxyParamCaption}\item[{string}]{region\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the name for the region. This name will be used for both display and internal identification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em region\+Name} & The desired name for the region\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+\Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a82aaa3e606bfab9664d652115e213700}\index{WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}!WithStartingLevel@{WithStartingLevel}}
+\index{WithStartingLevel@{WithStartingLevel}!WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}}
+\doxysubsubsection{\texorpdfstring{WithStartingLevel()}{WithStartingLevel()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a82aaa3e606bfab9664d652115e213700} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Region\+Builder.\+With\+Starting\+Level (\begin{DoxyParamCaption}\item[{bool}]{has\+Starting\+Level}{}\end{DoxyParamCaption})}
+
+
+
+Sets whether the region should attempt to include a default starting level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em has\+Starting\+Level} & A boolean value. If true, the builder will look for a default starting level\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+
+
+This method is marked as obsolete because the game\textquotesingle{}s internal logic often handles the selection of starting levels automatically~\newline
+ It\textquotesingle{}s generally recommended to let the game decide on the starting level \Hypertarget{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a461530ed9183dee7e4619a19dceaead4}\index{WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}!WithSubregions@{WithSubregions}}
+\index{WithSubregions@{WithSubregions}!WKLib.Gamemodes.Builders.RegionBuilder@{WKLib.Gamemodes.Builders.RegionBuilder}}
+\doxysubsubsection{\texorpdfstring{WithSubregions()}{WithSubregions()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder_a461530ed9183dee7e4619a19dceaead4} 
+\mbox{\hyperlink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder}} WKLib.\+Gamemodes.\+Builders.\+Region\+Builder.\+With\+Subregions (\begin{DoxyParamCaption}\item[{List$<$ M\+\_\+\+Subregion $>$}]{subregions}{}\end{DoxyParamCaption})}
+
+
+
+Sets the list of subregions that belong to this region. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subregions} & A List$<$\+T$>$ of M\+\_\+\+Subregion instances\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current \doxylink{classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder}{Region\+Builder} instance for fluent chaining
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Gamemodes/\+Builders/\mbox{\hyperlink{RegionBuilder_8cs}{Region\+Builder.\+cs}}\end{DoxyCompactItemize}

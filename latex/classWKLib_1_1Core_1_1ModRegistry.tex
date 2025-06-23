@@ -1,0 +1,72 @@
+\doxysection{WKLib.\+Core.\+Mod\+Registry Class Reference}
+\hypertarget{classWKLib_1_1Core_1_1ModRegistry}{}\label{classWKLib_1_1Core_1_1ModRegistry}\index{WKLib.Core.ModRegistry@{WKLib.Core.ModRegistry}}
+
+
+Provides a static registry for managing and accessing \doxylink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context} instances.~\newline
+ This ensures that each mod is registered only once and its context can be retrieved globally.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context}} \mbox{\hyperlink{classWKLib_1_1Core_1_1ModRegistry_ac05fb5251710aacaeb61f02ab2c629b4}{Register}} (string mod\+ID, string version=null)
+\begin{DoxyCompactList}\small\item\em Registers a new mod with the registry or returns an existing context if the mod is already registered. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context}} \mbox{\hyperlink{classWKLib_1_1Core_1_1ModRegistry_abc229c42597f17648d59714cee8635b5}{Get}} (string mod\+ID)
+\begin{DoxyCompactList}\small\item\em Retrieves the \doxylink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context} for a previously registered mod. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides a static registry for managing and accessing \doxylink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context} instances.~\newline
+ This ensures that each mod is registered only once and its context can be retrieved globally. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1Core_1_1ModRegistry_abc229c42597f17648d59714cee8635b5}\index{WKLib.Core.ModRegistry@{WKLib.Core.ModRegistry}!Get@{Get}}
+\index{Get@{Get}!WKLib.Core.ModRegistry@{WKLib.Core.ModRegistry}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1ModRegistry_abc229c42597f17648d59714cee8635b5} 
+static \mbox{\hyperlink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context}} WKLib.\+Core.\+Mod\+Registry.\+Get (\begin{DoxyParamCaption}\item[{string}]{mod\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the \doxylink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context} for a previously registered mod. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mod\+ID} & The unique identifier of the mod to retrieve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context} associated with the specified mod\+ID.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Key\+Not\+Found\+Exception} & Thrown when the specified mod\+ID has not been registered.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classWKLib_1_1Core_1_1ModRegistry_ac05fb5251710aacaeb61f02ab2c629b4}\index{WKLib.Core.ModRegistry@{WKLib.Core.ModRegistry}!Register@{Register}}
+\index{Register@{Register}!WKLib.Core.ModRegistry@{WKLib.Core.ModRegistry}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1ModRegistry_ac05fb5251710aacaeb61f02ab2c629b4} 
+static \mbox{\hyperlink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context}} WKLib.\+Core.\+Mod\+Registry.\+Register (\begin{DoxyParamCaption}\item[{string}]{mod\+ID}{, }\item[{string}]{version}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Registers a new mod with the registry or returns an existing context if the mod is already registered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mod\+ID} & The unique identifier for the mod to register.\\
+\hline
+{\em version} & The version of the mod. This can be null if no version is specified.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \doxylink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context} instance for the given mod\+ID.~\newline
+ If the mod was not previously registered, a new context is created and returned.~\newline
+ If the mod was already registered, the existing context is returned. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/\mbox{\hyperlink{ModRegistry_8cs}{Mod\+Registry.\+cs}}\end{DoxyCompactItemize}
