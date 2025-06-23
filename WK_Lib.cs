@@ -4,6 +4,9 @@ using WKLib.Utilities;
 
 namespace WKLib;
 
+/// <summary>
+/// Main Entry point of the whole Library
+/// </summary>
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class WkLib : BaseUnityPlugin
 {

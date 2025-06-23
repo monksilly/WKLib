@@ -64,10 +64,24 @@ public class AssetService
             return null;
         }
 
-        var bundle = await Task.Run(() => AssetBundle.LoadFromFile(fullPath));
+        var request = AssetBundle.LoadFromFileAsync(fullPath);
+        if (request is null)
+        {
+            WKLog.Error($"[AssetService] Failed to load bundle: {fullPath} (request)");
+            progress?.Report(1f);
+            return null;
+        }
+
+        while (!request.isDone)
+        {
+            progress?.Report(request.progress * (float)1.1);
+            await Task.Yield();
+        }
+        
+        var bundle = request.assetBundle;
         if (bundle is null)
         {
-            WKLog.Error($"[AssetService] Failed to load bundle at {fullPath}");
+            WKLog.Error($"[AssetService] Failed to load bundle at {fullPath} (bundle)");
             progress?.Report(1f);
             return null;
         }

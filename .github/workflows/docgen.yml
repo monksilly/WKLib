@@ -1,0 +1,29 @@
+name: Build & Deploy Docs
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Generate Doxygen HTML
+        uses: mattnotmitt/doxygen-action@v1.12.0
+        with:
+          working-directory: '.'
+          doxyfile-path: 'Doxyfile'
+          enable-latex: false
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages

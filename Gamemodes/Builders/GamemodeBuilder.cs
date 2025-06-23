@@ -7,7 +7,9 @@ using WKLib.Utilities;
 namespace WKLib.Gamemodes.Builders;
 
 /// <summary>
-/// Builds an M_Gamemode from regions, name, intro text, and flags.
+/// A fluent builder class for creating and configuring an <see cref="M_Gamemode"/> instance.<br/>
+/// It allows setting various properties of a gamemode such as regions, name, intro text,
+/// and gameplay flags in a chainable manner before finally building the <see cref="M_Gamemode"/> object.
 /// </summary>
 public class GamemodeBuilder
 {
@@ -23,8 +25,10 @@ public class GamemodeBuilder
     private M_Gamemode.GameType _gameType;
     
     /// <summary>
-    /// Set the list of regions for this gamemode.
+    /// Sets the list of regions for this gamemode
     /// </summary>
+    /// <param name="regions">A <see cref="List{T}"/> of <see cref="M_Region"/> instances to be used in the gamemode</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder WithRegions(List<M_Region> regions)
     {
         _regions = regions ?? [];
@@ -32,8 +36,10 @@ public class GamemodeBuilder
     }
     
     /// <summary>
-    /// Set the displayed name of the gamemode (and capsule name).
+    /// Sets the displayed name of the gamemode (which can also serves as the capsule name)
     /// </summary>
+    /// <param name="modeName">The desired name for the gamemode</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder WithName(string modeName)
     {
         _modeName = modeName;
@@ -41,27 +47,44 @@ public class GamemodeBuilder
     }
     
     /// <summary>
-    /// Set the intro text for the gamemode.<br/>
-    /// Shown when starting the gamemode
+    /// Sets the intro text for the gamemode<br/>
+    /// This text is shown when loaded into the gamemode
     /// </summary>
+    /// <param name="introText">The introductory text</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder WithIntroText(string introText)
     {
         _introText = introText;
         return this;
     }
     
+    /// <summary>
+    /// Sets whether the gamemode should be endless
+    /// </summary>
+    /// <param name="isEndless">A boolean value indicating if the gamemode is endless</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder IsEndless(bool isEndless)
     {
         _isEndless = isEndless;
         return this;
     }
     
+    /// <summary>
+    /// Sets whether perks are available in this gamemode
+    /// </summary>
+    /// <param name="hasPerks">A boolean value indicating if perks are enabled</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder HasPerks(bool hasPerks)
     {
         _hasPerks = hasPerks;
         return this;
     }
     
+    /// <summary>
+    /// Sets whether revives are available in this gamemode
+    /// </summary>
+    /// <param name="hasRevives">A boolean value indicating if revives are enabled</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder HasRevives(bool hasRevives)
     {
         _hasRevives = hasRevives;
@@ -69,8 +92,10 @@ public class GamemodeBuilder
     }
     
     /// <summary>
-    /// Provide a Sprite to use for capsuleArt.
+    /// Provides a <see cref="Sprite"/> to use for the gamemode's capsule art
     /// </summary>
+    /// <param name="sprite">The <see cref="Sprite"/> to set as the capsule art</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder WithCapsuleSprite(Sprite sprite)
     {
         _capsuleSprite = sprite;
@@ -78,20 +103,36 @@ public class GamemodeBuilder
     }
 
     /// <summary>
-    /// Provide a Sprite to use for screenArt.
+    /// Provides a <see cref="Sprite"/> to use for the gamemode's screen art
     /// </summary>
+    /// <param name="sprite">The <see cref="Sprite"/> to set as the screen art</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder WithScreenArt(Sprite sprite)
     {
         _screenArtSprite = sprite;
         return this;
     }
 
+    /// <summary>
+    /// Sets the list of items players will start with when entering this gamemode
+    /// </summary>
+    /// <param name="spawnItems">A <see cref="List{T}"/> of <see cref="M_Gamemode.SpawnItem"/> defining the initial inventory</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
     public GamemodeBuilder WithStartItems(List<M_Gamemode.SpawnItem> spawnItems)
     {
         _spawnItems = spawnItems;
         return this;
     }
 
+    /// <summary>
+    /// Sets the game type for the gamemode based on a string input
+    /// </summary>
+    /// <param name="gameType">A string representing the desired game type (e.g., "endless", "standard", "playlist", "playlist-shuffle", "single")</param>
+    /// <returns>The current <see cref="GamemodeBuilder"/> instance for fluent chaining</returns>
+    /// <remarks>
+    /// The string input is case-insensitive and mapped to the corresponding <see cref="M_Gamemode.GameType"/> enum value<br/>
+    /// If an unknown string is provided, the existing <see cref="_gameType"/> value is retained (auto-chosen)
+    /// </remarks>
     public GamemodeBuilder WithGameType(string gameType)
     {
         _gameType = gameType.ToLower() switch
@@ -107,6 +148,10 @@ public class GamemodeBuilder
         return this;
     }
     
+    /// <summary>
+    /// Constructs and returns a new <see cref="M_Gamemode"/> instance based on the properties configured in this builder
+    /// </summary>
+    /// <returns>A new <see cref="M_Gamemode"/> object populated with the specified settings</returns>
     public M_Gamemode Build()
     {
         var gm = ScriptableObject.CreateInstance<M_Gamemode>();

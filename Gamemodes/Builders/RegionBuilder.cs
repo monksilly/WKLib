@@ -5,24 +5,47 @@ using UnityEngine;
 
 namespace WKLib.Gamemodes.Builders;
 
+/// <summary>
+/// A fluent builder class for creating and configuring an <see cref="M_Region"/> instance<br/>
+/// It simplifies the process of defining a region with its name, subregions, and other properties
+/// </summary>
 public class RegionBuilder
 {
     private string _name = "New Region";
     private List<M_Subregion> _subregions = [];
     private bool _hasStartingLevel = true;
 
+    /// <summary>
+    /// Sets the name for the region. This name will be used for both display and internal identification
+    /// </summary>
+    /// <param name="regionName">The desired name for the region</param>
+    /// <returns>The current <see cref="RegionBuilder"/> instance for fluent chaining</returns>
     public RegionBuilder WithName(string regionName)
     {
         _name = regionName;
         return this;
     }
 
+    /// <summary>
+    /// Sets the list of subregions that belong to this region
+    /// </summary>
+    /// <param name="subregions">A <see cref="List{T}"/> of <see cref="M_Subregion"/> instances</param>
+    /// <returns>The current <see cref="RegionBuilder"/> instance for fluent chaining</returns>
     public RegionBuilder WithSubregions(List<M_Subregion> subregions)
     {
         _subregions = subregions ?? [];
         return this;
     }
 
+    /// <summary>
+    /// Sets whether the region should attempt to include a default starting level
+    /// </summary>
+    /// <param name="hasStartingLevel">A boolean value. If true, the builder will look for a default starting level</param>
+    /// <returns>The current <see cref="RegionBuilder"/> instance for fluent chaining</returns>
+    /// <remarks>
+    /// This method is marked as obsolete because the game's internal logic often handles the selection of starting levels automatically<br/>
+    /// It's generally recommended to let the game decide on the starting level
+    /// </remarks>
     [Obsolete("Game Handles this automatically, Let the game decide")]
     public RegionBuilder WithStartingLevel(bool hasStartingLevel)
     {
@@ -30,6 +53,10 @@ public class RegionBuilder
         return this;
     }
 
+    /// <summary>
+    /// Constructs and returns a new <see cref="M_Region"/> instance based on the properties configured in this builder
+    /// </summary>
+    /// <returns>A new <see cref="M_Region"/> object populated with the specified settings</returns>
     public M_Region Build()
     {
         var region = ScriptableObject.CreateInstance<M_Region>();

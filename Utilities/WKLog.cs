@@ -2,6 +2,9 @@ using BepInEx.Logging;
 
 namespace WKLib.Utilities;
 
+/// <summary>
+/// A static class used for All logging purposes of the library
+/// </summary>
 public static class WKLog
 {
     private static ManualLogSource _log;

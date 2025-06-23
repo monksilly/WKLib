@@ -10,19 +10,18 @@ _By the way, contributions are welcome ;)_
 
 ## Key Features
 
-Currently Supporting:
+| Feature                           | Implementation |
+|:----------------------------------|:--------------:|
+| Loading Custom Levels             |       ✅        |
+| Loading Custom Asset Bundles      |       ✅        |
+| Loading Custom Regions/Subregions |       ✅        |
+| Loading Custom Items              |       ❌        |
 
-*   Loading Custom Levels _(Not tested)_
-*   Patching Game Functions
-*   Loading Custom Asset Bundles
+<sub>✅ - Implemented | ➖ - Implemented, Not Tested | ❌ - Not Implemented<sub/>
 
-## Planed Features
-
-*   Loading custom Regions/Subregions
-*   Loading custom items
 
 ## Documentation
-To be made
+Documentation can be found [_**here**_](https://monksilly.galfar.net/wklib)
 
 ## Contact
-Currently there isn't a discord server, but if you have questions, contact **galfar.exe** on discord
+If you have any questions or want to help the development, you can join [our discord server](https://discord.gg/EbHdwEhjgY)
