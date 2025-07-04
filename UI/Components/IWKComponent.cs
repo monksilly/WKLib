@@ -3,7 +3,7 @@ namespace WKLib.UI.Components;
 /// <summary>
 /// Interface for all WKLib UI components
 /// </summary>
-public interface IWkComponent
+public interface IWKComponent
 {
     /// <summary>
     /// Reset the component state for recreation in a new scene

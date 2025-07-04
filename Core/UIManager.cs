@@ -51,10 +51,10 @@ public static class UIManager
     private static bool _initialized = false;
     private static string _currentSceneName = "";
     
-    private static readonly List<IWkComponent> RegisteredComponents = new();
+    private static readonly List<IWKComponent> RegisteredComponents = new();
     private static readonly List<Action> RegisteredActions = new();
     
-    private static readonly List<IWkComponent> PendingComponents = new();
+    private static readonly List<IWKComponent> PendingComponents = new();
     private static readonly List<Action> PendingActions = new();
 
     static UIManager()
@@ -150,7 +150,7 @@ public static class UIManager
         if (_initialized) return;
 
         // Initialize the settings system
-        WkSettings.Initialize();
+        WKSettings.Initialize();
 
         var accessibilitySettingsPath = FindObjectPath("Accessibility Settings");
         var videoSettingsPath = FindObjectPath("Video Settings");

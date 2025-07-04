@@ -12,18 +12,18 @@ namespace WKLib.UI.Components;
 /// <summary>
 /// Slider component
 /// </summary>
-public class WkSlider : WkComponent
+public class WKSlider : WKComponent
 {
     public float DefaultValue { get; private set; }
     public float MinValue { get; private set; }
     public float MaxValue { get; private set; }
 
-    private Action<WkSlider> _onValueChanged;
+    private Action<WKSlider> _onValueChanged;
 
     /// <summary>
     /// Create a slider with a parent column enum
     /// </summary>
-    public WkSlider(UIColumn parentColumn, string settingName, string displayName, 
+    public WKSlider(UIColumn parentColumn, string settingName, string displayName, 
                    float defaultValue = 0f, float minValue = 0f, float maxValue = 1f)
         : base(parentColumn, settingName, displayName)
     {
@@ -41,7 +41,7 @@ public class WkSlider : WkComponent
     {
         if (GameObject == null) return;
 
-        WkSettings.RegisterSetting(SettingName, DefaultValue);
+        WKSettings.RegisterSetting(SettingName, DefaultValue);
         
         RemoveOldBinders<SliderSettingBinder>();
         
@@ -73,7 +73,7 @@ public class WkSlider : WkComponent
 
     private void OnValueChanged(float value)
     {
-        WkSettings.SetSetting(SettingName, value);
+        WKSettings.SetSetting(SettingName, value);
         UpdateValueDisplay(value);
         _onValueChanged?.Invoke(this);
     }
@@ -100,7 +100,7 @@ public class WkSlider : WkComponent
     /// <summary>
     /// Set a custom listener for value changes - receives the WkSlider instance
     /// </summary>
-    public WkSlider SetListener(Action<WkSlider> listener)
+    public WKSlider SetListener(Action<WKSlider> listener)
     {
         _onValueChanged = listener;
         if (GameObject != null)
@@ -115,16 +115,16 @@ public class WkSlider : WkComponent
     /// </summary>
     public float GetValue()
     {
-        return WkSettings.GetSetting(SettingName, DefaultValue);
+        return WKSettings.GetSetting(SettingName, DefaultValue);
     }
 
     /// <summary>
     /// Set slider value
     /// </summary>
-    public WkSlider SetValue(float value)
+    public WKSlider SetValue(float value)
     {
         value = Mathf.Clamp(value, MinValue, MaxValue);
-        WkSettings.SetSetting(SettingName, value);
+        WKSettings.SetSetting(SettingName, value);
         if (GameObject != null)
         {
             var submitSlider = GameObject.GetComponentInChildren<SubmitSlider>();

@@ -14,7 +14,7 @@ namespace WKLib.UI.Settings;
 /// Unified settings management system for WKLib
 /// Handles custom settings registration and persistence via Newtonsoft(I love this now!!!)
 /// </summary>
-public static class WkSettings
+public static class WKSettings
 {
     private static Dictionary<string, SettingInfo> _customSettings = new Dictionary<string, SettingInfo>();
     private static Dictionary<string, object> _runtimeValues = new Dictionary<string, object>();
@@ -172,10 +172,10 @@ public static class WkSettings
             var originalSaveSettings = typeof(global::SettingsManager).GetMethod("SaveSettings");
             var originalLoadSettings = typeof(global::SettingsManager).GetMethod("LoadSettings");
 
-            harmony.Patch(originalGetSetting, prefix: new HarmonyMethod(typeof(WkSettings), nameof(GetSetting_Patch)));
-            harmony.Patch(originalSetSetting, prefix: new HarmonyMethod(typeof(WkSettings), nameof(SetSetting_Patch)));
-            harmony.Patch(originalSaveSettings, postfix: new HarmonyMethod(typeof(WkSettings), nameof(SaveSettings_Patch)));
-            harmony.Patch(originalLoadSettings, postfix: new HarmonyMethod(typeof(WkSettings), nameof(LoadSettings_Patch)));
+            harmony.Patch(originalGetSetting, prefix: new HarmonyMethod(typeof(WKSettings), nameof(GetSetting_Patch)));
+            harmony.Patch(originalSetSetting, prefix: new HarmonyMethod(typeof(WKSettings), nameof(SetSetting_Patch)));
+            harmony.Patch(originalSaveSettings, postfix: new HarmonyMethod(typeof(WKSettings), nameof(SaveSettings_Patch)));
+            harmony.Patch(originalLoadSettings, postfix: new HarmonyMethod(typeof(WKSettings), nameof(LoadSettings_Patch)));
         }
         catch (Exception ex)
         {

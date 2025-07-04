@@ -9,7 +9,7 @@ namespace WKLib.UI.Components;
 /// <summary>
 /// Base class for all WKLib UI components.<br/>
 /// </summary>
-public abstract class WkComponent : IWkComponent
+public abstract class WKComponent : IWKComponent
 {
     public GameObject GameObject { get; protected set; }
     public string SettingName { get; protected set; }
@@ -20,7 +20,7 @@ public abstract class WkComponent : IWkComponent
     protected UIColumn ParentColumn;
     protected bool IsCreated = false;
 
-    protected WkComponent(UIColumn parentColumn, string settingName, string displayName)
+    protected WKComponent(UIColumn parentColumn, string settingName, string displayName)
     {
         ParentColumn = parentColumn;
         SettingName = settingName;

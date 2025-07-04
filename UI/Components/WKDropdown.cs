@@ -11,17 +11,17 @@ namespace WKLib.UI.Components;
 /// <summary>
 /// Dropdown component
 /// </summary>
-public class WkDropdown : WkComponent
+public class WKDropdown : WKComponent
 {
     public int DefaultValue { get; private set; }
     public List<string> Options { get; private set; }
 
-    private Action<WkDropdown> _onValueChanged;
+    private Action<WKDropdown> _onValueChanged;
 
     /// <summary>
     /// Create a dropdown with a parent column enum
     /// </summary>
-    public WkDropdown(UIColumn parentColumn, string settingName, string displayName, 
+    public WKDropdown(UIColumn parentColumn, string settingName, string displayName, 
                      List<string> options, int defaultValue = 0)
         : base(parentColumn, settingName, displayName)
     {
@@ -38,7 +38,7 @@ public class WkDropdown : WkComponent
     {
         if (GameObject == null) return;
 
-        WkSettings.RegisterSetting(SettingName, DefaultValue);
+        WKSettings.RegisterSetting(SettingName, DefaultValue);
         
         RemoveOldBinders<DropdownBinder>();
         
@@ -68,7 +68,7 @@ public class WkDropdown : WkComponent
 
     private void OnValueChanged(int value)
     {
-        WkSettings.SetSetting(SettingName, value);
+        WKSettings.SetSetting(SettingName, value);
         _onValueChanged?.Invoke(this);
     }
 
@@ -77,7 +77,7 @@ public class WkDropdown : WkComponent
     /// </summary>
     public int GetValue()
     {
-        int settingValue = WkSettings.GetSetting(SettingName, DefaultValue);
+        int settingValue = WKSettings.GetSetting(SettingName, DefaultValue);
         return Mathf.Clamp(settingValue, 0, Options.Count - 1);
     }
 
@@ -93,10 +93,10 @@ public class WkDropdown : WkComponent
     /// <summary>
     /// Set dropdown value by index
     /// </summary>
-    public WkDropdown SetValue(int value)
+    public WKDropdown SetValue(int value)
     {
         value = Mathf.Clamp(value, 0, Options.Count - 1);
-        WkSettings.SetSetting(SettingName, value);
+        WKSettings.SetSetting(SettingName, value);
         if (GameObject != null)
         {
             var dropdown = GameObject.GetComponentInChildren<TMP_Dropdown>();
@@ -108,7 +108,7 @@ public class WkDropdown : WkComponent
     /// <summary>
     /// Set dropdown value by text
     /// </summary>
-    public WkDropdown SetValue(string text)
+    public WKDropdown SetValue(string text)
     {
         int index = Options.IndexOf(text);
         if (index >= 0)
@@ -121,7 +121,7 @@ public class WkDropdown : WkComponent
     /// <summary>
     /// Update the dropdown options
     /// </summary>
-    public WkDropdown SetOptions(List<string> newOptions)
+    public WKDropdown SetOptions(List<string> newOptions)
     {
         Options = newOptions ?? new List<string>();
         if (GameObject != null)
@@ -142,7 +142,7 @@ public class WkDropdown : WkComponent
     /// <summary>
     /// Set a custom listener for value changes - receives the WkDropdown instance
     /// </summary>
-    public WkDropdown SetListener(Action<WkDropdown> listener)
+    public WKDropdown SetListener(Action<WKDropdown> listener)
     {
         _onValueChanged = listener;
         if (GameObject != null)

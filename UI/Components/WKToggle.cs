@@ -10,17 +10,17 @@ namespace WKLib.UI.Components;
 /// <summary>
 /// Toggle component 
 /// </summary>
-public class WkToggle : WkComponent
+public class WKToggle : WKComponent
 {
     public bool DefaultValue { get; private set; }
 
-    private Action<WkToggle> _onValueChanged;
+    private Action<WKToggle> _onValueChanged;
     private Toggle _toggleComponent;
 
     /// <summary>
     /// Create a toggle with a parent column enum
     /// </summary>
-    public WkToggle(UIColumn parentColumn, string settingName, string displayName, bool defaultValue = false)
+    public WKToggle(UIColumn parentColumn, string settingName, string displayName, bool defaultValue = false)
         : base(parentColumn, settingName, displayName)
     {
         DefaultValue = defaultValue;
@@ -35,7 +35,7 @@ public class WkToggle : WkComponent
     {
         if (GameObject == null) return;
 
-        WkSettings.RegisterSetting(SettingName, DefaultValue);
+        WKSettings.RegisterSetting(SettingName, DefaultValue);
         
         RemoveOldBinders<ToggleSettingsBinder>();
         
@@ -62,14 +62,14 @@ public class WkToggle : WkComponent
 
     private void OnValueChanged(bool value)
     {
-        WkSettings.SetSetting(SettingName, value);
+        WKSettings.SetSetting(SettingName, value);
         _onValueChanged?.Invoke(this);
     }
 
     /// <summary>
     /// Set a custom listener for value changes - receives the WkToggle instance
     /// </summary>
-    public WkToggle SetListener(Action<WkToggle> listener)
+    public WKToggle SetListener(Action<WKToggle> listener)
     {
         _onValueChanged = listener;
         if (GameObject != null)
@@ -84,15 +84,15 @@ public class WkToggle : WkComponent
     /// </summary>
     public bool GetValue()
     {
-        return WkSettings.GetSetting(SettingName, DefaultValue);
+        return WKSettings.GetSetting(SettingName, DefaultValue);
     }
 
     /// <summary>
     /// Set toggle value
     /// </summary>
-    public WkToggle SetValue(bool value)
+    public WKToggle SetValue(bool value)
     {
-        WkSettings.SetSetting(SettingName, value);
+        WKSettings.SetSetting(SettingName, value);
         if (GameObject != null)
         {
             _toggleComponent.SetIsOnWithoutNotify(value);
