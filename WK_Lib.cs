@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using WKLib.Utilities;
+using WKLib.Core;
 
 namespace WKLib;
 
@@ -16,5 +17,8 @@ public class WkLib : BaseUnityPlugin
         WKLog.Initialize(Logger);
         
         WKLog.Info($"Plugin {MyPluginInfo.PLUGIN_NAME} v{MyPluginInfo.PLUGIN_VERSION} is loaded!");
+        
+        // Initialize UI System
+        UIManager.TryInitialize();
     }
 }
