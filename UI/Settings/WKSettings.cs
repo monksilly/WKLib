@@ -183,11 +183,11 @@ public static class WKSettings
         }
     }
 
-    private static bool GetSetting_Patch(string variableName, ref string result)
+    private static bool GetSetting_Patch(string variableName, ref string __result)
     {
         if (IsCustomSetting(variableName))
         {
-            result = _runtimeValues[variableName]?.ToString() ?? _customSettings[variableName].DefaultValue?.ToString();
+            __result = _runtimeValues[variableName]?.ToString() ?? _customSettings[variableName].DefaultValue?.ToString();
             return false;
         }
         return true;
