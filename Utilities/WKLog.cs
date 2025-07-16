@@ -5,7 +5,7 @@ namespace WKLib.Utilities;
 /// <summary>
 /// A static class used for All logging purposes of the library
 /// </summary>
-public static class WKLog
+public static class  WKLog
 {
     private static ManualLogSource _log;
     internal static void Initialize(ManualLogSource logSource)
