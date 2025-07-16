@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 using WKLib.Core;
 using UnityEngine;
@@ -22,11 +23,19 @@ public class AssetService
     private readonly Dictionary<string, Dictionary<string, M_Level>> _loadedLevelsCache = new();
     private readonly Dictionary<string, M_Gamemode> _gamemodeCache = new();
     
+    private readonly CancellationTokenSource _sQuitCts = new();
+    
     public AssetService(ModContext modContext)
     {
         _modContext = modContext ?? throw new ArgumentNullException(nameof(modContext));
         var assemblyPath = Assembly.GetExecutingAssembly().Location;
         _assemblyFolder = Path.GetDirectoryName(assemblyPath) ?? string.Empty;
+
+        Application.quitting += () =>
+        {
+            WKLog.Debug("[AssetService] Quitting...");
+            _sQuitCts.Cancel();
+        };
     }
     
     #region Loading Asset Bundles
@@ -72,10 +81,20 @@ public class AssetService
             return null;
         }
 
-        while (!request.isDone)
+        try
         {
-            progress?.Report(request.progress * (float)1.1);
-            await Task.Yield();
+            while (!request.isDone)
+            {
+                _sQuitCts.Token.ThrowIfCancellationRequested();
+
+                progress?.Report(request.progress * 1.1f);
+                await Task.Yield();
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            WKLog.Debug($"[AssetService] Asset Bundle Load cancelled");
+            return null;
         }
         
         var bundle = request.assetBundle;
@@ -177,10 +196,20 @@ public class AssetService
         }
 
         var request = bundle.LoadAllAssetsAsync<GameObject>();
-        while (!request.isDone)
+        try
         {
-            progress?.Report(request.progress * 0.5f);
-            await Task.Yield();
+            while (!request.isDone)
+            {
+                _sQuitCts.Token.ThrowIfCancellationRequested();
+
+                progress?.Report(request.progress * 0.5f);
+                await Task.Yield();
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            WKLog.Debug($"[AssetService] LoadAllLevelsFromBundle canceled.");
+            return null;
         }
         
         var allGOs = request.allAssets.Cast<GameObject>().ToList();
@@ -270,6 +299,14 @@ public class AssetService
             progress?.Report(1f);
             return null;
         }
+        
+        if (string.IsNullOrEmpty(gamemode.unlockAchievement))
+            gamemode.unlockAchievement = "ACH_TUTORIAL";
+        
+        gamemode.gamemodePanel = Resources.FindObjectsOfTypeAll<UI_GamemodeScreen_Panel>()
+            .FirstOrDefault(x => x.name == "Gamemode_Panel_Base");
+        gamemode.loseScreen = Resources.FindObjectsOfTypeAll<UI_ScoreScreen>()
+            .FirstOrDefault(x => x.name == "ScorePanel_Standard_Death");
         
         _gamemodeCache[cacheKey] = gamemode;
         progress?.Report(1f);

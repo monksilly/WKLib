@@ -176,6 +176,16 @@ public class GamemodeBuilder
         gm.hasRevives = _hasRevives;
         gm.gamemodeScene = "Game-Main";
         gm.roachBankID = $"custom-{_modeName}";
+        gm.gamemodePanel = Resources.FindObjectsOfTypeAll<UI_GamemodeScreen_Panel>().FirstOrDefault(x => x.name == "Gamemode_Panel_Base");
+        gm.loseScreen = Resources.FindObjectsOfTypeAll<UI_ScoreScreen>().FirstOrDefault(x => x.name == "ScorePanel_Standard_Death");
+        gm.modeTags = [""];
+        gm.unlockAchievement = "";
+
+        var gmStandard = new GamemodeModule_Standard
+        {
+            winScoreMultiplier = 1f
+        };
+        gm.gamemodeModule = gmStandard;
 
         var numLevelsToLoad = 0;
         

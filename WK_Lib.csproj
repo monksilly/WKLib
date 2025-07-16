@@ -50,6 +50,9 @@
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>deps\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>deps\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
   </ItemGroup>
   
   <ItemGroup>
