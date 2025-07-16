@@ -1,0 +1,98 @@
+\doxysection{WKLib.\+UI.\+Settings.\+WKSettings Class Reference}
+\hypertarget{classWKLib_1_1UI_1_1Settings_1_1WKSettings}{}\label{classWKLib_1_1UI_1_1Settings_1_1WKSettings}\index{WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}}
+
+
+Unified settings management system for \doxylink{namespaceWKLib}{WKLib} Handles custom settings registration and persistence via Newtonsoft(I love this now!!!)  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo}{Setting\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a0727fb5244130c1010f7fa8c83fa04ab}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the settings system. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_ac32e10c95256d79c85a3e9658348dd0f}{Register\+Setting$<$ T $>$}} (string setting\+Name, T default\+Value)
+\begin{DoxyCompactList}\small\item\em Register a new custom setting. \end{DoxyCompactList}\item 
+static T \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_ab7d5ba07bd4cb07812acb3e7e285040d}{Get\+Setting$<$ T $>$}} (string setting\+Name, T fallback=default(T))
+\begin{DoxyCompactList}\small\item\em Get a custom setting value. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a7db1ea65812ebffd320a61a4e5723a99}{Set\+Setting$<$ T $>$}} (string setting\+Name, T value)
+\begin{DoxyCompactList}\small\item\em Set a custom setting value. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a1b2d81b29e8f5dffe33fd30f7da8dcd0}{Is\+Custom\+Setting}} (string setting\+Name)
+\begin{DoxyCompactList}\small\item\em Check if a setting is a custom setting. \end{DoxyCompactList}\item 
+static Dictionary$<$ string, \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo}{Setting\+Info}} $>$ \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_aa8cccf922248f02bace4a057222d5363}{Get\+All\+Custom\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Get all registered custom settings (for debugging) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unified settings management system for \doxylink{namespaceWKLib}{WKLib} Handles custom settings registration and persistence via Newtonsoft(I love this now!!!) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Settings_1_1WKSettings_aa8cccf922248f02bace4a057222d5363}\index{WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}!GetAllCustomSettings@{GetAllCustomSettings}}
+\index{GetAllCustomSettings@{GetAllCustomSettings}!WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}}
+\doxysubsubsection{\texorpdfstring{GetAllCustomSettings()}{GetAllCustomSettings()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Settings_1_1WKSettings_aa8cccf922248f02bace4a057222d5363} 
+static Dictionary$<$ string, \mbox{\hyperlink{classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo}{Setting\+Info}} $>$ WKLib.\+UI.\+Settings.\+WKSettings.\+Get\+All\+Custom\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get all registered custom settings (for debugging) 
+
+\Hypertarget{classWKLib_1_1UI_1_1Settings_1_1WKSettings_ab7d5ba07bd4cb07812acb3e7e285040d}\index{WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}!GetSetting$<$ T $>$@{GetSetting$<$ T $>$}}
+\index{GetSetting$<$ T $>$@{GetSetting$<$ T $>$}!WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}}
+\doxysubsubsection{\texorpdfstring{GetSetting$<$ T $>$()}{GetSetting< T >()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Settings_1_1WKSettings_ab7d5ba07bd4cb07812acb3e7e285040d} 
+static T WKLib.\+UI.\+Settings.\+WKSettings.\+Get\+Setting$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{setting\+Name}{, }\item[{T}]{fallback}{ = {\ttfamily default(T)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get a custom setting value. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a0727fb5244130c1010f7fa8c83fa04ab}\index{WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a0727fb5244130c1010f7fa8c83fa04ab} 
+static void WKLib.\+UI.\+Settings.\+WKSettings.\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialize the settings system. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a1b2d81b29e8f5dffe33fd30f7da8dcd0}\index{WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}!IsCustomSetting@{IsCustomSetting}}
+\index{IsCustomSetting@{IsCustomSetting}!WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}}
+\doxysubsubsection{\texorpdfstring{IsCustomSetting()}{IsCustomSetting()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a1b2d81b29e8f5dffe33fd30f7da8dcd0} 
+static bool WKLib.\+UI.\+Settings.\+WKSettings.\+Is\+Custom\+Setting (\begin{DoxyParamCaption}\item[{string}]{setting\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if a setting is a custom setting. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Settings_1_1WKSettings_ac32e10c95256d79c85a3e9658348dd0f}\index{WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}!RegisterSetting$<$ T $>$@{RegisterSetting$<$ T $>$}}
+\index{RegisterSetting$<$ T $>$@{RegisterSetting$<$ T $>$}!WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}}
+\doxysubsubsection{\texorpdfstring{RegisterSetting$<$ T $>$()}{RegisterSetting< T >()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Settings_1_1WKSettings_ac32e10c95256d79c85a3e9658348dd0f} 
+static void WKLib.\+UI.\+Settings.\+WKSettings.\+Register\+Setting$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{setting\+Name}{, }\item[{T}]{default\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Register a new custom setting. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a7db1ea65812ebffd320a61a4e5723a99}\index{WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}!SetSetting$<$ T $>$@{SetSetting$<$ T $>$}}
+\index{SetSetting$<$ T $>$@{SetSetting$<$ T $>$}!WKLib.UI.Settings.WKSettings@{WKLib.UI.Settings.WKSettings}}
+\doxysubsubsection{\texorpdfstring{SetSetting$<$ T $>$()}{SetSetting< T >()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Settings_1_1WKSettings_a7db1ea65812ebffd320a61a4e5723a99} 
+static void WKLib.\+UI.\+Settings.\+WKSettings.\+Set\+Setting$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{setting\+Name}{, }\item[{T}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set a custom setting value. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+UI/\+Settings/\mbox{\hyperlink{WKSettings_8cs}{WKSettings.\+cs}}\end{DoxyCompactItemize}

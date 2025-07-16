@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['modcontext_0',['ModContext',['../classWKLib_1_1Core_1_1ModContext.html',1,'WKLib::Core']]],
-  ['modregistry_1',['ModRegistry',['../classWKLib_1_1Core_1_1ModRegistry.html',1,'WKLib::Core']]]
+  ['iwkcomponent_0',['IWKComponent',['../interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent.html',1,'WKLib::UI::Components']]]
 ];

@@ -1,14 +1,8 @@
 var searchData=
 [
-  ['warn_0',['Warn',['../classWKLib_1_1Utilities_1_1WKLog.html#a5998e5c300f5885ab480eca6995ef5b5',1,'WKLib::Utilities::WKLog']]],
-  ['withcapsulesprite_1',['WithCapsuleSprite',['../classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html#a59fd3848c230a6aaaba7f186083b1722',1,'WKLib::Gamemodes::Builders::GamemodeBuilder']]],
-  ['withgametype_2',['WithGameType',['../classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html#aef831a5eea62a116a93842047b76bacf',1,'WKLib::Gamemodes::Builders::GamemodeBuilder']]],
-  ['withintrotext_3',['WithIntroText',['../classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html#a956725a19fad91fd8c619df347cc99fe',1,'WKLib::Gamemodes::Builders::GamemodeBuilder']]],
-  ['withlevels_4',['WithLevels',['../classWKLib_1_1Gamemodes_1_1Builders_1_1SubRegionBuilder.html#a453b532e95793f3cd9533637928585a9',1,'WKLib::Gamemodes::Builders::SubRegionBuilder']]],
-  ['withname_5',['WithName',['../classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html#a66ef04aa99ec24c733cea78708838f7c',1,'WKLib.Gamemodes.Builders.GamemodeBuilder.WithName()'],['../classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder.html#a5cf8f8ab3459be64250808c6179710e0',1,'WKLib.Gamemodes.Builders.RegionBuilder.WithName()'],['../classWKLib_1_1Gamemodes_1_1Builders_1_1SubRegionBuilder.html#a55d9289cea9b1b341164a3f76ebe823f',1,'WKLib.Gamemodes.Builders.SubRegionBuilder.WithName()']]],
-  ['withregions_6',['WithRegions',['../classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html#a25c05d9e1cb669829e4cdddf2ae187f0',1,'WKLib::Gamemodes::Builders::GamemodeBuilder']]],
-  ['withscreenart_7',['WithScreenArt',['../classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html#ac01b3bd0e4b559c6932ece59a9b71ac7',1,'WKLib::Gamemodes::Builders::GamemodeBuilder']]],
-  ['withstartinglevel_8',['WithStartingLevel',['../classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder.html#a82aaa3e606bfab9664d652115e213700',1,'WKLib::Gamemodes::Builders::RegionBuilder']]],
-  ['withstartitems_9',['WithStartItems',['../classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html#a8a6e4af52e139b9d699e2743d636c01f',1,'WKLib::Gamemodes::Builders::GamemodeBuilder']]],
-  ['withsubregions_10',['WithSubregions',['../classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder.html#a461530ed9183dee7e4619a19dceaead4',1,'WKLib::Gamemodes::Builders::RegionBuilder']]]
+  ['setlabeltext_0',['SetLabelText',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#a318907822a5c2eabcfce44c1608b6865',1,'WKLib::UI::Components::WKComponent']]],
+  ['setlistener_1',['SetListener',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a0a1afe6cf0a73df7c0e78200b9340587',1,'WKLib.UI.Components.WKDropdown.SetListener()'],['../classWKLib_1_1UI_1_1Components_1_1WKSlider.html#aeb6a74153570312588d5b3ff04e17343',1,'WKLib.UI.Components.WKSlider.SetListener()'],['../classWKLib_1_1UI_1_1Components_1_1WKToggle.html#a48414924cc0c27b24056097e9646ec8c',1,'WKLib.UI.Components.WKToggle.SetListener()']]],
+  ['setoptions_2',['SetOptions',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#aa6aa01214ca2f215ada4a4c485145368',1,'WKLib::UI::Components::WKDropdown']]],
+  ['setsetting_3c_20t_20_3e_3',['SetSetting&lt; T &gt;',['../classWKLib_1_1UI_1_1Settings_1_1WKSettings.html#a7db1ea65812ebffd320a61a4e5723a99',1,'WKLib::UI::Settings::WKSettings']]],
+  ['setvalue_4',['SetValue',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a1fadbf059d0838c898a16ae55a4e90d2',1,'WKLib.UI.Components.WKDropdown.SetValue(int value)'],['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a3aa96ea4ccbcee19c9bba68364ca2f9b',1,'WKLib.UI.Components.WKDropdown.SetValue(string text)'],['../classWKLib_1_1UI_1_1Components_1_1WKSlider.html#a24b1359fa8c960ccf9ab31cd2d8f7e93',1,'WKLib.UI.Components.WKSlider.SetValue()'],['../classWKLib_1_1UI_1_1Components_1_1WKToggle.html#a87744a92f7ddf18e41f2ce4e19f306e0',1,'WKLib.UI.Components.WKToggle.SetValue()']]]
 ];

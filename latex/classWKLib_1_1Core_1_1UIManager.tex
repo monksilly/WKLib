@@ -1,0 +1,203 @@
+\doxysection{WKLib.\+Core.\+UIManager Class Reference}
+\hypertarget{classWKLib_1_1Core_1_1UIManager}{}\label{classWKLib_1_1Core_1_1UIManager}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+
+
+\doxylink{namespaceWKLib_1_1Core}{Core} \doxylink{namespaceWKLib_1_1UI}{UI} management system for \doxylink{namespaceWKLib}{WKLib}.~\newline
+ Dynamically finds \doxylink{namespaceWKLib_1_1UI}{UI} paths at runtime to be resilient to hierarchy changes.~\newline
+ Handles scene transitions and persistent component recreation.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_ad9609fe3ccea0da7fc197a51b8254329}{Execute\+When\+Ready}} (Action action)
+\begin{DoxyCompactList}\small\item\em Execute an action when the \doxylink{namespaceWKLib_1_1UI}{UI} is ready (persistent across scenes) \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a23127b0cbc7388129bfb9b4d6169c8a0}{Try\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Try to initialize -\/ called from scene loading and can be called manually. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a4c6aff5660df8ee24ce54725a28d91e1}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{classWKLib_1_1Core_1_1UIManager}{UIManager} by finding all \doxylink{namespaceWKLib_1_1UI}{UI} template paths. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a442754125a4ac0f7360bf1ca9a070cb6}{Is\+UIReady}} ()
+\begin{DoxyCompactList}\small\item\em Check if the \doxylink{namespaceWKLib_1_1UI}{UI} Manager has been initialized and paths are ready. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a07309e62e2ee1e8584319e5538cef15f}{Get\+Column\+Path}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} column)
+\begin{DoxyCompactList}\small\item\em Resolve a UIColumn enum to its actual path. \end{DoxyCompactList}\item 
+static Transform \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a8ff351666750a9d1270e8f6e698e8345}{Find\+UIPath}} (string path)
+\begin{DoxyCompactList}\small\item\em Find a \doxylink{namespaceWKLib_1_1UI}{UI} element\textquotesingle{}s Transform using its full hierarchy path. \end{DoxyCompactList}\item 
+static Game\+Object \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_af2fa8cf1547c783751a63ba20711c4d4}{Find\+Template}} (string template\+Path)
+\begin{DoxyCompactList}\small\item\em Find a template Game\+Object using its full hierarchy path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a1998e9a37c9380577772f9c21d2cb7ad}{Slider\+Template\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a2bd60fde87cc26d818d3777a3d5252ef}{Toggle\+Template\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_acb97532c78891ddcc3c3ead69e45864b}{Dropdown\+Template\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a420a1633c697e5e42bd2dd771d6094d0}{Accessibility\+Interface\+Column}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_afeeb84e69319097571e9002b3efade1f}{Accessibility\+Visuals\+Column}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a04664c4f33f2b541941e3fe7ae0156fe}{Accessibility\+Other\+Column}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a29fd4e9aa6d000e3faa1de5017016b0b}{Video\+Screen\+Info\+Column}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a81dccb3e86b04cbc715a00573a1fedb6}{Video\+Graphics\+Column}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a5a7351fac29096993e7ecd408ab2e8b6}{Video\+Audio\+Column}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_aec99601064c9e214101791d3a01452bd}{Controls\+Camera\+Column}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static string \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a756b4d5466b4ef061563ddde84b92b11}{Controls\+Toggles\+Column}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespaceWKLib_1_1Core}{Core} \doxylink{namespaceWKLib_1_1UI}{UI} management system for \doxylink{namespaceWKLib}{WKLib}.~\newline
+ Dynamically finds \doxylink{namespaceWKLib_1_1UI}{UI} paths at runtime to be resilient to hierarchy changes.~\newline
+ Handles scene transitions and persistent component recreation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_ad9609fe3ccea0da7fc197a51b8254329}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!ExecuteWhenReady@{ExecuteWhenReady}}
+\index{ExecuteWhenReady@{ExecuteWhenReady}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{ExecuteWhenReady()}{ExecuteWhenReady()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_ad9609fe3ccea0da7fc197a51b8254329} 
+static void WKLib.\+Core.\+UIManager.\+Execute\+When\+Ready (\begin{DoxyParamCaption}\item[{Action}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Execute an action when the \doxylink{namespaceWKLib_1_1UI}{UI} is ready (persistent across scenes) 
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_af2fa8cf1547c783751a63ba20711c4d4}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!FindTemplate@{FindTemplate}}
+\index{FindTemplate@{FindTemplate}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{FindTemplate()}{FindTemplate()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_af2fa8cf1547c783751a63ba20711c4d4} 
+static Game\+Object WKLib.\+Core.\+UIManager.\+Find\+Template (\begin{DoxyParamCaption}\item[{string}]{template\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find a template Game\+Object using its full hierarchy path. 
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a8ff351666750a9d1270e8f6e698e8345}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!FindUIPath@{FindUIPath}}
+\index{FindUIPath@{FindUIPath}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{FindUIPath()}{FindUIPath()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a8ff351666750a9d1270e8f6e698e8345} 
+static Transform WKLib.\+Core.\+UIManager.\+Find\+UIPath (\begin{DoxyParamCaption}\item[{string}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find a \doxylink{namespaceWKLib_1_1UI}{UI} element\textquotesingle{}s Transform using its full hierarchy path. 
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a07309e62e2ee1e8584319e5538cef15f}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!GetColumnPath@{GetColumnPath}}
+\index{GetColumnPath@{GetColumnPath}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{GetColumnPath()}{GetColumnPath()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a07309e62e2ee1e8584319e5538cef15f} 
+static string WKLib.\+Core.\+UIManager.\+Get\+Column\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}}}]{column}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Resolve a UIColumn enum to its actual path. 
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a4c6aff5660df8ee24ce54725a28d91e1}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a4c6aff5660df8ee24ce54725a28d91e1} 
+static void WKLib.\+Core.\+UIManager.\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialize the \doxylink{classWKLib_1_1Core_1_1UIManager}{UIManager} by finding all \doxylink{namespaceWKLib_1_1UI}{UI} template paths. 
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a442754125a4ac0f7360bf1ca9a070cb6}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!IsUIReady@{IsUIReady}}
+\index{IsUIReady@{IsUIReady}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{IsUIReady()}{IsUIReady()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a442754125a4ac0f7360bf1ca9a070cb6} 
+static bool WKLib.\+Core.\+UIManager.\+Is\+UIReady (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if the \doxylink{namespaceWKLib_1_1UI}{UI} Manager has been initialized and paths are ready. 
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a23127b0cbc7388129bfb9b4d6169c8a0}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!TryInitialize@{TryInitialize}}
+\index{TryInitialize@{TryInitialize}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{TryInitialize()}{TryInitialize()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a23127b0cbc7388129bfb9b4d6169c8a0} 
+static bool WKLib.\+Core.\+UIManager.\+Try\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Try to initialize -\/ called from scene loading and can be called manually. 
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a420a1633c697e5e42bd2dd771d6094d0}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!AccessibilityInterfaceColumn@{AccessibilityInterfaceColumn}}
+\index{AccessibilityInterfaceColumn@{AccessibilityInterfaceColumn}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{AccessibilityInterfaceColumn}{AccessibilityInterfaceColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a420a1633c697e5e42bd2dd771d6094d0} 
+string WKLib.\+Core.\+UIManager.\+Accessibility\+Interface\+Column\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a04664c4f33f2b541941e3fe7ae0156fe}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!AccessibilityOtherColumn@{AccessibilityOtherColumn}}
+\index{AccessibilityOtherColumn@{AccessibilityOtherColumn}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{AccessibilityOtherColumn}{AccessibilityOtherColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a04664c4f33f2b541941e3fe7ae0156fe} 
+string WKLib.\+Core.\+UIManager.\+Accessibility\+Other\+Column\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_afeeb84e69319097571e9002b3efade1f}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!AccessibilityVisualsColumn@{AccessibilityVisualsColumn}}
+\index{AccessibilityVisualsColumn@{AccessibilityVisualsColumn}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{AccessibilityVisualsColumn}{AccessibilityVisualsColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_afeeb84e69319097571e9002b3efade1f} 
+string WKLib.\+Core.\+UIManager.\+Accessibility\+Visuals\+Column\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_aec99601064c9e214101791d3a01452bd}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!ControlsCameraColumn@{ControlsCameraColumn}}
+\index{ControlsCameraColumn@{ControlsCameraColumn}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{ControlsCameraColumn}{ControlsCameraColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_aec99601064c9e214101791d3a01452bd} 
+string WKLib.\+Core.\+UIManager.\+Controls\+Camera\+Column\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a756b4d5466b4ef061563ddde84b92b11}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!ControlsTogglesColumn@{ControlsTogglesColumn}}
+\index{ControlsTogglesColumn@{ControlsTogglesColumn}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{ControlsTogglesColumn}{ControlsTogglesColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a756b4d5466b4ef061563ddde84b92b11} 
+string WKLib.\+Core.\+UIManager.\+Controls\+Toggles\+Column\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_acb97532c78891ddcc3c3ead69e45864b}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!DropdownTemplatePath@{DropdownTemplatePath}}
+\index{DropdownTemplatePath@{DropdownTemplatePath}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{DropdownTemplatePath}{DropdownTemplatePath}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_acb97532c78891ddcc3c3ead69e45864b} 
+string WKLib.\+Core.\+UIManager.\+Dropdown\+Template\+Path\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a1998e9a37c9380577772f9c21d2cb7ad}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!SliderTemplatePath@{SliderTemplatePath}}
+\index{SliderTemplatePath@{SliderTemplatePath}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{SliderTemplatePath}{SliderTemplatePath}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a1998e9a37c9380577772f9c21d2cb7ad} 
+string WKLib.\+Core.\+UIManager.\+Slider\+Template\+Path\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a2bd60fde87cc26d818d3777a3d5252ef}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!ToggleTemplatePath@{ToggleTemplatePath}}
+\index{ToggleTemplatePath@{ToggleTemplatePath}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{ToggleTemplatePath}{ToggleTemplatePath}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a2bd60fde87cc26d818d3777a3d5252ef} 
+string WKLib.\+Core.\+UIManager.\+Toggle\+Template\+Path\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a5a7351fac29096993e7ecd408ab2e8b6}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!VideoAudioColumn@{VideoAudioColumn}}
+\index{VideoAudioColumn@{VideoAudioColumn}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{VideoAudioColumn}{VideoAudioColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a5a7351fac29096993e7ecd408ab2e8b6} 
+string WKLib.\+Core.\+UIManager.\+Video\+Audio\+Column\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a81dccb3e86b04cbc715a00573a1fedb6}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!VideoGraphicsColumn@{VideoGraphicsColumn}}
+\index{VideoGraphicsColumn@{VideoGraphicsColumn}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{VideoGraphicsColumn}{VideoGraphicsColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a81dccb3e86b04cbc715a00573a1fedb6} 
+string WKLib.\+Core.\+UIManager.\+Video\+Graphics\+Column\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a29fd4e9aa6d000e3faa1de5017016b0b}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!VideoScreenInfoColumn@{VideoScreenInfoColumn}}
+\index{VideoScreenInfoColumn@{VideoScreenInfoColumn}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{VideoScreenInfoColumn}{VideoScreenInfoColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a29fd4e9aa6d000e3faa1de5017016b0b} 
+string WKLib.\+Core.\+UIManager.\+Video\+Screen\+Info\+Column\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/\mbox{\hyperlink{UIManager_8cs}{UIManager.\+cs}}\end{DoxyCompactItemize}

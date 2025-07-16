@@ -1,0 +1,169 @@
+\doxysection{WKLib.\+UI.\+Components.\+WKSlider Class Reference}
+\hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider}{}\label{classWKLib_1_1UI_1_1Components_1_1WKSlider}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+
+
+Slider component.  
+
+
+Inheritance diagram for WKLib.\+UI.\+Components.\+WKSlider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classWKLib_1_1UI_1_1Components_1_1WKSlider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_aa806b16df0c002ed4063e38ae348ee61}{WKSlider}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} parent\+Column, string setting\+Name, string display\+Name, float default\+Value=0f, float min\+Value=0f, float max\+Value=1f)
+\begin{DoxyCompactList}\small\item\em Create a slider with a parent column enum. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider}{WKSlider}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_aeb6a74153570312588d5b3ff04e17343}{Set\+Listener}} (Action$<$ \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider}{WKSlider}} $>$ listener)
+\begin{DoxyCompactList}\small\item\em Set a custom listener for value changes -\/ receives the Wk\+Slider instance. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_ac3fd44e54c3bb9a338f0e5ea61773e26}{Get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get current slider value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider}{WKSlider}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_a24b1359fa8c960ccf9ab31cd2d8f7e93}{Set\+Value}} (float value)
+\begin{DoxyCompactList}\small\item\em Set slider value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent}{WKLib.\+UI.\+Components.\+WKComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a7a35ba6c00701300d11c920b237995f2}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the component state for recreation in a new scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_afa164bd43dd9dc2dc6b5aa7cfe0158a0}{Create\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Called by UIManager when it\textquotesingle{}s ready to create Game\+Objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent}{WKLib.\+UI.\+Components.\+IWKComponent}}}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_a776a3f201cbde9f19b1957ab56fffe7a}{Get\+Template\+Path}} ()
+\item 
+override void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_a8039f05ed8b8f6c43e5165acd438137f}{Configure}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent}{WKLib.\+UI.\+Components.\+WKComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa1e51b4745dae3d04a1273ac8b609fff}{WKComponent}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} parent\+Column, string setting\+Name, string display\+Name)
+\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79}{Game\+Object}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_afc0af399cf26198e719fa88009680254}{Create\+From\+Template}} (Transform parent)
+\begin{DoxyCompactList}\small\item\em Create the \doxylink{namespaceWKLib_1_1UI}{UI} component from a template. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a318907822a5c2eabcfce44c1608b6865}{Set\+Label\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Set the label text for the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a84a8726a142de363fc13db28daf6e938}{Remove\+Old\+Binders$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Remove the old binder components, these arent needed anymore. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a1212fe54bc16c6ea6060f40ccd8801e4}{Get\+Template\+Path}} ()
+\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a240103aba264b8f4e9e5b20ab0a97c26}{Configure}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_a4d8dcb7b55a6dc85264625977f268b90}{Default\+Value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_a7bdb06d7d690e7fdd0149797d47976ed}{Min\+Value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider_a30e03159922f166f9cfc909577fcfa39}{Max\+Value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent}{WKLib.\+UI.\+Components.\+WKComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79}{Game\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae02c6288d6783fa484f889f2dcec42d4}{Setting\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa93f5f92769162962f234d30e3544846}{Label\+Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+TMPro.\+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa9a96dce012334cf2d3179dbfc227cce}{Label}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent}{WKLib.\+UI.\+Components.\+WKComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a234f696efdc4324f8d4127d0f37cf698}{Parent\+Column}}
+\item 
+bool \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae14f7e3241009da5be6ce4dfa1f0ed24}{Is\+Created}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Slider component. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_aa806b16df0c002ed4063e38ae348ee61}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!WKSlider@{WKSlider}}
+\index{WKSlider@{WKSlider}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{WKSlider()}{WKSlider()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_aa806b16df0c002ed4063e38ae348ee61} 
+WKLib.\+UI.\+Components.\+WKSlider.\+WKSlider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}}}]{parent\+Column}{, }\item[{string}]{setting\+Name}{, }\item[{string}]{display\+Name}{, }\item[{float}]{default\+Value}{ = {\ttfamily 0f}, }\item[{float}]{min\+Value}{ = {\ttfamily 0f}, }\item[{float}]{max\+Value}{ = {\ttfamily 1f}}\end{DoxyParamCaption})}
+
+
+
+Create a slider with a parent column enum. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_a8039f05ed8b8f6c43e5165acd438137f}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!Configure@{Configure}}
+\index{Configure@{Configure}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{Configure()}{Configure()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_a8039f05ed8b8f6c43e5165acd438137f} 
+override void WKLib.\+UI.\+Components.\+WKSlider.\+Configure (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_a776a3f201cbde9f19b1957ab56fffe7a}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!GetTemplatePath@{GetTemplatePath}}
+\index{GetTemplatePath@{GetTemplatePath}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{GetTemplatePath()}{GetTemplatePath()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_a776a3f201cbde9f19b1957ab56fffe7a} 
+override string WKLib.\+UI.\+Components.\+WKSlider.\+Get\+Template\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_ac3fd44e54c3bb9a338f0e5ea61773e26}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_ac3fd44e54c3bb9a338f0e5ea61773e26} 
+float WKLib.\+UI.\+Components.\+WKSlider.\+Get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get current slider value. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_aeb6a74153570312588d5b3ff04e17343}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!SetListener@{SetListener}}
+\index{SetListener@{SetListener}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{SetListener()}{SetListener()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_aeb6a74153570312588d5b3ff04e17343} 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider}{WKSlider}} WKLib.\+UI.\+Components.\+WKSlider.\+Set\+Listener (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider}{WKSlider}} $>$}]{listener}{}\end{DoxyParamCaption})}
+
+
+
+Set a custom listener for value changes -\/ receives the Wk\+Slider instance. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_a24b1359fa8c960ccf9ab31cd2d8f7e93}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_a24b1359fa8c960ccf9ab31cd2d8f7e93} 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider}{WKSlider}} WKLib.\+UI.\+Components.\+WKSlider.\+Set\+Value (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Set slider value. 
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_a4d8dcb7b55a6dc85264625977f268b90}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!DefaultValue@{DefaultValue}}
+\index{DefaultValue@{DefaultValue}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{DefaultValue}{DefaultValue}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_a4d8dcb7b55a6dc85264625977f268b90} 
+float WKLib.\+UI.\+Components.\+WKSlider.\+Default\+Value\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_a30e03159922f166f9cfc909577fcfa39}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!MaxValue@{MaxValue}}
+\index{MaxValue@{MaxValue}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{MaxValue}{MaxValue}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_a30e03159922f166f9cfc909577fcfa39} 
+float WKLib.\+UI.\+Components.\+WKSlider.\+Max\+Value\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKSlider_a7bdb06d7d690e7fdd0149797d47976ed}\index{WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}!MinValue@{MinValue}}
+\index{MinValue@{MinValue}!WKLib.UI.Components.WKSlider@{WKLib.UI.Components.WKSlider}}
+\doxysubsubsection{\texorpdfstring{MinValue}{MinValue}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKSlider_a7bdb06d7d690e7fdd0149797d47976ed} 
+float WKLib.\+UI.\+Components.\+WKSlider.\+Min\+Value\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+UI/\+Components/\mbox{\hyperlink{WKSlider_8cs}{WKSlider.\+cs}}\end{DoxyCompactItemize}

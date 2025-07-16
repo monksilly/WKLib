@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['unloadallbundles_0',['UnloadAllBundles',['../classWKLib_1_1Assets_1_1AssetService.html#aff18dcaec08796cad85638d414c8c90d',1,'WKLib::Assets::AssetService']]],
-  ['unloadbundlerelative_1',['UnloadBundleRelative',['../classWKLib_1_1Assets_1_1AssetService.html#ad489b049f592f1d0b7877a123fad99b6',1,'WKLib::Assets::AssetService']]]
+  ['register_0',['Register',['../classWKLib_1_1Core_1_1ModRegistry.html#ac05fb5251710aacaeb61f02ab2c629b4',1,'WKLib::Core::ModRegistry']]],
+  ['registersetting_3c_20t_20_3e_1',['RegisterSetting&lt; T &gt;',['../classWKLib_1_1UI_1_1Settings_1_1WKSettings.html#ac32e10c95256d79c85a3e9658348dd0f',1,'WKLib::UI::Settings::WKSettings']]],
+  ['removeoldbinders_3c_20t_20_3e_2',['RemoveOldBinders&lt; T &gt;',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#a84a8726a142de363fc13db28daf6e938',1,'WKLib::UI::Components::WKComponent']]],
+  ['reset_3',['Reset',['../interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent.html#ae136b819b7a46952bce453254ab58a86',1,'WKLib.UI.Components.IWKComponent.Reset()'],['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#a7a35ba6c00701300d11c920b237995f2',1,'WKLib.UI.Components.WKComponent.Reset()']]]
 ];

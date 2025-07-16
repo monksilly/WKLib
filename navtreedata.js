@@ -25,11 +25,16 @@
 var NAVTREE =
 [
   [ "WKLib", "index.html", [
-    [ "installation", "installation.html", null ],
-    [ "intro", "intro.html", null ],
-    [ "Topics", "topics.html", "topics" ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", "namespaces_dup" ]
+      [ "Project Description", "index.html#project-description", null ],
+      [ "Key Features", "index.html#key-features", null ],
+      [ "Documentation", "index.html#documentation", null ],
+      [ "Contact", "index.html#contact", null ],
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
+      [ "Package Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -38,6 +43,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ],
@@ -53,7 +59,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"AssetService_8cs.html"
+"AssetService_8cs.html",
+"classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#ab108f89e090811c2adff21e319207ef5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -7,4 +7,70 @@ class \mbox{\hyperlink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context}}
 \begin{DoxyCompactList}\small\item\em Represents the context for a registered mod, containing its unique identifier and version. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classWKLib_1_1Core_1_1ModRegistry}{Mod\+Registry}}
 \begin{DoxyCompactList}\small\item\em Provides a static registry for managing and accessing \doxylink{classWKLib_1_1Core_1_1ModContext}{Mod\+Context} instances.~\newline
- This ensures that each mod is registered only once and its context can be retrieved globally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+ This ensures that each mod is registered only once and its context can be retrieved globally. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager}{UIManager}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespaceWKLib_1_1Core}{Core} \doxylink{namespaceWKLib_1_1UI}{UI} management system for \doxylink{namespaceWKLib}{WKLib}.~\newline
+ Dynamically finds \doxylink{namespaceWKLib_1_1UI}{UI} paths at runtime to be resilient to hierarchy changes.~\newline
+ Handles scene transitions and persistent component recreation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} \{ \newline
+\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fa679ea7f32e1103ba32210fee5b87fdac}{Accessibility\+Interface}}
+, \mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77faff61b3bb3a55e0cfc4190c7e1b4c03e3}{Accessibility\+Visuals}}
+, \mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fadae67ddf78cebb5bb9ba192907451988}{Accessibility\+Other}}
+, \mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fa8fd32bdecd13b21dc1b00021164e67f3}{Video\+Screen\+Info}}
+, \newline
+\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fa3b9769d07bba6c83b7674fc7734c6a23}{Video\+Graphics}}
+, \mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fab8616d14dcd88124a92127310c1ef4d4}{Video\+Audio}}
+, \mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fab425ac1502ca5b3ba6c5ba8d990fbca6}{Controls\+Camera}}
+, \mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fa90d4e3854b1f3d2b7a76b13539c3643d}{Controls\+Toggles}}
+ \}
+\begin{DoxyCompactList}\small\item\em UI Column types for easy reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}\index{WKLib.Core@{WKLib.Core}!UIColumn@{UIColumn}}
+\index{UIColumn@{UIColumn}!WKLib.Core@{WKLib.Core}}
+\doxysubsubsection{\texorpdfstring{UIColumn}{UIColumn}}
+{\footnotesize\ttfamily \label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+enum \mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{WKLib.\+Core.\+UIColumn}}}
+
+
+
+\doxylink{namespaceWKLib_1_1UI}{UI} Column types for easy reference. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AccessibilityInterface@{AccessibilityInterface}!WKLib.Core@{WKLib.Core}}\index{WKLib.Core@{WKLib.Core}!AccessibilityInterface@{AccessibilityInterface}}}\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fa679ea7f32e1103ba32210fee5b87fdac}\label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+Accessibility\+Interface&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AccessibilityVisuals@{AccessibilityVisuals}!WKLib.Core@{WKLib.Core}}\index{WKLib.Core@{WKLib.Core}!AccessibilityVisuals@{AccessibilityVisuals}}}\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77faff61b3bb3a55e0cfc4190c7e1b4c03e3}\label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+Accessibility\+Visuals&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AccessibilityOther@{AccessibilityOther}!WKLib.Core@{WKLib.Core}}\index{WKLib.Core@{WKLib.Core}!AccessibilityOther@{AccessibilityOther}}}\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fadae67ddf78cebb5bb9ba192907451988}\label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+Accessibility\+Other&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VideoScreenInfo@{VideoScreenInfo}!WKLib.Core@{WKLib.Core}}\index{WKLib.Core@{WKLib.Core}!VideoScreenInfo@{VideoScreenInfo}}}\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fa8fd32bdecd13b21dc1b00021164e67f3}\label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+Video\+Screen\+Info&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VideoGraphics@{VideoGraphics}!WKLib.Core@{WKLib.Core}}\index{WKLib.Core@{WKLib.Core}!VideoGraphics@{VideoGraphics}}}\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fa3b9769d07bba6c83b7674fc7734c6a23}\label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+Video\+Graphics&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VideoAudio@{VideoAudio}!WKLib.Core@{WKLib.Core}}\index{WKLib.Core@{WKLib.Core}!VideoAudio@{VideoAudio}}}\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fab8616d14dcd88124a92127310c1ef4d4}\label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+Video\+Audio&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ControlsCamera@{ControlsCamera}!WKLib.Core@{WKLib.Core}}\index{WKLib.Core@{WKLib.Core}!ControlsCamera@{ControlsCamera}}}\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fab425ac1502ca5b3ba6c5ba8d990fbca6}\label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+Controls\+Camera&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ControlsToggles@{ControlsToggles}!WKLib.Core@{WKLib.Core}}\index{WKLib.Core@{WKLib.Core}!ControlsToggles@{ControlsToggles}}}\Hypertarget{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77fa90d4e3854b1f3d2b7a76b13539c3643d}\label{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f} 
+Controls\+Toggles&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,153 @@
+\doxysection{WKLib.\+UI.\+Components.\+WKToggle Class Reference}
+\hypertarget{classWKLib_1_1UI_1_1Components_1_1WKToggle}{}\label{classWKLib_1_1UI_1_1Components_1_1WKToggle}\index{WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}}
+
+
+Toggle component.  
+
+
+Inheritance diagram for WKLib.\+UI.\+Components.\+WKToggle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classWKLib_1_1UI_1_1Components_1_1WKToggle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle_ad94ddfab8273b2da2f2503639801e7c0}{WKToggle}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} parent\+Column, string setting\+Name, string display\+Name, bool default\+Value=false)
+\begin{DoxyCompactList}\small\item\em Create a toggle with a parent column enum. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle}{WKToggle}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle_a48414924cc0c27b24056097e9646ec8c}{Set\+Listener}} (Action$<$ \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle}{WKToggle}} $>$ listener)
+\begin{DoxyCompactList}\small\item\em Set a custom listener for value changes -\/ receives the Wk\+Toggle instance. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle_ad51a91f396a79742f3bf24b7d211226f}{Get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get current toggle value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle}{WKToggle}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle_a87744a92f7ddf18e41f2ce4e19f306e0}{Set\+Value}} (bool value)
+\begin{DoxyCompactList}\small\item\em Set toggle value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent}{WKLib.\+UI.\+Components.\+WKComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a7a35ba6c00701300d11c920b237995f2}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the component state for recreation in a new scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_afa164bd43dd9dc2dc6b5aa7cfe0158a0}{Create\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Called by UIManager when it\textquotesingle{}s ready to create Game\+Objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent}{WKLib.\+UI.\+Components.\+IWKComponent}}}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle_a46e5a5ee2df5df684579d40deb0fbbee}{Get\+Template\+Path}} ()
+\item 
+override void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle_ade110df8087aaf6bf80ef7eb30fc26b6}{Configure}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent}{WKLib.\+UI.\+Components.\+WKComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa1e51b4745dae3d04a1273ac8b609fff}{WKComponent}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} parent\+Column, string setting\+Name, string display\+Name)
+\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79}{Game\+Object}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_afc0af399cf26198e719fa88009680254}{Create\+From\+Template}} (Transform parent)
+\begin{DoxyCompactList}\small\item\em Create the \doxylink{namespaceWKLib_1_1UI}{UI} component from a template. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a318907822a5c2eabcfce44c1608b6865}{Set\+Label\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Set the label text for the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a84a8726a142de363fc13db28daf6e938}{Remove\+Old\+Binders$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Remove the old binder components, these arent needed anymore. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a1212fe54bc16c6ea6060f40ccd8801e4}{Get\+Template\+Path}} ()
+\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a240103aba264b8f4e9e5b20ab0a97c26}{Configure}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle_a1e1d6fdb9f0a523e27c9c56760d9cfc7}{Default\+Value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent}{WKLib.\+UI.\+Components.\+WKComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79}{Game\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae02c6288d6783fa484f889f2dcec42d4}{Setting\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa93f5f92769162962f234d30e3544846}{Label\+Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+TMPro.\+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa9a96dce012334cf2d3179dbfc227cce}{Label}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent}{WKLib.\+UI.\+Components.\+WKComponent}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a234f696efdc4324f8d4127d0f37cf698}{Parent\+Column}}
+\item 
+bool \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae14f7e3241009da5be6ce4dfa1f0ed24}{Is\+Created}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Toggle component. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKToggle_ad94ddfab8273b2da2f2503639801e7c0}\index{WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}!WKToggle@{WKToggle}}
+\index{WKToggle@{WKToggle}!WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}}
+\doxysubsubsection{\texorpdfstring{WKToggle()}{WKToggle()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKToggle_ad94ddfab8273b2da2f2503639801e7c0} 
+WKLib.\+UI.\+Components.\+WKToggle.\+WKToggle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}}}]{parent\+Column}{, }\item[{string}]{setting\+Name}{, }\item[{string}]{display\+Name}{, }\item[{bool}]{default\+Value}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Create a toggle with a parent column enum. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKToggle_ade110df8087aaf6bf80ef7eb30fc26b6}\index{WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}!Configure@{Configure}}
+\index{Configure@{Configure}!WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}}
+\doxysubsubsection{\texorpdfstring{Configure()}{Configure()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKToggle_ade110df8087aaf6bf80ef7eb30fc26b6} 
+override void WKLib.\+UI.\+Components.\+WKToggle.\+Configure (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKToggle_a46e5a5ee2df5df684579d40deb0fbbee}\index{WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}!GetTemplatePath@{GetTemplatePath}}
+\index{GetTemplatePath@{GetTemplatePath}!WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}}
+\doxysubsubsection{\texorpdfstring{GetTemplatePath()}{GetTemplatePath()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKToggle_a46e5a5ee2df5df684579d40deb0fbbee} 
+override string WKLib.\+UI.\+Components.\+WKToggle.\+Get\+Template\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKToggle_ad51a91f396a79742f3bf24b7d211226f}\index{WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKToggle_ad51a91f396a79742f3bf24b7d211226f} 
+bool WKLib.\+UI.\+Components.\+WKToggle.\+Get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get current toggle value. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKToggle_a48414924cc0c27b24056097e9646ec8c}\index{WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}!SetListener@{SetListener}}
+\index{SetListener@{SetListener}!WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}}
+\doxysubsubsection{\texorpdfstring{SetListener()}{SetListener()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKToggle_a48414924cc0c27b24056097e9646ec8c} 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle}{WKToggle}} WKLib.\+UI.\+Components.\+WKToggle.\+Set\+Listener (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle}{WKToggle}} $>$}]{listener}{}\end{DoxyParamCaption})}
+
+
+
+Set a custom listener for value changes -\/ receives the Wk\+Toggle instance. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKToggle_a87744a92f7ddf18e41f2ce4e19f306e0}\index{WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKToggle_a87744a92f7ddf18e41f2ce4e19f306e0} 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle}{WKToggle}} WKLib.\+UI.\+Components.\+WKToggle.\+Set\+Value (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Set toggle value. 
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKToggle_a1e1d6fdb9f0a523e27c9c56760d9cfc7}\index{WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}!DefaultValue@{DefaultValue}}
+\index{DefaultValue@{DefaultValue}!WKLib.UI.Components.WKToggle@{WKLib.UI.Components.WKToggle}}
+\doxysubsubsection{\texorpdfstring{DefaultValue}{DefaultValue}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKToggle_a1e1d6fdb9f0a523e27c9c56760d9cfc7} 
+bool WKLib.\+UI.\+Components.\+WKToggle.\+Default\+Value\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+UI/\+Components/\mbox{\hyperlink{WKToggle_8cs}{WKToggle.\+cs}}\end{DoxyCompactItemize}

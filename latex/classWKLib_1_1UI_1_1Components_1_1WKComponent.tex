@@ -1,0 +1,192 @@
+\doxysection{WKLib.\+UI.\+Components.\+WKComponent Class Reference}
+\hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent}{}\label{classWKLib_1_1UI_1_1Components_1_1WKComponent}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+
+
+Base class for all \doxylink{namespaceWKLib}{WKLib} \doxylink{namespaceWKLib_1_1UI}{UI} components.~\newline
+  
+
+
+Inheritance diagram for WKLib.\+UI.\+Components.\+WKComponent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.403433cm]{classWKLib_1_1UI_1_1Components_1_1WKComponent}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a7a35ba6c00701300d11c920b237995f2}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the component state for recreation in a new scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_afa164bd43dd9dc2dc6b5aa7cfe0158a0}{Create\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Called by UIManager when it\textquotesingle{}s ready to create Game\+Objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent}{WKLib.\+UI.\+Components.\+IWKComponent}}}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa1e51b4745dae3d04a1273ac8b609fff}{WKComponent}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} parent\+Column, string setting\+Name, string display\+Name)
+\item 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79}{Game\+Object}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_afc0af399cf26198e719fa88009680254}{Create\+From\+Template}} (Transform parent)
+\begin{DoxyCompactList}\small\item\em Create the \doxylink{namespaceWKLib_1_1UI}{UI} component from a template. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a318907822a5c2eabcfce44c1608b6865}{Set\+Label\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Set the label text for the component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a84a8726a142de363fc13db28daf6e938}{Remove\+Old\+Binders$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Remove the old binder components, these arent needed anymore. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a1212fe54bc16c6ea6060f40ccd8801e4}{Get\+Template\+Path}} ()
+\item 
+void \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a240103aba264b8f4e9e5b20ab0a97c26}{Configure}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a234f696efdc4324f8d4127d0f37cf698}{Parent\+Column}}
+\item 
+bool \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae14f7e3241009da5be6ce4dfa1f0ed24}{Is\+Created}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79}{Game\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae02c6288d6783fa484f889f2dcec42d4}{Setting\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa93f5f92769162962f234d30e3544846}{Label\+Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+TMPro.\+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa9a96dce012334cf2d3179dbfc227cce}{Label}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all \doxylink{namespaceWKLib}{WKLib} \doxylink{namespaceWKLib_1_1UI}{UI} components.~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa1e51b4745dae3d04a1273ac8b609fff}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!WKComponent@{WKComponent}}
+\index{WKComponent@{WKComponent}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{WKComponent()}{WKComponent()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa1e51b4745dae3d04a1273ac8b609fff} 
+WKLib.\+UI.\+Components.\+WKComponent.\+WKComponent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}}}]{parent\+Column}{, }\item[{string}]{setting\+Name}{, }\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_a240103aba264b8f4e9e5b20ab0a97c26}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!Configure@{Configure}}
+\index{Configure@{Configure}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{Configure()}{Configure()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_a240103aba264b8f4e9e5b20ab0a97c26} 
+void WKLib.\+UI.\+Components.\+WKComponent.\+Configure (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_afc0af399cf26198e719fa88009680254}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!CreateFromTemplate@{CreateFromTemplate}}
+\index{CreateFromTemplate@{CreateFromTemplate}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{CreateFromTemplate()}{CreateFromTemplate()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_afc0af399cf26198e719fa88009680254} 
+\mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79}{Game\+Object}} WKLib.\+UI.\+Components.\+WKComponent.\+Create\+From\+Template (\begin{DoxyParamCaption}\item[{Transform}]{parent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Create the \doxylink{namespaceWKLib_1_1UI}{UI} component from a template. 
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_afa164bd43dd9dc2dc6b5aa7cfe0158a0}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!CreateGameObject@{CreateGameObject}}
+\index{CreateGameObject@{CreateGameObject}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{CreateGameObject()}{CreateGameObject()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_afa164bd43dd9dc2dc6b5aa7cfe0158a0} 
+void WKLib.\+UI.\+Components.\+WKComponent.\+Create\+Game\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Called by UIManager when it\textquotesingle{}s ready to create Game\+Objects. 
+
+
+
+Implements \mbox{\hyperlink{interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent_aee68eda035fd3397ca204f5964d86604}{WKLib.\+UI.\+Components.\+IWKComponent}}.
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_a1212fe54bc16c6ea6060f40ccd8801e4}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!GetTemplatePath@{GetTemplatePath}}
+\index{GetTemplatePath@{GetTemplatePath}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{GetTemplatePath()}{GetTemplatePath()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_a1212fe54bc16c6ea6060f40ccd8801e4} 
+string WKLib.\+UI.\+Components.\+WKComponent.\+Get\+Template\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_a84a8726a142de363fc13db28daf6e938}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!RemoveOldBinders$<$ T $>$@{RemoveOldBinders$<$ T $>$}}
+\index{RemoveOldBinders$<$ T $>$@{RemoveOldBinders$<$ T $>$}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{RemoveOldBinders$<$ T $>$()}{RemoveOldBinders< T >()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_a84a8726a142de363fc13db28daf6e938} 
+void WKLib.\+UI.\+Components.\+WKComponent.\+Remove\+Old\+Binders$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Remove the old binder components, these arent needed anymore. 
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em Component}]\end{description}
+\end{Desc}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_a7a35ba6c00701300d11c920b237995f2}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!Reset@{Reset}}
+\index{Reset@{Reset}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_a7a35ba6c00701300d11c920b237995f2} 
+void WKLib.\+UI.\+Components.\+WKComponent.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reset the component state for recreation in a new scene. 
+
+
+
+Implements \mbox{\hyperlink{interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent_ae136b819b7a46952bce453254ab58a86}{WKLib.\+UI.\+Components.\+IWKComponent}}.
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_a318907822a5c2eabcfce44c1608b6865}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!SetLabelText@{SetLabelText}}
+\index{SetLabelText@{SetLabelText}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{SetLabelText()}{SetLabelText()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_a318907822a5c2eabcfce44c1608b6865} 
+void WKLib.\+UI.\+Components.\+WKComponent.\+Set\+Label\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set the label text for the component. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae14f7e3241009da5be6ce4dfa1f0ed24}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!IsCreated@{IsCreated}}
+\index{IsCreated@{IsCreated}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{IsCreated}{IsCreated}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae14f7e3241009da5be6ce4dfa1f0ed24} 
+bool WKLib.\+UI.\+Components.\+WKComponent.\+Is\+Created = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_a234f696efdc4324f8d4127d0f37cf698}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!ParentColumn@{ParentColumn}}
+\index{ParentColumn@{ParentColumn}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{ParentColumn}{ParentColumn}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_a234f696efdc4324f8d4127d0f37cf698} 
+\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} WKLib.\+UI.\+Components.\+WKComponent.\+Parent\+Column\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{GameObject}{GameObject}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_a920bab397176d1d7a40493938b6bbc79} 
+Game\+Object WKLib.\+UI.\+Components.\+WKComponent.\+Game\+Object\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa9a96dce012334cf2d3179dbfc227cce}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!Label@{Label}}
+\index{Label@{Label}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{Label}{Label}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa9a96dce012334cf2d3179dbfc227cce} 
+TMPro.\+Text\+Mesh\+Pro\+UGUI WKLib.\+UI.\+Components.\+WKComponent.\+Label\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa93f5f92769162962f234d30e3544846}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!LabelText@{LabelText}}
+\index{LabelText@{LabelText}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{LabelText}{LabelText}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_aa93f5f92769162962f234d30e3544846} 
+string WKLib.\+UI.\+Components.\+WKComponent.\+Label\+Text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+\Hypertarget{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae02c6288d6783fa484f889f2dcec42d4}\index{WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}!SettingName@{SettingName}}
+\index{SettingName@{SettingName}!WKLib.UI.Components.WKComponent@{WKLib.UI.Components.WKComponent}}
+\doxysubsubsection{\texorpdfstring{SettingName}{SettingName}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1Components_1_1WKComponent_ae02c6288d6783fa484f889f2dcec42d4} 
+string WKLib.\+UI.\+Components.\+WKComponent.\+Setting\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+UI/\+Components/\mbox{\hyperlink{WKComponent_8cs}{WKComponent.\+cs}}\end{DoxyCompactItemize}

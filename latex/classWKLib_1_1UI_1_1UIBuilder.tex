@@ -1,0 +1,57 @@
+\doxysection{WKLib.\+UI.\+UIBuilder Class Reference}
+\hypertarget{classWKLib_1_1UI_1_1UIBuilder}{}\label{classWKLib_1_1UI_1_1UIBuilder}\index{WKLib.UI.UIBuilder@{WKLib.UI.UIBuilder}}
+
+
+Convenient builder class for creating \doxylink{namespaceWKLib_1_1UI}{UI} components.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider}{WKSlider}} \mbox{\hyperlink{classWKLib_1_1UI_1_1UIBuilder_aca5cd02cdec4d36f78ce9eb8e7bb83d7}{Create\+Slider}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} parent\+Column, string setting\+Name, string display\+Name, float default\+Value=0f, float min\+Value=0f, float max\+Value=1f)
+\begin{DoxyCompactList}\small\item\em Create a new slider component. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle}{WKToggle}} \mbox{\hyperlink{classWKLib_1_1UI_1_1UIBuilder_a49326e32aa752e6d39a4b2f5f301d98f}{Create\+Toggle}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} parent\+Column, string setting\+Name, string display\+Name, bool default\+Value=false)
+\begin{DoxyCompactList}\small\item\em Create a new toggle component. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKDropdown}{WKDropdown}} \mbox{\hyperlink{classWKLib_1_1UI_1_1UIBuilder_a105b9cc09217d08fec702e8f5e070a8b}{Create\+Dropdown}} (\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}} parent\+Column, string setting\+Name, string display\+Name, List$<$ string $>$ options, int default\+Value=0)
+\begin{DoxyCompactList}\small\item\em Create a new dropdown component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Convenient builder class for creating \doxylink{namespaceWKLib_1_1UI}{UI} components. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWKLib_1_1UI_1_1UIBuilder_a105b9cc09217d08fec702e8f5e070a8b}\index{WKLib.UI.UIBuilder@{WKLib.UI.UIBuilder}!CreateDropdown@{CreateDropdown}}
+\index{CreateDropdown@{CreateDropdown}!WKLib.UI.UIBuilder@{WKLib.UI.UIBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateDropdown()}{CreateDropdown()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1UIBuilder_a105b9cc09217d08fec702e8f5e070a8b} 
+static \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKDropdown}{WKDropdown}} WKLib.\+UI.\+UIBuilder.\+Create\+Dropdown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}}}]{parent\+Column}{, }\item[{string}]{setting\+Name}{, }\item[{string}]{display\+Name}{, }\item[{List$<$ string $>$}]{options}{, }\item[{int}]{default\+Value}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new dropdown component. 
+
+\Hypertarget{classWKLib_1_1UI_1_1UIBuilder_aca5cd02cdec4d36f78ce9eb8e7bb83d7}\index{WKLib.UI.UIBuilder@{WKLib.UI.UIBuilder}!CreateSlider@{CreateSlider}}
+\index{CreateSlider@{CreateSlider}!WKLib.UI.UIBuilder@{WKLib.UI.UIBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSlider()}{CreateSlider()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1UIBuilder_aca5cd02cdec4d36f78ce9eb8e7bb83d7} 
+static \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKSlider}{WKSlider}} WKLib.\+UI.\+UIBuilder.\+Create\+Slider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}}}]{parent\+Column}{, }\item[{string}]{setting\+Name}{, }\item[{string}]{display\+Name}{, }\item[{float}]{default\+Value}{ = {\ttfamily 0f}, }\item[{float}]{min\+Value}{ = {\ttfamily 0f}, }\item[{float}]{max\+Value}{ = {\ttfamily 1f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new slider component. 
+
+\Hypertarget{classWKLib_1_1UI_1_1UIBuilder_a49326e32aa752e6d39a4b2f5f301d98f}\index{WKLib.UI.UIBuilder@{WKLib.UI.UIBuilder}!CreateToggle@{CreateToggle}}
+\index{CreateToggle@{CreateToggle}!WKLib.UI.UIBuilder@{WKLib.UI.UIBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateToggle()}{CreateToggle()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1UI_1_1UIBuilder_a49326e32aa752e6d39a4b2f5f301d98f} 
+static \mbox{\hyperlink{classWKLib_1_1UI_1_1Components_1_1WKToggle}{WKToggle}} WKLib.\+UI.\+UIBuilder.\+Create\+Toggle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWKLib_1_1Core_a33aed3385e062ebc9828eb55838ca77f}{UIColumn}}}]{parent\+Column}{, }\item[{string}]{setting\+Name}{, }\item[{string}]{display\+Name}{, }\item[{bool}]{default\+Value}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a new toggle component. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+UI/\+Builder/\mbox{\hyperlink{UIBuilder_8cs}{UIBuilder.\+cs}}\end{DoxyCompactItemize}

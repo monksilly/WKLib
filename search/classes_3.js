@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['regionbuilder_0',['RegionBuilder',['../classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder.html',1,'WKLib::Gamemodes::Builders']]]
+  ['modcontext_0',['ModContext',['../classWKLib_1_1Core_1_1ModContext.html',1,'WKLib::Core']]],
+  ['modregistry_1',['ModRegistry',['../classWKLib_1_1Core_1_1ModRegistry.html',1,'WKLib::Core']]]
 ];
