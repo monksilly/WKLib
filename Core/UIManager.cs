@@ -96,8 +96,23 @@ public static class UIManager
             _initialized = false;
         }
     }
+
     /// <summary>
-    /// Execute an action when the UI is ready (persistent across scenes)
+    /// Registers a UI component with the UIManager for persistence across scene transitions and ensures its associated GameObject is created when the UI is ready.
+    /// </summary>
+    /// <param name="component">The component to be registered, implementing the <see cref="IWKComponent"/> interface.</param>
+    public static void RegisterComponent(IWKComponent component)
+    {
+        if (!RegisteredComponents.Contains(component))
+        {
+            RegisteredComponents.Add(component);
+        }
+        
+        ExecuteWhenReady(component.CreateGameObject);
+    }
+
+    /// <summary>
+    /// Execute an action when the UI is ready
     /// </summary>
     public static void ExecuteWhenReady(Action action)
     {

@@ -26,7 +26,7 @@ public abstract class WKComponent : IWKComponent
         SettingName = settingName;
         LabelText = displayName;
         
-        UIManager.ExecuteWhenReady(CreateGameObject);
+        UIManager.RegisterComponent(this);
     }
     
 
