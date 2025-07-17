@@ -231,7 +231,7 @@ public static class UIManager
 
         SliderTemplatePath = $"{AccessibilityInterfaceColumn}/SliderAsset - UI Scale";
         ToggleTemplatePath = $"{AccessibilityVisualsColumn}/Item High Visibility";
-        DropdownTemplatePath = $"{VideoScreenInfoColumn}/Screen Resolution/Dropdown/";
+        DropdownTemplatePath = $"{VideoScreenInfoColumn}/Screen Resolution";
     }
 
     /// <summary>

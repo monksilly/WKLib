@@ -41,6 +41,7 @@ public class WKDropdown : WKComponent
         WKSettings.RegisterSetting(SettingName, DefaultValue);
         
         RemoveOldBinders<DropdownBinder>();
+        RemoveOldBinders<Settings_Resolution>();
         
         var dropdown = GameObject.GetComponentInChildren<TMP_Dropdown>();
         if (dropdown == null)
@@ -150,5 +151,37 @@ public class WKDropdown : WKComponent
             _onValueChanged?.Invoke(this);
         }
         return this;
+    }
+
+    /// <summary>
+    /// Override SetLabelText to look for the label on the parent GameObject (SettingsResolution)
+    /// instead of searching in children
+    /// </summary>
+    protected new void SetLabelText()
+    {
+        if (GameObject == null)
+        {
+            WKLog.Warn($"WkDropdown: Cannot set label text - GameObject is null for '{SettingName}'");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(LabelText))
+        {
+            WKLog.Warn($"WkDropdown: LabelText is null or empty for '{SettingName}'");
+            return;
+        }
+        
+        // Look for TextMeshPro component on the parent GameObject (SettingsResolution)
+        var tmpComponent = GameObject.GetComponent<TMPro.TextMeshProUGUI>();
+        if (tmpComponent != null)
+        {
+            Label = tmpComponent;
+            Label.text = LabelText;
+            WKLog.Info($"WkDropdown: Set label to '{LabelText}' for '{SettingName}' on parent GameObject");
+        }
+        else
+        {
+            WKLog.Warn($"WkDropdown: No TextMeshPro component found on parent GameObject for '{SettingName}'");
+        }
     }
 } 
