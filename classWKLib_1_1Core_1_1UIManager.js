@@ -6,6 +6,7 @@ var classWKLib_1_1Core_1_1UIManager =
     [ "GetColumnPath", "classWKLib_1_1Core_1_1UIManager.html#a07309e62e2ee1e8584319e5538cef15f", null ],
     [ "Initialize", "classWKLib_1_1Core_1_1UIManager.html#a4c6aff5660df8ee24ce54725a28d91e1", null ],
     [ "IsUIReady", "classWKLib_1_1Core_1_1UIManager.html#a442754125a4ac0f7360bf1ca9a070cb6", null ],
+    [ "RegisterComponent", "classWKLib_1_1Core_1_1UIManager.html#a36001250789a43259f1a0025f06ed70c", null ],
     [ "TryInitialize", "classWKLib_1_1Core_1_1UIManager.html#a23127b0cbc7388129bfb9b4d6169c8a0", null ],
     [ "AccessibilityInterfaceColumn", "classWKLib_1_1Core_1_1UIManager.html#a420a1633c697e5e42bd2dd771d6094d0", null ],
     [ "AccessibilityOtherColumn", "classWKLib_1_1Core_1_1UIManager.html#a04664c4f33f2b541941e3fe7ae0156fe", null ],

@@ -10,8 +10,10 @@
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+static void \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a36001250789a43259f1a0025f06ed70c}{Register\+Component}} (\mbox{\hyperlink{interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent}{IWKComponent}} component)
+\begin{DoxyCompactList}\small\item\em Registers a \doxylink{namespaceWKLib_1_1UI}{UI} component with the \doxylink{classWKLib_1_1Core_1_1UIManager}{UIManager} for persistence across scene transitions and ensures its associated Game\+Object is created when the \doxylink{namespaceWKLib_1_1UI}{UI} is ready. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_ad9609fe3ccea0da7fc197a51b8254329}{Execute\+When\+Ready}} (Action action)
-\begin{DoxyCompactList}\small\item\em Execute an action when the \doxylink{namespaceWKLib_1_1UI}{UI} is ready (persistent across scenes) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Execute an action when the \doxylink{namespaceWKLib_1_1UI}{UI} is ready. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a23127b0cbc7388129bfb9b4d6169c8a0}{Try\+Initialize}} ()
 \begin{DoxyCompactList}\small\item\em Try to initialize -\/ called from scene loading and can be called manually. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classWKLib_1_1Core_1_1UIManager_a4c6aff5660df8ee24ce54725a28d91e1}{Initialize}} ()
@@ -65,7 +67,7 @@ static void WKLib.\+Core.\+UIManager.\+Execute\+When\+Ready (\begin{DoxyParamCap
 
 
 
-Execute an action when the \doxylink{namespaceWKLib_1_1UI}{UI} is ready (persistent across scenes) 
+Execute an action when the \doxylink{namespaceWKLib_1_1UI}{UI} is ready. 
 
 \Hypertarget{classWKLib_1_1Core_1_1UIManager_af2fa8cf1547c783751a63ba20711c4d4}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!FindTemplate@{FindTemplate}}
 \index{FindTemplate@{FindTemplate}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
@@ -117,6 +119,21 @@ static bool WKLib.\+Core.\+UIManager.\+Is\+UIReady (\begin{DoxyParamCaption}{}{}
 
 Check if the \doxylink{namespaceWKLib_1_1UI}{UI} Manager has been initialized and paths are ready. 
 
+\Hypertarget{classWKLib_1_1Core_1_1UIManager_a36001250789a43259f1a0025f06ed70c}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!RegisterComponent@{RegisterComponent}}
+\index{RegisterComponent@{RegisterComponent}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
+\doxysubsubsection{\texorpdfstring{RegisterComponent()}{RegisterComponent()}}
+{\footnotesize\ttfamily \label{classWKLib_1_1Core_1_1UIManager_a36001250789a43259f1a0025f06ed70c} 
+static void WKLib.\+Core.\+UIManager.\+Register\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent}{IWKComponent}}}]{component}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Registers a \doxylink{namespaceWKLib_1_1UI}{UI} component with the \doxylink{classWKLib_1_1Core_1_1UIManager}{UIManager} for persistence across scene transitions and ensures its associated Game\+Object is created when the \doxylink{namespaceWKLib_1_1UI}{UI} is ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & The component to be registered, implementing the IWKComponent interface.\\
+\hline
+\end{DoxyParams}
 \Hypertarget{classWKLib_1_1Core_1_1UIManager_a23127b0cbc7388129bfb9b4d6169c8a0}\index{WKLib.Core.UIManager@{WKLib.Core.UIManager}!TryInitialize@{TryInitialize}}
 \index{TryInitialize@{TryInitialize}!WKLib.Core.UIManager@{WKLib.Core.UIManager}}
 \doxysubsubsection{\texorpdfstring{TryInitialize()}{TryInitialize()}}

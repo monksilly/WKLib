@@ -60,7 +60,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AssetService_8cs.html",
-"classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#ab108f89e090811c2adff21e319207ef5"
+"classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#a8ada6717d990e9626cbd1c9dd519dac0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

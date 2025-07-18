@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#a8ada6717d990e9626cbd1c9dd519dac0":[1,0,0,3,1,0,0,1],
+"classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#aaa48bb525476899c2506b748c819004a":[0,4,0,3,1,0,0,0],
+"classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#aaa48bb525476899c2506b748c819004a":[1,0,0,3,1,0,0,0],
+"classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#ab108f89e090811c2adff21e319207ef5":[0,4,0,3,1,0,0,2],
 "classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#ab108f89e090811c2adff21e319207ef5":[1,0,0,3,1,0,0,2],
 "classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#ad5409ebffd296aa96309d182c21023c7":[0,4,0,3,1,0,0,3],
 "classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#ad5409ebffd296aa96309d182c21023c7":[1,0,0,3,1,0,0,3],

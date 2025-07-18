@@ -5,6 +5,7 @@ var classWKLib_1_1UI_1_1Components_1_1WKDropdown =
     [ "GetTemplatePath", "classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a4282354c19c6257c026326b3293f88a7", null ],
     [ "GetText", "classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#af6347f2391c92704da8550dee67425ad", null ],
     [ "GetValue", "classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a01664c587b3e6a5195d2731f241c330f", null ],
+    [ "SetLabelText", "classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#ac0762431109281dd760843c05efd799c", null ],
     [ "SetListener", "classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a0a1afe6cf0a73df7c0e78200b9340587", null ],
     [ "SetOptions", "classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#aa6aa01214ca2f215ada4a4c485145368", null ],
     [ "SetValue", "classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a1fadbf059d0838c898a16ae55a4e90d2", null ],

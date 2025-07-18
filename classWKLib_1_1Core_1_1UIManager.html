@@ -113,8 +113,11 @@ $(function(){initNavTree('classWKLib_1_1Core_1_1UIManager.html',''); initResizab
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a36001250789a43259f1a0025f06ed70c" id="r_a36001250789a43259f1a0025f06ed70c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36001250789a43259f1a0025f06ed70c">RegisterComponent</a> (<a class="el" href="interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent.html">IWKComponent</a> component)</td></tr>
+<tr class="memdesc:a36001250789a43259f1a0025f06ed70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> component with the <a class="el" href="classWKLib_1_1Core_1_1UIManager.html" title="Core UI management system for WKLib.  Dynamically finds UI paths at runtime to be resilient to hierar...">UIManager</a> for persistence across scene transitions and ensures its associated GameObject is created when the <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> is ready.  <br /></td></tr>
+<tr class="separator:a36001250789a43259f1a0025f06ed70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9609fe3ccea0da7fc197a51b8254329" id="r_ad9609fe3ccea0da7fc197a51b8254329"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9609fe3ccea0da7fc197a51b8254329">ExecuteWhenReady</a> (Action action)</td></tr>
-<tr class="memdesc:ad9609fe3ccea0da7fc197a51b8254329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an action when the <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> is ready (persistent across scenes)  <br /></td></tr>
+<tr class="memdesc:ad9609fe3ccea0da7fc197a51b8254329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an action when the <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> is ready.  <br /></td></tr>
 <tr class="separator:ad9609fe3ccea0da7fc197a51b8254329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23127b0cbc7388129bfb9b4d6169c8a0" id="r_a23127b0cbc7388129bfb9b4d6169c8a0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23127b0cbc7388129bfb9b4d6169c8a0">TryInitialize</a> ()</td></tr>
 <tr class="memdesc:a23127b0cbc7388129bfb9b4d6169c8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to initialize - called from scene loading and can be called manually.  <br /></td></tr>
@@ -188,7 +191,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Execute an action when the <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> is ready (persistent across scenes) </p>
+<p>Execute an action when the <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> is ready. </p>
 
 </div>
 </div>
@@ -324,6 +327,39 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if the <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> Manager has been initialized and paths are ready. </p>
+
+</div>
+</div>
+<a id="a36001250789a43259f1a0025f06ed70c" name="a36001250789a43259f1a0025f06ed70c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36001250789a43259f1a0025f06ed70c">&#9670;&#160;</a></span>RegisterComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void WKLib.Core.UIManager.RegisterComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent.html">IWKComponent</a></td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> component with the <a class="el" href="classWKLib_1_1Core_1_1UIManager.html" title="Core UI management system for WKLib.  Dynamically finds UI paths at runtime to be resilient to hierar...">UIManager</a> for persistence across scene transitions and ensures its associated GameObject is created when the <a class="el" href="namespaceWKLib_1_1UI.html">UI</a> is ready. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>The component to be registered, implementing the IWKComponent interface.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
