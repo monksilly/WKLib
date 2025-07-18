@@ -44,6 +44,7 @@ public class WKSlider : WKComponent
         WKSettings.RegisterSetting(SettingName, DefaultValue);
         
         RemoveOldBinders<SliderSettingBinder>();
+        RemoveOldBinders<TextSettingsBinder>();
         
         var submitSlider = GameObject.GetComponentInChildren<SubmitSlider>();
         if (submitSlider == null)
