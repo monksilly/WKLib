@@ -178,6 +178,7 @@ public class GamemodeBuilder
         gm.roachBankID = $"custom-{_modeName}";
         gm.gamemodePanel = Resources.FindObjectsOfTypeAll<UI_GamemodeScreen_Panel>().FirstOrDefault(x => x.name == "Gamemode_Panel_Base");
         gm.loseScreen = Resources.FindObjectsOfTypeAll<UI_ScoreScreen>().FirstOrDefault(x => x.name == "ScorePanel_Standard_Death");
+        gm.winScreen = Resources.FindObjectsOfTypeAll<UI_ScoreScreen>().FirstOrDefault(x => x.name == "ScorePanel_Standard_Win");
         gm.modeTags = [""];
         gm.unlockAchievement = "";
 

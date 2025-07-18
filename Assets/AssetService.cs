@@ -307,6 +307,8 @@ public class AssetService
             .FirstOrDefault(x => x.name == "Gamemode_Panel_Base");
         gamemode.loseScreen = Resources.FindObjectsOfTypeAll<UI_ScoreScreen>()
             .FirstOrDefault(x => x.name == "ScorePanel_Standard_Death");
+        gamemode.winScreen = Resources.FindObjectsOfTypeAll<UI_ScoreScreen>()
+            .FirstOrDefault(x => x.name == "ScorePanel_Standard_Win");
         
         _gamemodeCache[cacheKey] = gamemode;
         progress?.Report(1f);
