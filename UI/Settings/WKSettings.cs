@@ -167,8 +167,8 @@ public static class WKSettings
     {
         try
         {
-            var originalGetSetting = typeof(global::SettingsManager).GetMethod("GetSetting", new Type[] { typeof(string) });
-            var originalSetSetting = typeof(global::SettingsManager).GetMethod("SetSetting", new Type[] { typeof(string[]) });
+            var originalGetSetting = typeof(global::SettingsManager).GetMethod("GetSetting", [typeof(string)]);
+            var originalSetSetting = typeof(global::SettingsManager).GetMethod("SetSetting", [typeof(string[])]);
             var originalSaveSettings = typeof(global::SettingsManager).GetMethod("SaveSettings");
             var originalLoadSettings = typeof(global::SettingsManager).GetMethod("LoadSettings");
 
@@ -241,7 +241,7 @@ public static class WKSettings
                 var entry = new SettingEntry
                 {
                     key = kvp.Key,
-                    value = kvp.Value.CurrentValue?.ToString() ?? "",
+                    value = SerializeValue(kvp.Value.CurrentValue),
                     type = kvp.Value.Type.FullName
                 };
                 saveData.settings.Add(entry);
@@ -255,6 +255,22 @@ public static class WKSettings
         {
             WKLog.Error($"WKSettings: Failed to save custom settings: {ex.Message}");
         }
+    }
+
+    private static string SerializeValue(object value)
+    {
+        if (value == null) return "";
+        
+        // For simple types, use ToString()
+        var type = value.GetType();
+        if (type.IsPrimitive || type == typeof(string) || type == typeof(decimal))
+        {
+            return value.ToString();
+        }
+        
+        // For complex types, use json serialization
+            return JsonConvert.SerializeObject(value);
+            
     }
 
     private static void LoadCustomSettings()
@@ -300,6 +316,9 @@ public static class WKSettings
 
     private static object ConvertValueToType(string valueString, Type targetType)
     {
+        if (string.IsNullOrEmpty(valueString)) return GetDefaultValue(targetType);
+        
+        // Handle simple types with direct parsing
         if (targetType == typeof(bool))
             return bool.Parse(valueString);
         else if (targetType == typeof(int))
@@ -308,8 +327,17 @@ public static class WKSettings
             return float.Parse(valueString);
         else if (targetType == typeof(string))
             return valueString;
-        else
+        else if (targetType.IsPrimitive || targetType == typeof(decimal))
             return Convert.ChangeType(valueString, targetType);
+        
+        {
+            return JsonConvert.DeserializeObject(valueString, targetType);
+        }
+    }
+    
+    private static object GetDefaultValue(Type type)
+    {
+        return type.IsValueType ? Activator.CreateInstance(type) : null;
     }
 
     [Serializable]
