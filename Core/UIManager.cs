@@ -35,8 +35,8 @@ public static class UIManager
     public static string SliderTemplatePath { get; private set; }
     public static string ToggleTemplatePath { get; private set; }
     public static string DropdownTemplatePath { get; private set; }
+    public static string SeparatorTemplatePath { get; private set; }    
     #endregion
-
     #region Column Paths
     public static string AccessibilityInterfaceColumn { get; private set; }
     public static string AccessibilityVisualsColumn { get; private set; }
@@ -232,6 +232,7 @@ public static class UIManager
         SliderTemplatePath = $"{AccessibilityInterfaceColumn}/SliderAsset - UI Scale";
         ToggleTemplatePath = $"{AccessibilityVisualsColumn}/Item High Visibility";
         DropdownTemplatePath = $"{VideoScreenInfoColumn}/Screen Resolution";
+        SeparatorTemplatePath = $"{VideoAudioColumn}/--- (1).01";
     }
 
     /// <summary>

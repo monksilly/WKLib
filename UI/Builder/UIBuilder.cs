@@ -36,4 +36,13 @@ public static class UIBuilder
     {
         return new WKDropdown(parentColumn, settingName, displayName, options, defaultValue);
     }
+
+    /// <summary>
+    /// Create a new separator component
+    /// </summary>
+    /// <param name="isInvisible">If true, clears the separator text to make it invisible</param>
+    public static WKSeparator CreateSeparator(UIColumn parentColumn, string settingName, string displayName, bool isInvisible = false)
+    {
+        return new WKSeparator(parentColumn, settingName, displayName, isInvisible);
+    }
 } 
