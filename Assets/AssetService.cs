@@ -223,8 +223,8 @@ public class AssetService
                 var go = allGOs[j];
                 if (go.TryGetComponent<M_Level>(out var level))
                 {
-                    if (!CL_AssetManager.instance.assetDatabase.levelPrefabs.Contains(go))
-                        CL_AssetManager.instance.assetDatabase.levelPrefabs.Add(go);
+                    if (!CL_AssetManager.instance.levelPrefabs.Contains(level))
+                        CL_AssetManager.instance.levelPrefabs.Add(level);
                 
                     // Log its name for debugging
                     WKLog.Debug($"[AssetService] Found level: {level.name}");
@@ -248,7 +248,7 @@ public class AssetService
     /// </summary>
     public List<M_Level> FindLevelsByName(string nameContains)
     {
-        return CL_AssetManager.instance.assetDatabase.levelPrefabs
+        return CL_AssetManager.instance.levelPrefabs
             .Where(prefab => prefab.name.Contains(nameContains))
             .Select(prefab => prefab.GetComponent<M_Level>())
             .Where(level => level is not null)

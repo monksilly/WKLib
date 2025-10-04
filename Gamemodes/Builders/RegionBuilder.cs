@@ -89,7 +89,7 @@ public class RegionBuilder
         
 
         // pick a default start level - M1_Intro_01 (if exists)
-        var defaultPrefab = CL_AssetManager.instance.assetDatabase.levelPrefabs
+        var defaultPrefab = CL_AssetManager.instance.levelPrefabs
             .FirstOrDefault(pref => pref.name == "M1_Intro_01");
         var defaultLevelComp = defaultPrefab?.GetComponent<M_Level>();
         if (defaultLevelComp is not null && _hasStartingLevel)
