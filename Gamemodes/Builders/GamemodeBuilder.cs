@@ -181,6 +181,7 @@ public class GamemodeBuilder
         gm.winScreen = Resources.FindObjectsOfTypeAll<UI_ScoreScreen>().FirstOrDefault(x => x.name == "ScorePanel_Standard_Win");
         gm.modeTags = [""];
         gm.unlockAchievement = "";
+        gm.playlistLevels = [];
 
         var gmStandard = new GamemodeModule_Standard
         {
