@@ -170,8 +170,8 @@ public class AssetService
     /// Given a loaded AssetBundle, iterate over every ".prefab" asset name,
     /// Load it as a GameObject, check for an M_Level component; if found, add to the returned list.<br/>
     /// Also logs each M_Level found via WKLog.Debug("LevelName").<br/>
-    /// If you want to register each prefab in CL_AssetManager.instance.assetDatabase.levelPrefabs,
-    /// this method will do it automatically.
+    /// If you want to register each prefab in a CL_AssetManager database this
+    /// method will do it automatically.
     /// </summary>
     public async Task<Dictionary<string, M_Level>> LoadAllLevelsFromBundle(
         AssetBundle bundle,
@@ -212,6 +212,28 @@ public class AssetService
             return null;
         }
         
+
+        var currentDatabase = CL_AssetManager.GetDatabase(_modContext.ModID);
+        if (currentDatabase == null)
+        {
+            WKLog.Info($"[AssetService] Creating new asset database for {_modContext.ModID}");
+            currentDatabase = new WKAssetDatabase {
+                denizenPrefabs = new List<GameObject>(),
+                entityPrefabs = new List<GameObject>(),
+                itemPrefabs = new List<GameObject>(),
+                levelPrefabs = new List<GameObject>(),
+                regionAssets = new List<M_Region>(),
+                subRegionAssets = new List<M_Subregion>(),
+                gamemodeAssets = new List<M_Gamemode>(),
+                perkAssets = new List<Perk>(),
+                diskData = new List<OS_DiskData>(),
+                sessionEvents = new List<SessionEvent>(),
+                spriteAssets = new List<Sprite>()
+            };
+
+            CL_AssetManager.AddNewDatabase(_modContext.ModID, currentDatabase);
+        }
+
         var allGOs = request.allAssets.Cast<GameObject>().ToList();
         var total = allGOs.Count;
         const int batchSize = 20;
@@ -223,9 +245,9 @@ public class AssetService
                 var go = allGOs[j];
                 if (go.TryGetComponent<M_Level>(out var level))
                 {
-                    if (!CL_AssetManager.instance.levelPrefabs.Contains(level))
-                        CL_AssetManager.instance.levelPrefabs.Add(level);
-                
+                    if (!currentDatabase.levelPrefabs.Contains(go))
+                        currentDatabase.levelPrefabs.Add(go);
+
                     // Log its name for debugging
                     WKLog.Debug($"[AssetService] Found level: {level.name}");
 
@@ -244,11 +266,11 @@ public class AssetService
     
     /// <summary>
     /// Returns all M_Level instances whose prefab names contain the given substring.
-    /// (Uses CL_AssetManager.instance.assetDatabase.levelPrefabs)
+    /// (Uses levelPrefabs from the combined asset database in CL_AssetManager)
     /// </summary>
     public List<M_Level> FindLevelsByName(string nameContains)
     {
-        return CL_AssetManager.instance.levelPrefabs
+        return CL_AssetManager.GetFullCombinedAssetDatabase().levelPrefabs
             .Where(prefab => prefab.name.Contains(nameContains))
             .Select(prefab => prefab.GetComponent<M_Level>())
             .Where(level => level is not null)
