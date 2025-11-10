@@ -23,9 +23,9 @@ void \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_aff18dcaec08796cad856
 async Task$<$ Dictionary$<$ string, M\+\_\+\+Level $>$ $>$ \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_ab000f5f348d6a815c59372c79aeba4a4}{Load\+All\+Levels\+From\+Bundle}} (Asset\+Bundle bundle, IProgress$<$ float $>$ progress=null)
 \begin{DoxyCompactList}\small\item\em Given a loaded Asset\+Bundle, iterate over every "{}.\+prefab"{} asset name, Load it as a Game\+Object, check for an M\+\_\+\+Level component; if found, add to the returned list.~\newline
  Also logs each M\+\_\+\+Level found via \doxylink{classWKLib_1_1Utilities_1_1WKLog_a3cb5ab414da39e8ba8d8c0632589674f}{WKLog.\+Debug}("{}\+Level\+Name"{}).~\newline
- If you want to register each prefab in CL\+\_\+\+Asset\+Manager.\+instance.\+asset\+Database.\+level\+Prefabs, this method will do it automatically. \end{DoxyCompactList}\item 
+ If you want to register each prefab in a CL\+\_\+\+Asset\+Manager database this method will do it automatically. \end{DoxyCompactList}\item 
 List$<$ M\+\_\+\+Level $>$ \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_a99c4e0c913ae051dc14dce3f94913618}{Find\+Levels\+By\+Name}} (string name\+Contains)
-\begin{DoxyCompactList}\small\item\em Returns all M\+\_\+\+Level instances whose prefab names contain the given substring. (Uses CL\+\_\+\+Asset\+Manager.\+instance.\+asset\+Database.\+level\+Prefabs) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns all M\+\_\+\+Level instances whose prefab names contain the given substring. (Uses level\+Prefabs from the combined asset database in CL\+\_\+\+Asset\+Manager) \end{DoxyCompactList}\item 
 async Task$<$ M\+\_\+\+Gamemode $>$ \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_ac6ae893baeb21640920e8dd9fa20cd99}{Load\+Game\+Mode\+From\+Bundle}} (Asset\+Bundle bundle, string asset\+Name, IProgress$<$ float $>$ progress=null)
 \begin{DoxyCompactList}\small\item\em Loads a gamemode from an asset bundle. \end{DoxyCompactList}\item 
 Sprite \mbox{\hyperlink{classWKLib_1_1Assets_1_1AssetService_ac432ab6abea58d7f48ee9080c2b58959}{Load\+Png\+As\+Sprite\+Relative}} (string relative\+Png\+Path)
@@ -58,7 +58,7 @@ List$<$ M\+\_\+\+Level $>$ WKLib.\+Assets.\+Asset\+Service.\+Find\+Levels\+By\+N
 
 
 
-Returns all M\+\_\+\+Level instances whose prefab names contain the given substring. (Uses CL\+\_\+\+Asset\+Manager.\+instance.\+asset\+Database.\+level\+Prefabs) 
+Returns all M\+\_\+\+Level instances whose prefab names contain the given substring. (Uses level\+Prefabs from the combined asset database in CL\+\_\+\+Asset\+Manager) 
 
 \Hypertarget{classWKLib_1_1Assets_1_1AssetService_ab000f5f348d6a815c59372c79aeba4a4}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!LoadAllLevelsFromBundle@{LoadAllLevelsFromBundle}}
 \index{LoadAllLevelsFromBundle@{LoadAllLevelsFromBundle}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}
@@ -70,7 +70,7 @@ async Task$<$ Dictionary$<$ string, M\+\_\+\+Level $>$ $>$ WKLib.\+Assets.\+Asse
 
 Given a loaded Asset\+Bundle, iterate over every "{}.\+prefab"{} asset name, Load it as a Game\+Object, check for an M\+\_\+\+Level component; if found, add to the returned list.~\newline
  Also logs each M\+\_\+\+Level found via \doxylink{classWKLib_1_1Utilities_1_1WKLog_a3cb5ab414da39e8ba8d8c0632589674f}{WKLog.\+Debug}("{}\+Level\+Name"{}).~\newline
- If you want to register each prefab in CL\+\_\+\+Asset\+Manager.\+instance.\+asset\+Database.\+level\+Prefabs, this method will do it automatically. 
+ If you want to register each prefab in a CL\+\_\+\+Asset\+Manager database this method will do it automatically. 
 
 \Hypertarget{classWKLib_1_1Assets_1_1AssetService_ac68a0a8801cbf4df8749a61f7ba31f93}\index{WKLib.Assets.AssetService@{WKLib.Assets.AssetService}!LoadBundleRelativeAsync@{LoadBundleRelativeAsync}}
 \index{LoadBundleRelativeAsync@{LoadBundleRelativeAsync}!WKLib.Assets.AssetService@{WKLib.Assets.AssetService}}

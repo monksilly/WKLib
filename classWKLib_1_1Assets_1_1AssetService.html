@@ -126,10 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab000f5f348d6a815c59372c79aeba4a4" id="r_ab000f5f348d6a815c59372c79aeba4a4"><td class="memItemLeft" align="right" valign="top">async Task&lt; Dictionary&lt; string, M_Level &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab000f5f348d6a815c59372c79aeba4a4">LoadAllLevelsFromBundle</a> (AssetBundle bundle, IProgress&lt; float &gt; progress=null)</td></tr>
 <tr class="memdesc:ab000f5f348d6a815c59372c79aeba4a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a loaded AssetBundle, iterate over every ".prefab" asset name, Load it as a GameObject, check for an M_Level component; if found, add to the returned list.<br  />
  Also logs each M_Level found via <a class="el" href="classWKLib_1_1Utilities_1_1WKLog.html#a3cb5ab414da39e8ba8d8c0632589674f">WKLog.Debug</a>("LevelName").<br  />
- If you want to register each prefab in CL_AssetManager.instance.assetDatabase.levelPrefabs, this method will do it automatically.  <br /></td></tr>
+ If you want to register each prefab in a CL_AssetManager database this method will do it automatically.  <br /></td></tr>
 <tr class="separator:ab000f5f348d6a815c59372c79aeba4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99c4e0c913ae051dc14dce3f94913618" id="r_a99c4e0c913ae051dc14dce3f94913618"><td class="memItemLeft" align="right" valign="top">List&lt; M_Level &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99c4e0c913ae051dc14dce3f94913618">FindLevelsByName</a> (string nameContains)</td></tr>
-<tr class="memdesc:a99c4e0c913ae051dc14dce3f94913618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all M_Level instances whose prefab names contain the given substring. (Uses CL_AssetManager.instance.assetDatabase.levelPrefabs)  <br /></td></tr>
+<tr class="memdesc:a99c4e0c913ae051dc14dce3f94913618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all M_Level instances whose prefab names contain the given substring. (Uses levelPrefabs from the combined asset database in CL_AssetManager)  <br /></td></tr>
 <tr class="separator:a99c4e0c913ae051dc14dce3f94913618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6ae893baeb21640920e8dd9fa20cd99" id="r_ac6ae893baeb21640920e8dd9fa20cd99"><td class="memItemLeft" align="right" valign="top">async Task&lt; M_Gamemode &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6ae893baeb21640920e8dd9fa20cd99">LoadGameModeFromBundle</a> (AssetBundle bundle, string assetName, IProgress&lt; float &gt; progress=null)</td></tr>
 <tr class="memdesc:ac6ae893baeb21640920e8dd9fa20cd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a gamemode from an asset bundle.  <br /></td></tr>
@@ -178,7 +178,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns all M_Level instances whose prefab names contain the given substring. (Uses CL_AssetManager.instance.assetDatabase.levelPrefabs) </p>
+<p>Returns all M_Level instances whose prefab names contain the given substring. (Uses levelPrefabs from the combined asset database in CL_AssetManager) </p>
 
 </div>
 </div>
@@ -203,7 +203,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Given a loaded AssetBundle, iterate over every ".prefab" asset name, Load it as a GameObject, check for an M_Level component; if found, add to the returned list.<br  />
  Also logs each M_Level found via <a class="el" href="classWKLib_1_1Utilities_1_1WKLog.html#a3cb5ab414da39e8ba8d8c0632589674f">WKLog.Debug</a>("LevelName").<br  />
- If you want to register each prefab in CL_AssetManager.instance.assetDatabase.levelPrefabs, this method will do it automatically. </p>
+ If you want to register each prefab in a CL_AssetManager database this method will do it automatically. </p>
 
 </div>
 </div>
