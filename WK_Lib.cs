@@ -1,4 +1,5 @@
-﻿using BepInEx;
+﻿using System;
+using BepInEx;
 using BepInEx.Logging;
 using TMPro;
 using UnityEngine;
@@ -40,5 +41,10 @@ public class WkLib : BaseUnityPlugin
 
         versionText.text += $" (wklib-{VERSION}) ({BepInEx.Bootstrap.Chainloader.PluginInfos.Count} Mods)";
     }
-    
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        WKLog.Info($"Plugin {NAME} unloaded!");
+    }
 }
