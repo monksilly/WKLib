@@ -35,6 +35,9 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Reference Include="ImuiBepInEx">
+      <HintPath>Libs\ImuiBepInEx.dll</HintPath>
+    </Reference>
     <Reference Include="ALINE">
       <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/ALINE.dll</HintPath>
       <Private>false</Private>
