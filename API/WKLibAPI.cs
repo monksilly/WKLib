@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using WKLib.API.Assets;
 using WKLib.API.Config;
 using WKLib.API.UI;
 
@@ -18,6 +19,8 @@ public class WKLibAPI
     public ConfigFolder ConfigFolder = null;
     public ConfigFile DefaultConfigFile = null;
 
+    public AssetService AssetService = null;
+    
     public WKLibAPI(string displayName, string guid)
     {
         DisplayName = displayName;
@@ -25,6 +28,7 @@ public class WKLibAPI
         
         //ConfigFolder = new ConfigFolder(displayName);
         //DefaultConfigFile = Config.ConfigFolder.GetOrCreateConfigFile(guid);
+        AssetService = new AssetService(this);
     }
 
     /// <summary>

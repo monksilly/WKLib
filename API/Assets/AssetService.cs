@@ -5,19 +5,19 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using WKLib.Core;
 using UnityEngine;
+using WKLib.API;
 using WKLib.Utilities;
 using Object = UnityEngine.Object;
 
-namespace WKLib.Assets;
+namespace WKLib.API.Assets;
 
 /// <summary>
 /// Loads and caches AssetBundles and assets, scoped by ModContext to avoid collisions.
 /// </summary>
 public class AssetService
 {
-    private readonly ModContext _modContext;
+    private readonly WKLibAPI _wkLibAPI;
     private readonly string _assemblyFolder;
     private readonly Dictionary<string, AssetBundle> _bundleCache = new();
     private readonly Dictionary<string, Dictionary<string, M_Level>> _loadedLevelsCache = new();
@@ -25,9 +25,9 @@ public class AssetService
     
     private readonly CancellationTokenSource _sQuitCts = new();
     
-    public AssetService(ModContext modContext)
+    public AssetService(WKLibAPI API)
     {
-        _modContext = modContext ?? throw new ArgumentNullException(nameof(modContext));
+        _wkLibAPI = API ?? throw new ArgumentNullException(nameof(API));
         var assemblyPath = Assembly.GetExecutingAssembly().Location;
         _assemblyFolder = Path.GetDirectoryName(assemblyPath) ?? string.Empty;
 
@@ -57,7 +57,7 @@ public class AssetService
             return null;
         }
 
-        var cacheKey = $"{_modContext.ModID}:{Path.GetFileNameWithoutExtension(relativePath)}";
+        var cacheKey = $"{_wkLibAPI.DisplayName}:{Path.GetFileNameWithoutExtension(relativePath)}";
         if (_bundleCache.TryGetValue(cacheKey, out var cached) && cached is not null)
         {
             WKLog.Debug($"[AssetService] Returning cached bundle: {cacheKey}");
@@ -120,7 +120,7 @@ public class AssetService
     /// </summary>
     public void UnloadBundleRelative(string relativePath, bool unloadAllLoadedObjects = false)
     {
-        var cacheKey = $"{_modContext.ModID}:{relativePath}";
+        var cacheKey = $"{_wkLibAPI.DisplayName}:{relativePath}";
         if (_bundleCache.TryGetValue(cacheKey, out var bundle) && bundle is not null)
         {
             try
@@ -142,7 +142,7 @@ public class AssetService
     /// </summary>
     public void UnloadAllBundles(bool unloadAllLoadedObjects = false)
     {
-        var keys = _bundleCache.Keys.Where(k => k.StartsWith(_modContext.ModID + ":")).ToList();
+        var keys = _bundleCache.Keys.Where(k => k.StartsWith(_wkLibAPI.DisplayName + ":")).ToList();
         foreach (var key in keys)
         {
             if (_bundleCache[key] is not null)
@@ -186,7 +186,7 @@ public class AssetService
             return foundLevels;
         }
 
-        var cacheKey = $"{_modContext.ModID}:{bundle.name}";
+        var cacheKey = $"{_wkLibAPI.DisplayName}:{bundle.name}";
 
         if (_loadedLevelsCache.ContainsKey(cacheKey))
         {
@@ -213,10 +213,10 @@ public class AssetService
         }
         
 
-        var currentDatabase = CL_AssetManager.GetDatabase(_modContext.ModID);
+        var currentDatabase = CL_AssetManager.GetDatabase(_wkLibAPI.DisplayName);
         if (currentDatabase == null)
         {
-            WKLog.Info($"[AssetService] Creating new asset database for {_modContext.ModID}");
+            WKLog.Info($"[AssetService] Creating new asset database for {_wkLibAPI.DisplayName}");
             currentDatabase = new WKAssetDatabase {
                 denizenPrefabs = new List<GameObject>(),
                 entityPrefabs = new List<GameObject>(),
@@ -231,7 +231,7 @@ public class AssetService
                 spriteAssets = new List<Sprite>()
             };
 
-            CL_AssetManager.AddNewDatabase(_modContext.ModID, currentDatabase);
+            CL_AssetManager.AddNewDatabase(_wkLibAPI.DisplayName, currentDatabase);
         }
 
         var allGOs = request.allAssets.Cast<GameObject>().ToList();
@@ -297,7 +297,7 @@ public class AssetService
             return null;
         }
 
-        var cacheKey = $"{_modContext.ModID}:{assetName}";
+        var cacheKey = $"{_wkLibAPI.DisplayName}:{assetName}";
         
         if (_gamemodeCache.TryGetValue(cacheKey, out var cachedGamemode))
         {
