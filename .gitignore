@@ -8,3 +8,10 @@
 *.DotSettings.*
 docs
 !docs/CNAME
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

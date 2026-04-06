@@ -5,20 +5,29 @@
     <Product>WKLib</Product>
     <Version>0.0.2</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>14.0</LangVersion>
+    <RootNamespace>WKLib</RootNamespace>
+    <WhiteKnuckleDir>Defined in WK_Lib.csproj.user!!</WhiteKnuckleDir> <!-- Ensure that this has BepInEx installed -->
+    <CopyToBepInExPluginsDir>true</CopyToBepInExPluginsDir>
+    
     <RestoreAdditionalProjectSources>
       https://api.nuget.org/v3/index.json;
       https://nuget.bepinex.dev/v3/index.json;
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
-    <RootNamespace>WKLib</RootNamespace>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
   </PropertyGroup>
-
+    
+  <Import Project="Properties/DeployToPlugins.targets" />
+  
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
-    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-    <PackageReference Include="UnityEngine.Modules" Version="2022.3.32" IncludeAssets="compile" />
+    <PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="UnityEngine.Modules" Version="2022.3.62" IncludeAssets="compile" />
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
@@ -27,41 +36,67 @@
   
   <ItemGroup>
     <Reference Include="ALINE">
-      <HintPath>deps\ALINE.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/ALINE.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>deps\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="DarkMachineUI">
-      <HintPath>deps\DarkMachineUI.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/DarkMachineUI.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>deps\Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/Newtonsoft.Json.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="System.Runtime">
-      <HintPath>deps\System.Runtime.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/System.Runtime.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="System.Runtime.InteropServices">
-      <HintPath>deps\System.Runtime.InteropServices.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/System.Runtime.InteropServices.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="System.Runtime.Serialization">
-      <HintPath>deps\System.Runtime.Serialization.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/System.Runtime.Serialization.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="Unity.Collections">
-      <HintPath>deps\Unity.Collections.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/Unity.Collections.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>deps\Unity.Mathematics.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/Unity.Mathematics.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>deps\Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>deps\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>deps\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(WhiteKnuckleDir)White Knuckle_Data/Managed/UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+      <CopyLocal>false</CopyLocal>
     </Reference>
+
+    <Publicize Include="Assembly-CSharp"/>
   </ItemGroup>
   
   <ItemGroup>
@@ -71,9 +106,4 @@
   <ItemGroup>
     <Content Include=".github\workflows\docgen.yml" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /Y /D &quot;$(TargetPath)&quot; &quot;F:\Modding Stuff\White Knuckle\CustomGamemodes\deps\&quot;" />
-    <Exec Command="xcopy /Y /D &quot;$(TargetPath)&quot; &quot;D:\SteamLibrary\steamapps\common\White Knuckle\BepInEx\plugins\WKLib\&quot;" />
-  </Target>
 </Project>
