@@ -22,7 +22,7 @@ _By the way, contributions are welcome ;)_
 
 
 ## Documentation
-**Code Documentation** can be found [_**here**_](https://monksilly.github.io/wklib)
+**Code Documentation** can be found [_**here**_](https://github.com/monksilly/WKLib/wiki/Code-Documentation-Index)
 
 **Guides/Tutorials** can be found [_**here**_](https://github.com/monksilly/WKLib/wiki)
 
