@@ -1,11 +1,8 @@
-﻿using System;
-using BepInEx;
-using BepInEx.Logging;
+﻿using BepInEx;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using WKLib.Utilities;
-using WKLib.Core;
 
 namespace WKLib;
 
@@ -13,7 +10,7 @@ namespace WKLib;
 /// Main Entry point of the whole Library
 /// </summary>
 [BepInPlugin(GUID, NAME, VERSION)]
-public class WkLib : BaseUnityPlugin
+public class WKLibPlugin : BaseUnityPlugin
 {
     public const string GUID = "com.monksilly.WKLib";
     public const string NAME = "WKLib";
@@ -26,9 +23,6 @@ public class WkLib : BaseUnityPlugin
         
         WKLog.Info($"Plugin {NAME} v{VERSION} is loaded!");
         
-        // Initialize UI System
-        UIManager.TryInitialize();
-
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
