@@ -18,7 +18,7 @@ public class WKLibPlugin : BaseUnityPlugin
 {
     public const string GUID = "com.monksilly.WKLib";
     public const string NAME = "WKLib";
-    public const string VERSION = "0.0.2";
+    public const string VERSION = "0.1.0";
 
     private static Harmony harmony = null;
     
