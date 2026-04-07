@@ -6,47 +6,43 @@ using UnityEngine;
 
 namespace WKLib.API.Input;
 
-// TODO: Add more keys (basically all of them)
 public static class InputUtility
 {
-    private static Dictionary<KeyCode, bool> keys = new Dictionary<KeyCode, bool>()
-    {
-        { KeyCode.RightShift, false },
-        { KeyCode.LeftShift, false },
-        { KeyCode.RightControl, false },
-        { KeyCode.LeftControl,false },
-        { KeyCode.RightAlt, false },
-        { KeyCode.LeftAlt, false },
-    };
-    
+    private static Dictionary<KeyCode, bool> keysDictionary = new Dictionary<KeyCode, bool>();
+        
     public static void HandleInput(ImGui gui)
     {
+        if (keysDictionary.Keys.Count <= 0)
+        {
+            foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
+            {
+                keysDictionary[keyCode] = false;
+            }
+        }
+        
         for (int i = 0; i < gui.Input.KeyboardEventsCount; ++i)
         {
             var keyboardEvent = gui.Input.GetKeyboardEvent(i);
             var key = keyboardEvent.Key;
 
-            if (keys.ContainsKey(key))
-            {
-                bool isDown = keyboardEvent.Type == ImKeyboardEventType.Down;
-                bool isUp = keyboardEvent.Type == ImKeyboardEventType.Up;
+            bool isDown = keyboardEvent.Type == ImKeyboardEventType.Down;
+            bool isUp = keyboardEvent.Type == ImKeyboardEventType.Up;
 
-                if (isDown)
-                {
-                    keys[key] = true;
-                }
-                else if (isUp)
-                {
-                    keys[key] = false;
-                }
+            if (isDown)
+            {
+                keysDictionary[key] = true;
+            }
+            else if (isUp)
+            {
+                keysDictionary[key] = false;
             }
         }
     }
 
     public static bool GetKeyDown(KeyCode key)
     {
-        if (keys.TryGetValue(key, out var keyState))
+        if (keysDictionary.TryGetValue(key, out var keyState))
             return keyState;
-        throw new Exception($"No key ({key.ToString()}) could be found in {nameof(InputUtility)}.{nameof(keys)}.");
+        throw new Exception($"No key ({key.ToString()}) could be found in {nameof(InputUtility)}.{nameof(keysDictionary)}.");
     }
 }
