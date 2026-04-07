@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using BepInEx;
 using HarmonyLib;
-using ImuiBepInEx.API;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -54,7 +53,8 @@ public class WKLibPlugin : BaseUnityPlugin
     private void OnDestroy()
     {
         harmony?.UnpatchSelf();
-            
+        Destroy(RootPanel.Instance.transform.parent); //TODO: Better
+        
         SceneManager.sceneLoaded -= OnSceneLoaded;
         WKLog.Info($"Plugin {NAME} unloaded!");
     }
