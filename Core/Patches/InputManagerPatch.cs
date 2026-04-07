@@ -15,7 +15,12 @@ internal static class InputManagerPatch
         if (RootPanel.Instance != null)
             return;
 
-        var imuiPanel = ImuiBepInExAPI.CreateImuiPanel<RootPanel>();
-        RootPanel.Instance.ImuiPanel = imuiPanel;
+        var imuiPanel = ImuiBepInExAPI.CreateImuiPanel();
+        imuiPanel.Backend.gameObject.SetActive(false);
+        
+        var rootPanel = imuiPanel.Backend.gameObject.AddComponent<RootPanel>();
+        rootPanel.ImuiPanel = imuiPanel;
+
+        imuiPanel.Backend.gameObject.SetActive(true);
     }
 }
