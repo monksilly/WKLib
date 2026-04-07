@@ -1,7 +1,12 @@
-﻿using BepInEx;
+﻿using System.Reflection;
+using BepInEx;
+using HarmonyLib;
+using ImuiBepInEx.API;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using WKLib.Core.Attributes;
+using WKLib.Core.UI;
 using WKLib.Utilities;
 
 namespace WKLib;
@@ -15,11 +20,21 @@ public class WKLibPlugin : BaseUnityPlugin
     public const string GUID = "com.monksilly.WKLib";
     public const string NAME = "WKLib";
     public const string VERSION = "0.0.2";
+
+    private static Harmony harmony = null;
     
     private void Awake()
     {
         // Initialize Logger
         WKLog.Initialize(Logger);
+        
+        harmony = new Harmony(GUID);
+        
+        foreach (var type in typeof(WKLibPlugin).Assembly.GetTypes())
+        {
+            if (type.GetCustomAttribute<PatchOnEntryAttribute>() != null)
+                harmony.PatchAll(type);
+        }
         
         WKLog.Info($"Plugin {NAME} v{VERSION} is loaded!");
         
@@ -38,6 +53,8 @@ public class WKLibPlugin : BaseUnityPlugin
 
     private void OnDestroy()
     {
+        harmony?.UnpatchSelf();
+            
         SceneManager.sceneLoaded -= OnSceneLoaded;
         WKLog.Info($"Plugin {NAME} unloaded!");
     }
