@@ -13,6 +13,7 @@ namespace WKLib;
 /// <summary>
 /// Main Entry point of the whole Library
 /// </summary>
+[BepInDependency(ImuiBepInEx.Plugin.GUID, BepInDependency.DependencyFlags.HardDependency)]
 [BepInPlugin(GUID, NAME, VERSION)]
 public class WKLibPlugin : BaseUnityPlugin
 {
