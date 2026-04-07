@@ -15,6 +15,7 @@ internal static class InputManagerPatch
         if (RootPanel.Instance != null)
             return;
 
-        ImuiBepInExAPI.CreateImuiPanel<RootPanel>();
+        var imuiPanel = ImuiBepInExAPI.CreateImuiPanel<RootPanel>();
+        RootPanel.Instance.ImuiPanel = imuiPanel;
     }
 }

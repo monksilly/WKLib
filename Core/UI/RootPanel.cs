@@ -2,6 +2,7 @@ using Imui.Controls;
 using Imui.Core;
 using Imui.Examples;
 using Imui.IO.UGUI;
+using ImuiBepInEx.API;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using WKLib.API;
@@ -15,7 +16,7 @@ namespace WKLib.Core.UI;
 internal class RootPanel : MonoSingleton<RootPanel>
 {
     public ImGui gui = null;
-    private Canvas canvas = null;
+    public ImuiPanel ImuiPanel = null;
 
     private ThemeController themeController = null;
     private OverlayState overlayState = null;
@@ -40,12 +41,9 @@ internal class RootPanel : MonoSingleton<RootPanel>
 
         SceneManager.sceneLoaded -= OnSceneChange;
         SceneManager.sceneLoaded += OnSceneChange;
-
-        //TODO: Better way for finding the parent object for DontDestroyOnLoad
-        canvas = transform.parent.GetComponent<Canvas>();
-        canvas.gameObject.hideFlags = HideFlags.HideAndDontSave;
         
-        DontDestroyOnLoad(canvas.gameObject);
+        ImuiPanel.Canvas.hideFlags = HideFlags.HideAndDontSave;
+        DontDestroyOnLoad(ImuiPanel.Canvas);
         
         var backend = transform.GetComponent<ImuiUnityGUIBackend>();
         if (gui == null)

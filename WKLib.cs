@@ -53,7 +53,7 @@ public class WKLibPlugin : BaseUnityPlugin
     private void OnDestroy()
     {
         harmony?.UnpatchSelf();
-        Destroy(RootPanel.Instance.transform.parent); //TODO: Better
+        Destroy(RootPanel.Instance.ImuiPanel.Canvas);
         
         SceneManager.sceneLoaded -= OnSceneLoaded;
         WKLog.Info($"Plugin {NAME} unloaded!");
