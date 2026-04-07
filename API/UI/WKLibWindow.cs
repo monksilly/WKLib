@@ -1,9 +1,7 @@
 using Imui.Core;
-using JetBrains.Annotations;
 
 namespace WKLib.API.UI;
 
-[PublicAPI]
 public abstract class WKLibWindow
 {
     public bool isOpen = false;

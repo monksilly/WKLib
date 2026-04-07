@@ -1,13 +1,11 @@
 using System;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using WKLib.API.Assets;
 using WKLib.API.Config;
 using WKLib.API.UI;
 
 namespace WKLib.API;
 
-[PublicAPI]
 public class WKLibAPI
 {
     internal static List<WKLibAPI> internalAPIs = new List<WKLibAPI>();
