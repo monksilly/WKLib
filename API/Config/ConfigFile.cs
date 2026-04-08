@@ -232,7 +232,6 @@ public class ConfigFile
     // one caller may enter immediately and at most one caller can hold it at a time
     readonly SemaphoreSlim saveLock = new SemaphoreSlim(1, 1);
 
-    //TODO: Rewrite
     public async Task SaveAsync()
     {
         await saveLock.WaitAsync().ConfigureAwait(false);
