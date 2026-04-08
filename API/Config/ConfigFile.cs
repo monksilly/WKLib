@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
@@ -55,7 +57,7 @@ public class ConfigFile
         // Try load file
         try
         {
-            //LoadFromDisk();
+            LoadFromDisk();
         }
         catch (Exception ex)
         {
@@ -181,4 +183,128 @@ public class ConfigFile
             registeredValues.Add(configValue);
         }
     }
+    
+    public void LoadFromDisk()
+    {
+        JObject obj = null;
+
+        if (File.Exists(FilePath))
+        {
+            try
+            {
+                var json = File.ReadAllText(FilePath);
+                if (!string.IsNullOrWhiteSpace(json))
+                    obj = JObject.Parse(json);
+            }
+            catch
+            {
+                // if there was an error, just dont load anything
+                obj = null;
+            }
+        }
+
+        // Clear cache
+        parsedCache.Clear();
+        
+        if (obj != null)
+        {
+            foreach (var prop in obj.Properties())
+                parsedCache[prop.Name] = prop.Value.DeepClone();
+        }
+
+        // Set values
+        lock (registeredValues)
+        {
+            foreach (var value in registeredValues)
+            {
+                if (parsedCache.TryGetValue(value.Key, out var token))
+                {
+                    value.LoadFromJToken(token);
+                }
+                else
+                {
+                    value.ResetToDefaultValue();
+                }
+            }
+        }
+    }
+    
+    // one caller may enter immediately and at most one caller can hold it at a time
+    readonly SemaphoreSlim saveLock = new SemaphoreSlim(1, 1);
+
+    //TODO: Rewrite
+    public async Task SaveAsync()
+    {
+        await saveLock.WaitAsync().ConfigureAwait(false);
+        try
+        {
+            var settings = CoreSettings.Instance.JsonSerializerSettings;
+            var serializer = JsonSerializer.Create(settings);
+
+            // Root object that will become the saved JSON
+            var root = new JObject();
+
+            lock (registeredValues)
+            {
+                foreach (var v in registeredValues)
+                {
+                    // Don't save default values
+                    if (object.Equals(v.GetBoxedValue(), v.GetBoxedDefaultValue())) 
+                        continue;
+
+                    // produce a JToken for the value using the serializer
+                    JToken valueToken = v.GetBoxedValue() == null
+                        ? JValue.CreateNull()
+                        : JToken.FromObject(v.GetBoxedValue(), serializer);
+
+                    // split path and ensure nested objects exist
+                    var parts = v.Key.Split('.');
+                    JObject current = root;
+                    for (int i = 0; i < parts.Length - 1; i++)
+                    {
+                        var part = parts[i];
+                        if (current.TryGetValue(part, out var child) && child is JObject childObj)
+                        {
+                            current = childObj;
+                        }
+                        else
+                        {
+                            var newObj = new JObject();
+                            current[part] = newObj;
+                            current = newObj;
+                        }
+                    }
+
+                    // set the final property
+                    current[parts[^1]] = valueToken;
+                }
+            }
+
+            // if root has no properties, write empty object {}
+            var text = root.HasValues
+                ? root.ToString(Formatting.Indented)
+                : "{}";
+
+            // Ensure directory exists
+            var dir = Path.GetDirectoryName(FilePath);
+            if (!string.IsNullOrWhiteSpace(dir) && !Directory.Exists(dir))
+                Directory.CreateDirectory(dir);
+
+            await File.WriteAllTextAsync(FilePath, text).ConfigureAwait(false);
+
+            // Update parsedCache to match saved JSON (top-level entries)
+            parsedCache.Clear();
+            if (root.HasValues)
+            {
+                foreach (var p in root.Properties())
+                    parsedCache[p.Name] = p.Value.DeepClone();
+            }
+        }
+        finally
+        {
+            saveLock.Release();
+        }
+    }
+
+    public void SaveSync() => SaveAsync().GetAwaiter().GetResult();
 }
