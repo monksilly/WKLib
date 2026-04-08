@@ -112,17 +112,6 @@ internal class RootPanel : MonoSingleton<RootPanel>
 
             if (EnableDemoWindow)
                 gui.Menu("Open demo menu", ref isDemoOpen);
-
-            //TODO: Implement auto save 
-            if (gui.Menu("Try save"))
-            {
-                
-            }
-
-            if (gui.Menu("Try load"))
-            {
-                
-            }
             
             gui.Separator();
 

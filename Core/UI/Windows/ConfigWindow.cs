@@ -7,6 +7,7 @@ using Imui.Core;
 using WKLib.API.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using WKLib.Core.Config;
 using static WKLib.Core.Config.ConfigManager;
 
 namespace WKLib.Core.UI.Windows;
@@ -24,7 +25,10 @@ internal static class ConfigWindow
             return;
 
         gui.Separator("General");
-        gui.SimpleKeybind("Overlay key", ref OverlayKey.RefValue);
+        if (gui.SimpleKeybind("Overlay key", ref OverlayKey.RefValue))
+        {
+            CoreSettings.Instance.DefaultConfigFile.SaveAsync();
+        }
 
         if (CommandConsole.instance)
         {
@@ -41,15 +45,22 @@ internal static class ConfigWindow
         
         gui.Separator("Appearance");
 
-        RootPanel.Instance.ThemeController.DrawApperanceEditor(gui);
+        RootPanel.Instance.ThemeController.DrawAppearanceEditor(gui);
         
         gui.Separator("Debug");
         
         gui.Checkbox(ref AdvancedSettings.RefValue, "Advanced settings");
         if (AdvancedSettings)
         {
-            gui.Checkbox(ref AutoCloseOverlay.RefValue, "Automatically close overlay");
-            gui.Checkbox(ref EnableDemoWindow.RefValue, "Enable demo window");
+            if (gui.Checkbox(ref AutoCloseOverlay.RefValue, "Automatically close overlay"))
+            {
+                CoreSettings.Instance.DefaultConfigFile.SaveAsync();
+            }
+
+            if (gui.Checkbox(ref EnableDemoWindow.RefValue, "Enable demo window"))
+            {
+                CoreSettings.Instance.DefaultConfigFile.SaveAsync();
+            }
         }
 
         gui.EndWindow();

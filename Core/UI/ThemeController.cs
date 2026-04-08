@@ -42,18 +42,22 @@ internal class ThemeController : MonoBehaviour
         lastScreenSize = new Vector2(Screen.width, Screen.height);
     }
 
-    public void DrawApperanceEditor(ImGui gui)
+    public void DrawAppearanceEditor(ImGui gui)
     {
         if (gui.Checkbox(ref ThemeSettings.RefValue.HighContrast, "High contrast"))
         {
             BaseTheme.Contrast = ThemeSettings.Value.HighContrast ? 1f : 0f;
             SetTheme(gui);
+            
+            CoreSettings.Instance.DefaultConfigFile.SaveAsync();
         }
 
         if (gui.ColorEdit(ref ThemeSettings.RefValue.AccentColor))
         {
             BaseTheme.Accent = ThemeSettings.Value.AccentColor;
             SetTheme(gui);
+            
+            CoreSettings.Instance.DefaultConfigFile.SaveAsync();
         }
     }
     
