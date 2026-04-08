@@ -5,7 +5,7 @@ using WKLib.API.Config;
 
 namespace WKLib.Core.Config;
 
-public class CoreSettings
+internal class CoreSettings
 {
     private static CoreSettings instance;
     
