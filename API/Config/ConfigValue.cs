@@ -2,6 +2,7 @@ using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using WKLib.Core.Config;
+using static WKLib.API.Config.ConfigUtility;
 
 namespace WKLib.API.Config;
 
@@ -54,7 +55,6 @@ public class ConfigValue<T> : ConfigValueBase
         Initialize(file, key, defaultValue, defaultValue, loadOnCreation);
     }
     
-    
     public ConfigValue(ConfigFile file, string key, T currentValue, T defaultValue, bool loadOnCreation)
         : base(file, key)
     {
@@ -82,8 +82,8 @@ public class ConfigValue<T> : ConfigValueBase
     
     private void Initialize(ConfigFile file, string key, T currentValue, T defaultValue, bool loadOnCreation = true)
     {
-        Value = currentValue;
-        DefaultValue = defaultValue;
+        Value = CloneIfPossible(currentValue);
+        DefaultValue = CloneIfPossible(defaultValue);
         
         if (!loadOnCreation)
             return;
@@ -104,7 +104,7 @@ public class ConfigValue<T> : ConfigValueBase
 
     public void SetDefaultValue(T newDefaultValue)
     {
-        DefaultValue = newDefaultValue;
+        DefaultValue = CloneIfPossible(newDefaultValue);
     }
 
     public override object GetBoxedValue() => value;

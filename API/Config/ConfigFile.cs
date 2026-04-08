@@ -248,7 +248,7 @@ public class ConfigFile
                 foreach (var v in registeredValues)
                 {
                     // Don't save default values
-                    if (object.Equals(v.GetBoxedValue(), v.GetBoxedDefaultValue())) 
+                    if (v.GetBoxedValue().Equals(v.GetBoxedDefaultValue()))
                         continue;
 
                     // produce a JToken for the value using the serializer
@@ -283,7 +283,7 @@ public class ConfigFile
             var text = root.HasValues
                 ? root.ToString(Formatting.Indented)
                 : "{}";
-
+            
             // Ensure directory exists
             var dir = Path.GetDirectoryName(FilePath);
             if (!string.IsNullOrWhiteSpace(dir) && !Directory.Exists(dir))
@@ -298,6 +298,10 @@ public class ConfigFile
                 foreach (var p in root.Properties())
                     parsedCache[p.Name] = p.Value.DeepClone();
             }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error while saving config, {e.Message}");
         }
         finally
         {
