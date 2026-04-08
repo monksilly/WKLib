@@ -39,8 +39,10 @@ public static class UIUtility
         }
     }
 
-    public static void SimpleKeybind(this ImGui gui, string label, ref KeyBind keyBind)
+    public static bool SimpleKeybind(this ImGui gui, string label, ref KeyBind keyBind)
     {
+        var changed = false;
+        
         var id = gui.GetControlId(label);
         gui.PushId(id);
 
@@ -56,6 +58,7 @@ public static class UIUtility
 
             if (keyBind.SetToPressedKey(gui))
             {
+                changed = true;
                 gui.ResetActiveControl();
             }
         }
@@ -67,6 +70,8 @@ public static class UIUtility
         gui.EndVertical();
         gui.EndHorizontal();
         gui.PopId();
+        
+        return changed;
     }
 
     public static void ShowPopupForTime(string text, float seconds = 2.5f)
