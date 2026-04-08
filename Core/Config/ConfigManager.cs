@@ -12,5 +12,5 @@ internal static class ConfigManager
     public static ConfigValue<bool> AutoCloseOverlay = new ConfigValue<bool>(nameof(AutoCloseOverlay), true);
     public static ConfigValue<bool> EnableDemoWindow = new ConfigValue<bool>(nameof(EnableDemoWindow), false);
     
-    public static ConfigValue<ThemeConfig> ThemeSettings = new ConfigValue<ThemeConfig>(nameof(ThemeConfig), new ThemeConfig());
+    public static ConfigValue<ThemeConfig> ThemeSettings = new ConfigValue<ThemeConfig>(nameof(ThemeSettings), new ThemeConfig());
 }
