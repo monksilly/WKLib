@@ -14,7 +14,7 @@ namespace WKLib.Core.UI.Windows;
 internal static class ConfigWindow
 {
     public static bool isOpen = true;
-
+    
     public static void Draw(ImGui gui, bool isRootPanelOpen)
     {
         if (!isRootPanelOpen)
@@ -40,9 +40,9 @@ internal static class ConfigWindow
         }
         
         gui.Separator("Appearance");
-        
-        gui.Text("TODO");
 
+        RootPanel.Instance.ThemeController.DrawApperanceEditor(gui);
+        
         gui.Separator("Debug");
         
         gui.Checkbox(ref AdvancedSettings.RefValue, "Advanced settings");

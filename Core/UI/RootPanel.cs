@@ -18,13 +18,13 @@ internal class RootPanel : MonoSingleton<RootPanel>
     public ImGui gui = null;
     public ImuiPanel ImuiPanel = null;
 
-    private ThemeController themeController = null;
-    private OverlayState overlayState = null;
+    public ThemeController ThemeController = null;
+    public OverlayState OverlayState = null;
     
     public bool IsOpen
     {
-        get => overlayState.IsOpen;
-        set => overlayState.IsOpen = value;
+        get => OverlayState.IsOpen;
+        set => OverlayState.IsOpen = value;
     }
     
     private bool isDemoOpen = false;
@@ -49,20 +49,20 @@ internal class RootPanel : MonoSingleton<RootPanel>
         if (gui == null)
             gui = new ImGui(backend, backend);
 
-        overlayState = gameObject.GetComponent<OverlayState>();
-        if (overlayState == null)
-            overlayState = gameObject.AddComponent<OverlayState>();
+        OverlayState = gameObject.GetComponent<OverlayState>();
+        if (OverlayState == null)
+            OverlayState = gameObject.AddComponent<OverlayState>();
         
-        themeController = gameObject.GetComponent<ThemeController>();
-        if (themeController == null)
-            themeController = gameObject.AddComponent<ThemeController>();
+        ThemeController = gameObject.GetComponent<ThemeController>();
+        if (ThemeController == null)
+            ThemeController = gameObject.AddComponent<ThemeController>();
         
-        themeController.SetTheme(gui);
+        ThemeController.SetTheme(gui);
     }
 
     private void Update()
     {
-        themeController.DetectChanges(gui);
+        ThemeController.DetectChanges(gui);
 
         gui.BeginFrame();
 
@@ -75,7 +75,7 @@ internal class RootPanel : MonoSingleton<RootPanel>
         HandleAPIInput();
         
         // Draw overlay warnings (like not being able to open)
-        overlayState.Draw(gui);
+        OverlayState.Draw(gui);
 
         if (IsOpen)
         {
@@ -113,7 +113,7 @@ internal class RootPanel : MonoSingleton<RootPanel>
             if (EnableDemoWindow)
                 gui.Menu("Open demo menu", ref isDemoOpen);
 
-            //TODO: Implement save
+            //TODO: Implement auto save 
             if (gui.Menu("Try save"))
             {
                 
@@ -202,5 +202,5 @@ internal class RootPanel : MonoSingleton<RootPanel>
                 window.isOpen = false;
             }
         }
-    }   
+    }
 }
