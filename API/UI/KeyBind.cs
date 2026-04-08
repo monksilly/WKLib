@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Imui.Controls;
 using Imui.Core;
 using Imui.IO.Events;
-using Imui.IO.UGUI;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using UnityEngine;
-using static BuffContainer;
 
 namespace WKLib.API.UI;
 
 [Serializable]
-public class KeyBind : IEquatable<KeyBind>
+public class KeyBind : IEquatable<KeyBind>, ICloneable
 {
     [JsonProperty]
     [JsonConverter(typeof(StringEnumConverter))]
@@ -105,6 +100,11 @@ public class KeyBind : IEquatable<KeyBind>
         return KeyCode != KeyCode.None; 
     }
     
+    public object Clone()
+    {
+        return new KeyBind(KeyCode);
+    }
+    
     public override int GetHashCode()
     {
         return KeyCode.GetHashCode();
@@ -116,6 +116,6 @@ public class KeyBind : IEquatable<KeyBind>
             return false;
         return KeyCode == other.KeyCode;
     }
-
+    
     public override bool Equals(object obj) => Equals(obj as KeyBind);
 }
