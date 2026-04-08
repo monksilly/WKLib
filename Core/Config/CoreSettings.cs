@@ -2,6 +2,7 @@ using System.IO;
 using BepInEx;
 using Newtonsoft.Json;
 using WKLib.API.Config;
+using WKLib.Core.Config.Converters;
 
 namespace WKLib.Core.Config;
 
@@ -22,10 +23,12 @@ internal class CoreSettings
     
     public string BasePath { get; }
     internal ConfigFile DefaultConfigFile { get; private set; } // WKLib default config
-    public JsonSerializerSettings JsonSerializerSettings { get; }
-
+    public JsonSerializerSettings JsonSerializerSettings { get; } = new JsonSerializerSettings();
     private CoreSettings()
     {
+        // Add converters
+        JsonSerializerSettings.Converters.Add(new ColorJsonConverter());
+        
         // Set base path
         BasePath = Path.Combine(Paths.ConfigPath, "WKLib");
         if (!Directory.Exists(BasePath)) 
