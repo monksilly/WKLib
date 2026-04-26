@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UIElements;
 using WKLib.API;
 using WKLib.Utilities;
 using Object = UnityEngine.Object;
@@ -217,19 +218,7 @@ public class AssetService
         if (currentDatabase == null)
         {
             WKLog.Info($"[AssetService] Creating new asset database for {_wkLibAPI.DisplayName}");
-            currentDatabase = new WKAssetDatabase {
-                denizenPrefabs = new List<GameObject>(),
-                entityPrefabs = new List<GameObject>(),
-                itemPrefabs = new List<GameObject>(),
-                levelPrefabs = new List<GameObject>(),
-                regionAssets = new List<M_Region>(),
-                subRegionAssets = new List<M_Subregion>(),
-                gamemodeAssets = new List<M_Gamemode>(),
-                perkAssets = new List<Perk>(),
-                diskData = new List<OS_DiskData>(),
-                sessionEvents = new List<SessionEvent>(),
-                spriteAssets = new List<Sprite>()
-            };
+            currentDatabase = new WKAssetDatabase();
 
             CL_AssetManager.AddNewDatabase(_wkLibAPI.DisplayName, currentDatabase);
         }
@@ -242,15 +231,28 @@ public class AssetService
         {
             for (var j = i; j < i + batchSize && j < total; j++)
             {
-                var go = allGOs[j];
+                var go = allGOs[j]; 
                 if (go.TryGetComponent<M_Level>(out var level))
                 {
-                    if (!currentDatabase.levelPrefabs.Contains(go))
-                        currentDatabase.levelPrefabs.Add(go);
-
+                    bool alreadyExists = false;
+                    foreach (var levelAsset in currentDatabase.levelAssets)
+                    {
+                        if (levelAsset == null)
+                            continue;
+                        
+                        if (levelAsset.id == level.levelName)
+                        {
+                            alreadyExists = true;
+                            break;
+                        }
+                    }
+                    
+                    if (!alreadyExists)
+                        currentDatabase.levelAssets.Add(M_Level.LevelAssetHolder.GetNewHolderFromLevel(level));
+                    
                     // Log its name for debugging
                     WKLog.Debug($"[AssetService] Found level: {level.name}");
-
+                    
                     if (!foundLevels.TryAdd(level.name, level))
                         WKLog.Debug($"[AssetService] Duplicate prefab.name '{level.name}' found; skipping the duplicate.");
                 }
@@ -270,10 +272,10 @@ public class AssetService
     /// </summary>
     public List<M_Level> FindLevelsByName(string nameContains)
     {
-        return CL_AssetManager.GetFullCombinedAssetDatabase().levelPrefabs
-            .Where(prefab => prefab.name.Contains(nameContains))
-            .Select(prefab => prefab.GetComponent<M_Level>())
+        return CL_AssetManager.GetFullCombinedAssetDatabase().levelAssets
+            .Select(levelAsset => levelAsset.level)
             .Where(level => level is not null)
+            .Where(level => level.name.Contains(nameContains))
             .ToList();
     }
     
