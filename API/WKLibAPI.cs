@@ -16,7 +16,7 @@ public class WKLibAPI
     public List<WKLibWindow> Windows = new List<WKLibWindow>();
     public ConfigFolder ConfigFolder = null;
     public ConfigFile DefaultConfigFile = null;
-
+    
     public AssetService AssetService = null;
     
     public WKLibAPI(string displayName, string guid)
@@ -24,8 +24,8 @@ public class WKLibAPI
         DisplayName = displayName;
         GUID = guid;
         
-        //ConfigFolder = new ConfigFolder(displayName);
-        //DefaultConfigFile = Config.ConfigFolder.GetOrCreateConfigFile(guid);
+        ConfigFolder = new ConfigFolder(displayName);
+        DefaultConfigFile = ConfigFolder.GetOrCreateConfigFile(guid);
         AssetService = new AssetService(this);
     }
 
