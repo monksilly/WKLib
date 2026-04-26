@@ -15,7 +15,7 @@ internal class OverlayState : MonoBehaviour
     private CL_GameManager gameManager = null;
     private GraphicRaycaster mainGraphicRaycaster = null;
     
-    private bool isOpen = true;
+    private bool isOpen = false;
 
     public bool IsOpen
     {
