@@ -81,7 +81,8 @@ internal class RootPanel : MonoSingleton<RootPanel>
         {
             DrawRootMenuBar();
         }
-        
+
+        ChangeLogWindow.Draw(gui, IsOpen);
         ConfigWindow.Draw(gui, IsOpen);
         if (EnableDemoWindow)
         {
@@ -115,6 +116,10 @@ internal class RootPanel : MonoSingleton<RootPanel>
             
             gui.Separator();
 
+            gui.Menu("Open changelog", ref ChangeLogWindow.isOpen);
+
+            gui.Separator();
+            
             if (gui.Menu("Close menu"))
             {
                 IsOpen = false;
