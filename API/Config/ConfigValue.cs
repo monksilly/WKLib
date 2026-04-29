@@ -2,7 +2,6 @@ using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using WKLib.Core.Config;
-using static WKLib.API.Config.ConfigUtility;
 
 namespace WKLib.API.Config;
 
