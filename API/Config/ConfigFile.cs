@@ -67,49 +67,13 @@ public class ConfigFile
     #endregion
 
     #region ValueParsing
-    // We get 2 strings like "MyConfig.Element" and "MyConfig.Element2" and we save like
-    // MyConfig
-    // - Element: value
-    // - Element2: value
-    private bool TryGetParsedTokenByPath(string path, out JToken token)
-    {
-        token = null;
-        if (string.IsNullOrEmpty(path)) 
-            return false;
-
-        var parts = path.Split('.');
-        if (parts.Length <= 0)
-            return false;
-
-        // first segment must be a top-level property in parsedCache
-        if (!parsedCache.TryGetValue(parts[0], out var current) || current == null)
-            return false;
-
-        token = current;
-        for (int i = 1; i < parts.Length; i++)
-        {
-            if (token is JObject obj 
-                && obj.TryGetValue(parts[i], out var child))
-            {
-                token = child;
-            }
-            else
-            {
-                token = null;
-                return false;
-            }
-        }
-
-        return token != null;
-    }
-    
     public bool TryGetParsedToken(string key, out JToken token)
     {
         token = null;
         if (string.IsNullOrEmpty(key)) 
             return false;
         
-        if (TryGetParsedTokenByPath(key, out token))
+        if (parsedCache.TryGetValue(key, out token))
             return true;
         
         return false;
@@ -141,8 +105,10 @@ public class ConfigFile
         return false;
     }
     #endregion
+    /*
+    TODO: Remove
     
-    public ConfigValueBase AddOrUpdateConfigValue<T>(string key, T currentValue, T defaultValue, bool loadOnCreation)
+    public ConfigValueBase AddOrUpdateConfigValue<T>(string key, T currentValue, bool loadOnCreation)
     {
         if (string.IsNullOrEmpty(key))
             return null;
@@ -160,11 +126,12 @@ public class ConfigFile
                 return exConfigValue;
             }
             
-            var newConfigValue = new ConfigValue<T>(this, key, currentValue, defaultValue, loadOnCreation);
+            var newConfigValue = new ConfigValue<T>(this, key, currentValue, loadOnCreation);
             registeredValues.Add(newConfigValue);
             return newConfigValue;
         }
     }
+    */
     
     public void RegisterConfigValue(ConfigValueBase configValue)
     {
@@ -221,10 +188,6 @@ public class ConfigFile
                 {
                     value.LoadFromJToken(token);
                 }
-                else
-                {
-                    value.ResetToDefaultValue();
-                }
             }
         }
     }
@@ -246,36 +209,13 @@ public class ConfigFile
             lock (registeredValues)
             {
                 foreach (var v in registeredValues)
-                {
-                    // Don't save default values
-                    if (v.GetBoxedValue().Equals(v.GetBoxedDefaultValue()))
-                        continue;
-
+                { 
                     // produce a JToken for the value using the serializer
                     JToken valueToken = v.GetBoxedValue() == null
                         ? JValue.CreateNull()
                         : JToken.FromObject(v.GetBoxedValue(), serializer);
 
-                    // split path and ensure nested objects exist
-                    var parts = v.Key.Split('.');
-                    JObject current = root;
-                    for (int i = 0; i < parts.Length - 1; i++)
-                    {
-                        var part = parts[i];
-                        if (current.TryGetValue(part, out var child) && child is JObject childObj)
-                        {
-                            current = childObj;
-                        }
-                        else
-                        {
-                            var newObj = new JObject();
-                            current[part] = newObj;
-                            current = newObj;
-                        }
-                    }
-
-                    // set the final property
-                    current[parts[^1]] = valueToken;
+                    root[v.Key] = valueToken;
                 }
             }
 

@@ -17,6 +17,12 @@ internal class ChangeLogWindow
             return;
         
         gui.Separator("Versions");
+
+        if (gui.BeginTreeNode("Version 0.2.1"))
+        {
+            gui.Text("+ Change config system saving and loading");
+            gui.EndTreeNode();
+        }
         
         if (gui.BeginTreeNode("Version 0.2.0"))
         {

@@ -22,9 +22,7 @@ public abstract class ConfigValueBase
     }
     
     public abstract object GetBoxedValue();
-    public abstract object GetBoxedDefaultValue();
     public abstract void LoadFromJToken(JToken token);
-    public abstract void ResetToDefaultValue();
 }
 
 public class ConfigValue<T> : ConfigValueBase
@@ -36,32 +34,18 @@ public class ConfigValue<T> : ConfigValueBase
         get => value;
         set => this.value = value;
     }
-    
-    private T defaultValue;
-
-    public T DefaultValue
-    {
-        get => defaultValue; 
-        private set => this.defaultValue = value;
-    }
 
     public ref T RefValue => ref this.value;
     public static implicit operator T(ConfigValue<T> cfg) => cfg.Value;
 
     #region Constructors
-    public ConfigValue(ConfigFile file, string key, T defaultValue = default,  bool loadOnCreation = true)
+    public ConfigValue(ConfigFile file, string key, T currentValue, bool loadOnCreation = true)
         : base(file, key)
     {
-        Initialize(file, key, defaultValue, defaultValue, loadOnCreation);
-    }
-    
-    public ConfigValue(ConfigFile file, string key, T currentValue, T defaultValue, bool loadOnCreation)
-        : base(file, key)
-    {
-        Initialize(file, key, currentValue, defaultValue, loadOnCreation);
+        Initialize(file, key, currentValue, loadOnCreation);
     }
 
-    public ConfigValue(WKLibAPI API, string key, T defaultValue = default,  bool loadOnCreation = true)
+    public ConfigValue(WKLibAPI API, string key, T currentValue, bool loadOnCreation = true)
         : base(API.DefaultConfigFile, key)
     {
         if (API == null)
@@ -70,20 +54,19 @@ public class ConfigValue<T> : ConfigValueBase
         if (API.ConfigFolder == null)
             throw new ArgumentNullException(nameof(API.ConfigFolder));
         
-        Initialize(API.DefaultConfigFile, key, defaultValue, defaultValue, loadOnCreation);
+        Initialize(API.DefaultConfigFile, key, currentValue, loadOnCreation);
     }
     
-    internal ConfigValue(string key, T defaultValue = default,  bool loadOnCreation = true) // WKLib only
+    internal ConfigValue(string key, T currentValue, bool loadOnCreation = true) // WKLib only
         : base(CoreSettings.Instance.DefaultConfigFile, key)
     {
-        Initialize(CoreSettings.Instance.DefaultConfigFile, key, defaultValue, defaultValue, loadOnCreation);
+        Initialize(CoreSettings.Instance.DefaultConfigFile, key, currentValue, loadOnCreation);
     }
     #endregion
     
-    private void Initialize(ConfigFile file, string key, T currentValue, T defaultValue, bool loadOnCreation = true)
+    private void Initialize(ConfigFile file, string key, T currentValue, bool loadOnCreation = true)
     {
-        Value = CloneIfPossible(currentValue);
-        DefaultValue = CloneIfPossible(defaultValue);
+        Value = currentValue;
         
         if (!loadOnCreation)
             return;
@@ -102,13 +85,7 @@ public class ConfigValue<T> : ConfigValueBase
         }
     }
 
-    public void SetDefaultValue(T newDefaultValue)
-    {
-        DefaultValue = CloneIfPossible(newDefaultValue);
-    }
-
     public override object GetBoxedValue() => value;
-    public override object GetBoxedDefaultValue() => defaultValue;
 
     //TODO: Custom serializer
     public override void LoadFromJToken(JToken token)
@@ -127,6 +104,4 @@ public class ConfigValue<T> : ConfigValueBase
             //Ignore parse errors
         }
     }
-    
-    public override void ResetToDefaultValue() { Value = DefaultValue; }
 }
