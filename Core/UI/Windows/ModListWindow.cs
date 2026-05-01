@@ -23,7 +23,7 @@ internal static class ModListWindow
 
         foreach (var API in WKLibAPI.internalAPIs)
         {
-            if (API == null)
+            if (API == null || API.ModTab == null)
                 continue;
 
             if (gui.BeginTreeNode(API.ModTab.DisplayName))
