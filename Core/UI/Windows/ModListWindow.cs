@@ -26,15 +26,10 @@ internal static class ModListWindow
             if (API == null)
                 continue;
 
-            if (gui.Button(API.DisplayName))
+            if (gui.BeginTreeNode(API.ModTab.DisplayName))
             {
-                foreach (var window in API.Windows)
-                {
-                    if (!window.isMainConfigWindow)
-                        continue;
-
-                    window.isOpen = true;
-                }
+                API.ModTab.DrawSubMenu(gui);
+                gui.EndTreeNode();
             }
         }
 

@@ -189,10 +189,7 @@ internal class RootPanel : MonoSingleton<RootPanel>
             {
                 if (window == null)
                     continue;
-
-                if (!window.isMainConfigWindow)
-                    continue;
-                        
+                
                 window.isOpen = false;
             }
         }

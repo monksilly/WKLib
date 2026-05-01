@@ -14,6 +14,7 @@ public class WKLibAPI
     public string GUID = string.Empty;
 
     public List<WKLibWindow> Windows = new List<WKLibWindow>();
+    public ModTab ModTab = null;
     public ConfigFolder ConfigFolder = null;
     public ConfigFile DefaultConfigFile = null;
     
@@ -53,6 +54,14 @@ public class WKLibAPI
             return;
 
         Windows.Add(window);
+    }
+
+    public void AddToModList(ModTab modTab)
+    {
+        if (ModTab != null)
+            throw new Exception($"Mod tab already exists, cant add new one");
+        
+        ModTab = modTab;
     }
     
     public void Destroy()
