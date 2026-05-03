@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['defaultvalue_0',['DefaultValue',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a235ec8140f1309ecca3f548603ff83f3',1,'WKLib.UI.Components.WKDropdown.DefaultValue'],['../classWKLib_1_1UI_1_1Components_1_1WKSlider.html#a4d8dcb7b55a6dc85264625977f268b90',1,'WKLib.UI.Components.WKSlider.DefaultValue'],['../classWKLib_1_1UI_1_1Components_1_1WKToggle.html#a1e1d6fdb9f0a523e27c9c56760d9cfc7',1,'WKLib.UI.Components.WKToggle.DefaultValue']]],
-  ['dropdowntemplatepath_1',['DropdownTemplatePath',['../classWKLib_1_1Core_1_1UIManager.html#acb97532c78891ddcc3c3ead69e45864b',1,'WKLib::Core::UIManager']]]
+  ['file_0',['File',['../classWKLib_1_1API_1_1Config_1_1ConfigValueBase.html#af8ae820a126fe2253056dcc0fde0033f',1,'WKLib::API::Config::ConfigValueBase']]],
+  ['filename_1',['FileName',['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#afffb8b7bbf8c9d39990693bf3f85bea5',1,'WKLib::API::Config::ConfigFile']]],
+  ['filepath_2',['FilePath',['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#ae688091e8d9c03b2091b9dcb64526819',1,'WKLib::API::Config::ConfigFile']]],
+  ['foldername_3',['FolderName',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a9acc06fec8fe27c6904cc95a7879dc23',1,'WKLib::API::Config::ConfigFolder']]],
+  ['fullfilename_4',['FullFileName',['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a3f9e3111aa6bb16ddf725e0bc7ce89ea',1,'WKLib::API::Config::ConfigFile']]]
 ];

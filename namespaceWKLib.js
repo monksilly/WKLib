@@ -1,9 +1,7 @@
 var namespaceWKLib =
 [
-    [ "Assets", "namespaceWKLib_1_1Assets.html", "namespaceWKLib_1_1Assets" ],
+    [ "API", "namespaceWKLib_1_1API.html", "namespaceWKLib_1_1API" ],
     [ "Core", "namespaceWKLib_1_1Core.html", "namespaceWKLib_1_1Core" ],
-    [ "Gamemodes", "namespaceWKLib_1_1Gamemodes.html", "namespaceWKLib_1_1Gamemodes" ],
-    [ "UI", "namespaceWKLib_1_1UI.html", "namespaceWKLib_1_1UI" ],
-    [ "Utilities", "namespaceWKLib_1_1Utilities.html", "namespaceWKLib_1_1Utilities" ],
-    [ "WkLib", "classWKLib_1_1WkLib.html", null ]
+    [ "Utilities", "namespaceWKLib_1_1Utilities.html", null ],
+    [ "WKLibPlugin", "classWKLib_1_1WKLibPlugin.html", "classWKLib_1_1WKLibPlugin" ]
 ];

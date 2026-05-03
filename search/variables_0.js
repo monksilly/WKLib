@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['currentvalue_0',['CurrentValue',['../classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#aaa48bb525476899c2506b748c819004a',1,'WKLib::UI::Settings::WKSettings::SettingInfo']]]
+  ['assetservice_0',['AssetService',['../classWKLib_1_1API_1_1WKLibAPI.html#ae74997a0006cc47b01392fe428ed6049',1,'WKLib::API::WKLibAPI']]]
 ];

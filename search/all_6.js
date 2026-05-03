@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['gamemodebuilder_0',['GamemodeBuilder',['../classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html',1,'WKLib::Gamemodes::Builders']]],
-  ['gamemodebuilder_2ecs_1',['GamemodeBuilder.cs',['../GamemodeBuilder_8cs.html',1,'']]],
-  ['gameobject_2',['GameObject',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#a920bab397176d1d7a40493938b6bbc79',1,'WKLib::UI::Components::WKComponent']]],
-  ['get_3',['Get',['../classWKLib_1_1Core_1_1ModRegistry.html#abc229c42597f17648d59714cee8635b5',1,'WKLib::Core::ModRegistry']]],
-  ['getallcustomsettings_4',['GetAllCustomSettings',['../classWKLib_1_1UI_1_1Settings_1_1WKSettings.html#aa8cccf922248f02bace4a057222d5363',1,'WKLib::UI::Settings::WKSettings']]],
-  ['getcolumnpath_5',['GetColumnPath',['../classWKLib_1_1Core_1_1UIManager.html#a07309e62e2ee1e8584319e5538cef15f',1,'WKLib::Core::UIManager']]],
-  ['getsetting_3c_20t_20_3e_6',['GetSetting&lt; T &gt;',['../classWKLib_1_1UI_1_1Settings_1_1WKSettings.html#ab7d5ba07bd4cb07812acb3e7e285040d',1,'WKLib::UI::Settings::WKSettings']]],
-  ['gettemplatepath_7',['GetTemplatePath',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#a1212fe54bc16c6ea6060f40ccd8801e4',1,'WKLib.UI.Components.WKComponent.GetTemplatePath()'],['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a4282354c19c6257c026326b3293f88a7',1,'WKLib.UI.Components.WKDropdown.GetTemplatePath()'],['../classWKLib_1_1UI_1_1Components_1_1WKSlider.html#a776a3f201cbde9f19b1957ab56fffe7a',1,'WKLib.UI.Components.WKSlider.GetTemplatePath()'],['../classWKLib_1_1UI_1_1Components_1_1WKToggle.html#a46e5a5ee2df5df684579d40deb0fbbee',1,'WKLib.UI.Components.WKToggle.GetTemplatePath()']]],
-  ['gettext_8',['GetText',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#af6347f2391c92704da8550dee67425ad',1,'WKLib::UI::Components::WKDropdown']]],
-  ['getvalue_9',['GetValue',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a01664c587b3e6a5195d2731f241c330f',1,'WKLib.UI.Components.WKDropdown.GetValue()'],['../classWKLib_1_1UI_1_1Components_1_1WKSlider.html#ac3fd44e54c3bb9a338f0e5ea61773e26',1,'WKLib.UI.Components.WKSlider.GetValue()'],['../classWKLib_1_1UI_1_1Components_1_1WKToggle.html#ad51a91f396a79742f3bf24b7d211226f',1,'WKLib.UI.Components.WKToggle.GetValue()']]]
+  ['getboxedvalue_0',['GetBoxedValue',['../classWKLib_1_1API_1_1Config_1_1ConfigValueBase.html#a99b344c1647cada6cd3d6f9be86a33db',1,'WKLib.API.Config.ConfigValueBase.GetBoxedValue()'],['../classWKLib_1_1API_1_1Config_1_1ConfigValue.html#af7e2dc6fafedf96d2fea49551e9f11c5',1,'WKLib.API.Config.ConfigValue.GetBoxedValue()']]],
+  ['getconfigfile_1',['GetConfigFile',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a84bfdf7f5d1369ab15f49419008a9458',1,'WKLib::API::Config::ConfigFolder']]],
+  ['getconfigfiles_2',['GetConfigFiles',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#aeac6fef41fade1a079aa5a03f9fcfc8c',1,'WKLib::API::Config::ConfigFolder']]],
+  ['getconfigfolders_3',['GetConfigFolders',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a8b419f4481fed53fa397c9b22e4b95f8',1,'WKLib::API::Config::ConfigFolder']]],
+  ['gethashcode_4',['GetHashCode',['../classWKLib_1_1API_1_1UI_1_1KeyBind.html#a2f57caa494380847a35c4c28b686426b',1,'WKLib::API::UI::KeyBind']]],
+  ['getkeydown_5',['GetKeyDown',['../classWKLib_1_1API_1_1Input_1_1InputUtility.html#a2887d3cbead319c86cc85e7742251343',1,'WKLib::API::Input::InputUtility']]],
+  ['getorcreateconfigfile_6',['GetOrCreateConfigFile',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a6fe4d4c2522c22462585c31f4bfef4b5',1,'WKLib::API::Config::ConfigFolder']]],
+  ['getorcreatesubfolder_7',['GetOrCreateSubFolder',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a65e7c44b8f15f3e5adca5cc881de2a91',1,'WKLib::API::Config::ConfigFolder']]],
+  ['getsubfolder_8',['GetSubFolder',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#ab20abae4a5059b80737440c01bebccd6',1,'WKLib::API::Config::ConfigFolder']]],
+  ['guid_9',['GUID',['../classWKLib_1_1API_1_1WKLibAPI.html#a187c4bf6150f2c15cda019d262a4b4aa',1,'WKLib.API.WKLibAPI.GUID'],['../classWKLib_1_1WKLibPlugin.html#a67e37279daec10c9334f081d76e63e93',1,'WKLib.WKLibPlugin.GUID']]]
 ];

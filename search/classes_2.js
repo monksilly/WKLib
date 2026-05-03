@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iwkcomponent_0',['IWKComponent',['../interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent.html',1,'WKLib::UI::Components']]]
+  ['inpututility_0',['InputUtility',['../classWKLib_1_1API_1_1Input_1_1InputUtility.html',1,'WKLib::API::Input']]]
 ];

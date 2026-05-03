@@ -1,24 +1,30 @@
 var hierarchy =
 [
-    [ "WKLib.Assets.AssetService", "classWKLib_1_1Assets_1_1AssetService.html", null ],
+    [ "WKLib.API.Assets.AssetService", "classWKLib_1_1API_1_1Assets_1_1AssetService.html", null ],
     [ "BaseUnityPlugin", null, [
-      [ "WKLib.WkLib", "classWKLib_1_1WkLib.html", null ]
+      [ "WKLib.WKLibPlugin", "classWKLib_1_1WKLibPlugin.html", null ]
     ] ],
-    [ "WKLib.Gamemodes.Builders.GamemodeBuilder", "classWKLib_1_1Gamemodes_1_1Builders_1_1GamemodeBuilder.html", null ],
-    [ "WKLib.UI.Components.IWKComponent", "interfaceWKLib_1_1UI_1_1Components_1_1IWKComponent.html", [
-      [ "WKLib.UI.Components.WKComponent", "classWKLib_1_1UI_1_1Components_1_1WKComponent.html", [
-        [ "WKLib.UI.Components.WKDropdown", "classWKLib_1_1UI_1_1Components_1_1WKDropdown.html", null ],
-        [ "WKLib.UI.Components.WKSlider", "classWKLib_1_1UI_1_1Components_1_1WKSlider.html", null ],
-        [ "WKLib.UI.Components.WKToggle", "classWKLib_1_1UI_1_1Components_1_1WKToggle.html", null ]
-      ] ]
+    [ "WKLib.API.Config.ConfigFile", "classWKLib_1_1API_1_1Config_1_1ConfigFile.html", null ],
+    [ "WKLib.API.Config.ConfigFolder", "classWKLib_1_1API_1_1Config_1_1ConfigFolder.html", null ],
+    [ "WKLib.API.Config.ConfigValue< bool >", "classWKLib_1_1API_1_1Config_1_1ConfigValue.html", null ],
+    [ "WKLib.API.Config.ConfigValue< KeyBind >", "classWKLib_1_1API_1_1Config_1_1ConfigValue.html", null ],
+    [ "WKLib.API.Config.ConfigValue< ThemeConfig >", "classWKLib_1_1API_1_1Config_1_1ConfigValue.html", null ],
+    [ "WKLib.API.Config.ConfigValueBase", "classWKLib_1_1API_1_1Config_1_1ConfigValueBase.html", [
+      [ "WKLib.API.Config.ConfigValue< T >", "classWKLib_1_1API_1_1Config_1_1ConfigValue.html", null ]
     ] ],
-    [ "WKLib.Core.ModContext", "classWKLib_1_1Core_1_1ModContext.html", null ],
-    [ "WKLib.Core.ModRegistry", "classWKLib_1_1Core_1_1ModRegistry.html", null ],
-    [ "WKLib.Gamemodes.Builders.RegionBuilder", "classWKLib_1_1Gamemodes_1_1Builders_1_1RegionBuilder.html", null ],
-    [ "WKLib.UI.Settings.WKSettings.SettingInfo", "classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html", null ],
-    [ "WKLib.Gamemodes.Builders.SubRegionBuilder", "classWKLib_1_1Gamemodes_1_1Builders_1_1SubRegionBuilder.html", null ],
-    [ "WKLib.UI.UIBuilder", "classWKLib_1_1UI_1_1UIBuilder.html", null ],
-    [ "WKLib.Core.UIManager", "classWKLib_1_1Core_1_1UIManager.html", null ],
-    [ "WKLib.Utilities.WKLog", "classWKLib_1_1Utilities_1_1WKLog.html", null ],
-    [ "WKLib.UI.Settings.WKSettings", "classWKLib_1_1UI_1_1Settings_1_1WKSettings.html", null ]
+    [ "ICloneable", null, [
+      [ "WKLib.API.UI.KeyBind", "classWKLib_1_1API_1_1UI_1_1KeyBind.html", null ]
+    ] ],
+    [ "IDisposable", null, [
+      [ "WKLib.API.UI.UIUtility.LabeledScope", "structWKLib_1_1API_1_1UI_1_1UIUtility_1_1LabeledScope.html", null ]
+    ] ],
+    [ "IEquatable", null, [
+      [ "WKLib.API.UI.KeyBind", "classWKLib_1_1API_1_1UI_1_1KeyBind.html", null ]
+    ] ],
+    [ "WKLib.API.Input.InputUtility", "classWKLib_1_1API_1_1Input_1_1InputUtility.html", null ],
+    [ "WKLib.API.UI.ModTab", "classWKLib_1_1API_1_1UI_1_1ModTab.html", null ],
+    [ "WKLib.API.UI.PopupSettings", "classWKLib_1_1API_1_1UI_1_1PopupSettings.html", null ],
+    [ "WKLib.API.UI.UIUtility", "classWKLib_1_1API_1_1UI_1_1UIUtility.html", null ],
+    [ "WKLib.API.WKLibAPI", "classWKLib_1_1API_1_1WKLibAPI.html", null ],
+    [ "WKLib.API.UI.WKLibWindow", "classWKLib_1_1API_1_1UI_1_1WKLibWindow.html", null ]
 ];

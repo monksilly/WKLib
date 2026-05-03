@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['label_0',['Label',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#aa9a96dce012334cf2d3179dbfc227cce',1,'WKLib::UI::Components::WKComponent']]],
-  ['labeltext_1',['LabelText',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#aa93f5f92769162962f234d30e3544846',1,'WKLib::UI::Components::WKComponent']]],
-  ['loadalllevelsfrombundle_2',['LoadAllLevelsFromBundle',['../classWKLib_1_1Assets_1_1AssetService.html#ab000f5f348d6a815c59372c79aeba4a4',1,'WKLib::Assets::AssetService']]],
-  ['loadbundlerelativeasync_3',['LoadBundleRelativeAsync',['../classWKLib_1_1Assets_1_1AssetService.html#ac68a0a8801cbf4df8749a61f7ba31f93',1,'WKLib::Assets::AssetService']]],
-  ['loadgamemodefrombundle_4',['LoadGameModeFromBundle',['../classWKLib_1_1Assets_1_1AssetService.html#ac6ae893baeb21640920e8dd9fa20cd99',1,'WKLib::Assets::AssetService']]],
-  ['loadpngassprite_5',['LoadPngAsSprite',['../classWKLib_1_1Assets_1_1AssetService.html#a437d5784886fd64acd18def9cf743b69',1,'WKLib::Assets::AssetService']]],
-  ['loadpngasspriterelative_6',['LoadPngAsSpriteRelative',['../classWKLib_1_1Assets_1_1AssetService.html#ac432ab6abea58d7f48ee9080c2b58959',1,'WKLib::Assets::AssetService']]]
+  ['labeledscope_0',['LabeledScope',['../structWKLib_1_1API_1_1UI_1_1UIUtility_1_1LabeledScope.html',1,'WKLib.API.UI.UIUtility.LabeledScope'],['../structWKLib_1_1API_1_1UI_1_1UIUtility_1_1LabeledScope.html#ab96e481bf14fa75556c0ca7493ef6cbc',1,'WKLib.API.UI.UIUtility.LabeledScope.LabeledScope()']]],
+  ['loadalllevelsfrombundle_1',['LoadAllLevelsFromBundle',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html#a6f00b9fa4e621c32f62f126623c4d048',1,'WKLib::API::Assets::AssetService']]],
+  ['loadbundlerelativeasync_2',['LoadBundleRelativeAsync',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html#afa95a7de993dc4a4765b2da88df1cb4a',1,'WKLib::API::Assets::AssetService']]],
+  ['loadfiles_3',['LoadFiles',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#adf991858befc6703ca7006d8a018540b',1,'WKLib::API::Config::ConfigFolder']]],
+  ['loadfromdisk_4',['LoadFromDisk',['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a7b1d4d9764d43eedb84999a0d615e096',1,'WKLib::API::Config::ConfigFile']]],
+  ['loadfromjtoken_5',['LoadFromJToken',['../classWKLib_1_1API_1_1Config_1_1ConfigValueBase.html#a6df0022e7f5cb6fc145217cf7771310c',1,'WKLib.API.Config.ConfigValueBase.LoadFromJToken()'],['../classWKLib_1_1API_1_1Config_1_1ConfigValue.html#af79eb1da46b2c9f5d89658f713d5295c',1,'WKLib.API.Config.ConfigValue.LoadFromJToken()']]],
+  ['loadgamemodefrombundle_6',['LoadGameModeFromBundle',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html#a92c12e69368a342637d65544a91a8645',1,'WKLib::API::Assets::AssetService']]],
+  ['loadpngassprite_7',['LoadPngAsSprite',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html#aa7ac63cfc1051148f1c8cc9ca4cbe392',1,'WKLib::API::Assets::AssetService']]],
+  ['loadpngasspriterelative_8',['LoadPngAsSpriteRelative',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html#a68372d60047bc045eef80ab5c2c03dd1',1,'WKLib::API::Assets::AssetService']]]
 ];

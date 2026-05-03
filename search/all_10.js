@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['setlabeltext_0',['SetLabelText',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#a318907822a5c2eabcfce44c1608b6865',1,'WKLib.UI.Components.WKComponent.SetLabelText()'],['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#ac0762431109281dd760843c05efd799c',1,'WKLib.UI.Components.WKDropdown.SetLabelText()']]],
-  ['setlistener_1',['SetListener',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a0a1afe6cf0a73df7c0e78200b9340587',1,'WKLib.UI.Components.WKDropdown.SetListener()'],['../classWKLib_1_1UI_1_1Components_1_1WKSlider.html#aeb6a74153570312588d5b3ff04e17343',1,'WKLib.UI.Components.WKSlider.SetListener()'],['../classWKLib_1_1UI_1_1Components_1_1WKToggle.html#a48414924cc0c27b24056097e9646ec8c',1,'WKLib.UI.Components.WKToggle.SetListener()']]],
-  ['setoptions_2',['SetOptions',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#aa6aa01214ca2f215ada4a4c485145368',1,'WKLib::UI::Components::WKDropdown']]],
-  ['setsetting_3c_20t_20_3e_3',['SetSetting&lt; T &gt;',['../classWKLib_1_1UI_1_1Settings_1_1WKSettings.html#a7db1ea65812ebffd320a61a4e5723a99',1,'WKLib::UI::Settings::WKSettings']]],
-  ['settinginfo_4',['SettingInfo',['../classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html',1,'WKLib::UI::Settings::WKSettings']]],
-  ['settingname_5',['SettingName',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#ae02c6288d6783fa484f889f2dcec42d4',1,'WKLib::UI::Components::WKComponent']]],
-  ['setvalue_6',['SetValue',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a1fadbf059d0838c898a16ae55a4e90d2',1,'WKLib.UI.Components.WKDropdown.SetValue(int value)'],['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a3aa96ea4ccbcee19c9bba68364ca2f9b',1,'WKLib.UI.Components.WKDropdown.SetValue(string text)'],['../classWKLib_1_1UI_1_1Components_1_1WKSlider.html#a24b1359fa8c960ccf9ab31cd2d8f7e93',1,'WKLib.UI.Components.WKSlider.SetValue()'],['../classWKLib_1_1UI_1_1Components_1_1WKToggle.html#a87744a92f7ddf18e41f2ce4e19f306e0',1,'WKLib.UI.Components.WKToggle.SetValue()']]],
-  ['slidertemplatepath_7',['SliderTemplatePath',['../classWKLib_1_1Core_1_1UIManager.html#a1998e9a37c9380577772f9c21d2cb7ad',1,'WKLib::Core::UIManager']]],
-  ['subregionbuilder_8',['SubRegionBuilder',['../classWKLib_1_1Gamemodes_1_1Builders_1_1SubRegionBuilder.html',1,'WKLib::Gamemodes::Builders']]],
-  ['subregionbuilder_2ecs_9',['SubRegionBuilder.cs',['../SubRegionBuilder_8cs.html',1,'']]]
+  ['readme_2emd_0',['README.md',['../README_8md.html',1,'']]],
+  ['refvalue_1',['RefValue',['../classWKLib_1_1API_1_1Config_1_1ConfigValue.html#ae4cb39ec2ad897bf35b6e5951778e772',1,'WKLib::API::Config::ConfigValue']]],
+  ['registerconfigfile_2',['RegisterConfigFile',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a42f834764761133121cafa33ac92d30a',1,'WKLib::API::Config::ConfigFolder']]],
+  ['registerconfigfolder_3',['RegisterConfigFolder',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a9608a314a7a8e45ca67506c993697708',1,'WKLib::API::Config::ConfigFolder']]],
+  ['registerconfigvalue_4',['RegisterConfigValue',['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a52b0b976a40249777e4957b8ebea4503',1,'WKLib::API::Config::ConfigFile']]],
+  ['rootpanel_2ecs_5',['RootPanel.cs',['../RootPanel_8cs.html',1,'']]]
 ];

@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['debug_0',['Debug',['../classWKLib_1_1Utilities_1_1WKLog.html#a3cb5ab414da39e8ba8d8c0632589674f',1,'WKLib::Utilities::WKLog']]],
-  ['defaultvalue_1',['DefaultValue',['../classWKLib_1_1UI_1_1Components_1_1WKDropdown.html#a235ec8140f1309ecca3f548603ff83f3',1,'WKLib.UI.Components.WKDropdown.DefaultValue'],['../classWKLib_1_1UI_1_1Components_1_1WKSlider.html#a4d8dcb7b55a6dc85264625977f268b90',1,'WKLib.UI.Components.WKSlider.DefaultValue'],['../classWKLib_1_1UI_1_1Components_1_1WKToggle.html#a1e1d6fdb9f0a523e27c9c56760d9cfc7',1,'WKLib.UI.Components.WKToggle.DefaultValue'],['../classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#a8ada6717d990e9626cbd1c9dd519dac0',1,'WKLib.UI.Settings.WKSettings.SettingInfo.DefaultValue']]],
-  ['description_2',['Project Description',['../index.html#project-description',1,'']]],
-  ['documentation_3',['Documentation',['../index.html#documentation',1,'']]],
-  ['dropdowntemplatepath_4',['DropdownTemplatePath',['../classWKLib_1_1Core_1_1UIManager.html#acb97532c78891ddcc3c3ead69e45864b',1,'WKLib::Core::UIManager']]]
+  ['defaultconfigfile_0',['DefaultConfigFile',['../classWKLib_1_1API_1_1WKLibAPI.html#a76630c156761e3b45f0b901e9eacf780',1,'WKLib::API::WKLibAPI']]],
+  ['description_1',['Project Description',['../index.html#project-description',1,'']]],
+  ['destroy_2',['Destroy',['../classWKLib_1_1API_1_1WKLibAPI.html#a22cfb7b2e8644ce40e42fe2c371a06b6',1,'WKLib::API::WKLibAPI']]],
+  ['displayname_3',['DisplayName',['../classWKLib_1_1API_1_1UI_1_1ModTab.html#a952528fc49a9fea9ab5fc95a3e2db414',1,'WKLib.API.UI.ModTab.DisplayName'],['../classWKLib_1_1API_1_1WKLibAPI.html#a23594dcd9cab3cdcf6702398445c55f0',1,'WKLib.API.WKLibAPI.DisplayName']]],
+  ['dispose_4',['Dispose',['../structWKLib_1_1API_1_1UI_1_1UIUtility_1_1LabeledScope.html#aad8f5aa022cb7198ced5ba8d5487c90e',1,'WKLib::API::UI::UIUtility::LabeledScope']]],
+  ['documentation_5',['Documentation',['../index.html#documentation',1,'']]],
+  ['draw_6',['Draw',['../classWKLib_1_1API_1_1UI_1_1WKLibWindow.html#a814dcd174cf48f92ea5e135c93232673',1,'WKLib::API::UI::WKLibWindow']]],
+  ['drawsubmenu_7',['DrawSubMenu',['../classWKLib_1_1API_1_1UI_1_1ModTab.html#af9e7a914a69149d645c2aa92580d55e1',1,'WKLib::API::UI::ModTab']]]
 ];

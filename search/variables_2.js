@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['iscreated_0',['IsCreated',['../classWKLib_1_1UI_1_1Components_1_1WKComponent.html#ae14f7e3241009da5be6ce4dfa1f0ed24',1,'WKLib::UI::Components::WKComponent']]]
+  ['defaultconfigfile_0',['DefaultConfigFile',['../classWKLib_1_1API_1_1WKLibAPI.html#a76630c156761e3b45f0b901e9eacf780',1,'WKLib::API::WKLibAPI']]],
+  ['displayname_1',['DisplayName',['../classWKLib_1_1API_1_1WKLibAPI.html#a23594dcd9cab3cdcf6702398445c55f0',1,'WKLib::API::WKLibAPI']]]
 ];

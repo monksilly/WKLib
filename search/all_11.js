@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['toggletemplatepath_0',['ToggleTemplatePath',['../classWKLib_1_1Core_1_1UIManager.html#a2bd60fde87cc26d818d3777a3d5252ef',1,'WKLib::Core::UIManager']]],
-  ['tryinitialize_1',['TryInitialize',['../classWKLib_1_1Core_1_1UIManager.html#a23127b0cbc7388129bfb9b4d6169c8a0',1,'WKLib::Core::UIManager']]],
-  ['type_2',['Type',['../classWKLib_1_1UI_1_1Settings_1_1WKSettings_1_1SettingInfo.html#ad5409ebffd296aa96309d182c21023c7',1,'WKLib::UI::Settings::WKSettings::SettingInfo']]]
+  ['saveasync_0',['SaveAsync',['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a327704826c88b26cd144689209f46426',1,'WKLib::API::Config::ConfigFile']]],
+  ['savesync_1',['SaveSync',['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a2a4cfe70fa58ade003a134ebc9c9e74d',1,'WKLib::API::Config::ConfigFile']]],
+  ['settopressedkey_2',['SetToPressedKey',['../classWKLib_1_1API_1_1UI_1_1KeyBind.html#a72e544447d2017401b6843003608240e',1,'WKLib::API::UI::KeyBind']]],
+  ['showpopupfortime_3',['ShowPopupForTime',['../classWKLib_1_1API_1_1UI_1_1UIUtility.html#a41cb93a488cdd3dc5bfe48bc25a8bba4',1,'WKLib::API::UI::UIUtility']]],
+  ['simplekeybind_4',['SimpleKeybind',['../classWKLib_1_1API_1_1UI_1_1UIUtility.html#a58c5d40a87446720ac629bb04f7ceba6',1,'WKLib::API::UI::UIUtility']]]
 ];
