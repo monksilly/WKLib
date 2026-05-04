@@ -40,12 +40,16 @@ public class WKLibPlugin : BaseUnityPlugin
         }
         
         WKLog.Info($"Plugin {NAME} v{VERSION} is loaded!");
-        
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene == null)
+            return;
+        
         if (scene.name == "Main-Menu")
         {
             var versionText = GameObject.Find("Canvas - Main Menu/Main Menu/Version Text")?.GetComponent<TextMeshProUGUI>();
