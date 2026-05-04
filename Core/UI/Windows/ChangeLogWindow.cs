@@ -18,6 +18,13 @@ internal class ChangeLogWindow
         
         gui.Separator("Versions");
 
+        if (gui.BeginTreeNode("Version 0.2.2"))
+        {
+            gui.Text("+ Fix plugin object being deleted");
+            gui.Text("+ Fix error on scene loaded");
+            gui.EndTreeNode();
+        }        
+        
         if (gui.BeginTreeNode("Version 0.2.1"))
         {
             gui.Text("+ Change config system saving and loading");
