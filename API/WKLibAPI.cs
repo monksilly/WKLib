@@ -45,6 +45,7 @@ public class WKLibAPI
 
         WKLibAPI newAPI = new WKLibAPI(displayName, guid);
         internalAPIs.Add(newAPI);
+        internalAPIs.Sort((a, b) => string.Compare(a.DisplayName, b.DisplayName, StringComparison.OrdinalIgnoreCase));
         return newAPI;
     }
 
