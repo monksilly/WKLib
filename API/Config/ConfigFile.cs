@@ -49,8 +49,11 @@ public class ConfigFile
     {
         if (string.IsNullOrWhiteSpace(filePath))
             throw new ArgumentNullException(nameof(filePath));
-
-        FilePath = filePath;
+        
+        FilePath = Path.GetExtension(filePath).Equals(".json", StringComparison.OrdinalIgnoreCase)
+            ? filePath
+            : $"{filePath}.json";
+        
         FullFileName = Path.GetFileName(FilePath);
         FileName = Path.GetFileNameWithoutExtension(FilePath);
         
