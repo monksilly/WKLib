@@ -16,11 +16,13 @@ var searchData=
   ['wklib_3a_3acore_3a_3apatches_13',['Patches',['../namespaceWKLib_1_1Core_1_1Patches.html',1,'WKLib::Core']]],
   ['wklib_3a_3acore_3a_3aui_14',['UI',['../namespaceWKLib_1_1Core_1_1UI.html',1,'WKLib::Core']]],
   ['wklib_3a_3acore_3a_3aui_3a_3awindows_15',['Windows',['../namespaceWKLib_1_1Core_1_1UI_1_1Windows.html',1,'WKLib::Core::UI']]],
-  ['wklib_3a_3autilities_16',['Utilities',['../namespaceWKLib_1_1Utilities.html',1,'WKLib']]],
-  ['wklibapi_17',['WKLibAPI',['../classWKLib_1_1API_1_1WKLibAPI.html',1,'WKLib.API.WKLibAPI'],['../classWKLib_1_1API_1_1WKLibAPI.html#ac5c2ebdd4b7c4db8316d319740ab3f90',1,'WKLib.API.WKLibAPI.WKLibAPI()']]],
-  ['wklibapi_2ecs_18',['WKLibAPI.cs',['../WKLibAPI_8cs.html',1,'']]],
-  ['wklibplugin_19',['WKLibPlugin',['../classWKLib_1_1WKLibPlugin.html',1,'WKLib']]],
-  ['wklibwindow_20',['WKLibWindow',['../classWKLib_1_1API_1_1UI_1_1WKLibWindow.html',1,'WKLib::API::UI']]],
-  ['wklibwindow_2ecs_21',['WKLibWindow.cs',['../WKLibWindow_8cs.html',1,'']]],
-  ['wklog_2ecs_22',['WKLog.cs',['../WKLog_8cs.html',1,'']]]
+  ['wklib_3a_3aexamples_16',['Examples',['../namespaceWKLib_1_1Examples.html',1,'WKLib']]],
+  ['wklib_3a_3aexamples_3a_3aui_17',['UI',['../namespaceWKLib_1_1Examples_1_1UI.html',1,'WKLib::Examples']]],
+  ['wklib_3a_3autilities_18',['Utilities',['../namespaceWKLib_1_1Utilities.html',1,'WKLib']]],
+  ['wklibapi_19',['WKLibAPI',['../classWKLib_1_1API_1_1WKLibAPI.html',1,'WKLib.API.WKLibAPI'],['../classWKLib_1_1API_1_1WKLibAPI.html#ac5c2ebdd4b7c4db8316d319740ab3f90',1,'WKLib.API.WKLibAPI.WKLibAPI()']]],
+  ['wklibapi_2ecs_20',['WKLibAPI.cs',['../WKLibAPI_8cs.html',1,'']]],
+  ['wklibplugin_21',['WKLibPlugin',['../classWKLib_1_1WKLibPlugin.html',1,'WKLib']]],
+  ['wklibwindow_22',['WKLibWindow',['../classWKLib_1_1API_1_1UI_1_1WKLibWindow.html',1,'WKLib::API::UI']]],
+  ['wklibwindow_2ecs_23',['WKLibWindow.cs',['../WKLibWindow_8cs.html',1,'']]],
+  ['wklog_2ecs_24',['WKLog.cs',['../WKLog_8cs.html',1,'']]]
 ];

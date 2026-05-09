@@ -23,6 +23,11 @@ var annotated_dup =
         ] ],
         [ "WKLibAPI", "classWKLib_1_1API_1_1WKLibAPI.html", "classWKLib_1_1API_1_1WKLibAPI" ]
       ] ],
+      [ "Examples", "namespaceWKLib_1_1Examples.html", [
+        [ "UI", "namespaceWKLib_1_1Examples_1_1UI.html", [
+          [ "DemoWindow", "classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html", "classWKLib_1_1Examples_1_1UI_1_1DemoWindow" ]
+        ] ]
+      ] ],
       [ "WKLibPlugin", "classWKLib_1_1WKLibPlugin.html", "classWKLib_1_1WKLibPlugin" ]
     ] ]
 ];

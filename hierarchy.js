@@ -12,6 +12,7 @@ var hierarchy =
     [ "WKLib.API.Config.ConfigValueBase", "classWKLib_1_1API_1_1Config_1_1ConfigValueBase.html", [
       [ "WKLib.API.Config.ConfigValue< T >", "classWKLib_1_1API_1_1Config_1_1ConfigValue.html", null ]
     ] ],
+    [ "WKLib.Examples.UI.DemoWindow", "classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html", null ],
     [ "ICloneable", null, [
       [ "WKLib.API.UI.KeyBind", "classWKLib_1_1API_1_1UI_1_1KeyBind.html", null ]
     ] ],

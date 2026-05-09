@@ -14,5 +14,7 @@ var searchData=
   ['wklib_3a_3acore_3a_3apatches_11',['Patches',['../namespaceWKLib_1_1Core_1_1Patches.html',1,'WKLib::Core']]],
   ['wklib_3a_3acore_3a_3aui_12',['UI',['../namespaceWKLib_1_1Core_1_1UI.html',1,'WKLib::Core']]],
   ['wklib_3a_3acore_3a_3aui_3a_3awindows_13',['Windows',['../namespaceWKLib_1_1Core_1_1UI_1_1Windows.html',1,'WKLib::Core::UI']]],
-  ['wklib_3a_3autilities_14',['Utilities',['../namespaceWKLib_1_1Utilities.html',1,'WKLib']]]
+  ['wklib_3a_3aexamples_14',['Examples',['../namespaceWKLib_1_1Examples.html',1,'WKLib']]],
+  ['wklib_3a_3aexamples_3a_3aui_15',['UI',['../namespaceWKLib_1_1Examples_1_1UI.html',1,'WKLib::Examples']]],
+  ['wklib_3a_3autilities_16',['Utilities',['../namespaceWKLib_1_1Utilities.html',1,'WKLib']]]
 ];
