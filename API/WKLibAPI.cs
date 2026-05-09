@@ -20,7 +20,7 @@ public class WKLibAPI
     
     public AssetService AssetService = null;
     
-    public WKLibAPI(string displayName, string guid, string defaultConfigFileName = "DefaultConfig")
+    private WKLibAPI(string displayName, string guid, string defaultConfigFileName)
     {
         DisplayName = displayName;
         GUID = guid;
@@ -31,11 +31,13 @@ public class WKLibAPI
     }
 
     /// <summary>
-    /// Create a new configurator. Use one instance throughout the session
+    /// Creates and registers a new API instance.
     /// </summary>
-    /// <param name="displayName">Name of the plugin, displayName will be set to this</param>
-    /// <param name="guid">ID of the plugin, guid will be set to this</param>
-    public static WKLibAPI Create(string displayName, string guid)
+    /// <param name="displayName">The plugin display name.</param>
+    /// <param name="guid">The plugin GUID.</param>
+    /// <param name="defaultConfigFileName">The default config file name.</param>
+    /// <returns>The created API instance.</returns>
+    public static WKLibAPI Create(string displayName, string guid, string defaultConfigFileName = "DefaultConfig")
     {
         foreach(WKLibAPI API in internalAPIs)
         {
@@ -43,7 +45,7 @@ public class WKLibAPI
                 throw new Exception($"{displayName} collides with {API.DisplayName}, they both have the same guid, {guid}");
         }
 
-        WKLibAPI newAPI = new WKLibAPI(displayName, guid);
+        WKLibAPI newAPI = new WKLibAPI(displayName, guid, defaultConfigFileName);
         internalAPIs.Add(newAPI);
         internalAPIs.Sort((a, b) => string.Compare(a.DisplayName, b.DisplayName, StringComparison.OrdinalIgnoreCase));
         return newAPI;
