@@ -30,11 +30,11 @@ internal class CoreSettings
         JsonSerializerSettings.Converters.Add(new ColorJsonConverter());
         
         // Set base path
-        BasePath = Path.Combine(Paths.ConfigPath, "WKLib");
+        BasePath = Paths.ConfigPath;
         if (!Directory.Exists(BasePath)) 
             Directory.CreateDirectory(BasePath);
         
         // Create default WKLib config
-        DefaultConfigFile = new ConfigFile(Path.Combine(BasePath, "DefaultConfig.json"));
+        DefaultConfigFile = new ConfigFile(Path.Combine(BasePath, "WKLib", "DefaultConfig.json"));
     }   
 }
