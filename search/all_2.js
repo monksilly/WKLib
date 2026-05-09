@@ -18,7 +18,7 @@ var searchData=
   ['configwindow_2ecs_15',['ConfigWindow.cs',['../ConfigWindow_8cs.html',1,'']]],
   ['contact_16',['Contact',['../index.html#contact',1,'']]],
   ['coresettings_2ecs_17',['CoreSettings.cs',['../CoreSettings_8cs.html',1,'']]],
-  ['create_18',['Create',['../classWKLib_1_1API_1_1WKLibAPI.html#a21fff6e7d686748381d1012b99449303',1,'WKLib::API::WKLibAPI']]],
+  ['create_18',['Create',['../classWKLib_1_1API_1_1WKLibAPI.html#a6dc86c41a43cb6c73dcc11e3464f00b5',1,'WKLib.API.WKLibAPI.Create(string displayName, string guid)'],['../classWKLib_1_1API_1_1WKLibAPI.html#a23f9547a4632138a4bf89028ed4c4508',1,'WKLib.API.WKLibAPI.Create(string displayName, string guid, string defaultConfigFileName)']]],
   ['createconfigfile_19',['CreateConfigFile',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#aba6a93712b13af83eede755457271d9b',1,'WKLib::API::Config::ConfigFolder']]],
   ['createsubfolder_20',['CreateSubFolder',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#afcb707fb855126da8aec795b52487528',1,'WKLib::API::Config::ConfigFolder']]]
 ];
