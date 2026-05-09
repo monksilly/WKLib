@@ -35,9 +35,25 @@ public class WKLibAPI
     /// </summary>
     /// <param name="displayName">The plugin display name.</param>
     /// <param name="guid">The plugin GUID.</param>
+    /// <returns>The created API instance.</returns>
+    public static WKLibAPI Create(string displayName, string guid)
+    {
+        return Create_Internal(displayName, guid);
+    }
+    
+    /// <summary>
+    /// Creates and registers a new API instance.
+    /// </summary>
+    /// <param name="displayName">The plugin display name.</param>
+    /// <param name="guid">The plugin GUID.</param>
     /// <param name="defaultConfigFileName">The default config file name.</param>
     /// <returns>The created API instance.</returns>
-    public static WKLibAPI Create(string displayName, string guid, string defaultConfigFileName = "DefaultConfig")
+    public static WKLibAPI Create(string displayName, string guid, string defaultConfigFileName)
+    {
+        return Create_Internal(displayName, guid, defaultConfigFileName);
+    }
+    
+    private static WKLibAPI Create_Internal(string displayName, string guid, string defaultConfigFileName = "DefaultConfig")
     {
         foreach(WKLibAPI API in internalAPIs)
         {
