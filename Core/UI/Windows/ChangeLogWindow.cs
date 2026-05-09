@@ -18,6 +18,13 @@ internal class ChangeLogWindow
         
         gui.Separator("Versions");
 
+        if (gui.BeginTreeNode("Version 0.2.3"))
+        {
+            gui.Text("+ Change config system default saving folder location, dont use WKLib as the default");
+            gui.Text("+ Fix configs not saving as jsons");
+            gui.EndTreeNode();
+        }
+
         if (gui.BeginTreeNode("Version 0.2.2"))
         {
             gui.Text("+ Fix plugin object being deleted");
