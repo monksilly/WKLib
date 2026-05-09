@@ -3,8 +3,6 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI_a7eaa1393e011f7fea5268b4359568534}{WKLib\+API}} (string display\+Name, string guid, string default\+Config\+File\+Name="{}Default\+Config"{})
-\item 
 void \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI_a16210bc3b801bdc2261640e0aef89655}{Add\+Window}} (\mbox{\hyperlink{classWKLib_1_1API_1_1UI_1_1WKLibWindow}{WKLib\+Window}} window)
 \item 
 void \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI_a69d7212259014a5d2b53ec17e409759f}{Add\+To\+Mod\+List}} (\mbox{\hyperlink{classWKLib_1_1API_1_1UI_1_1ModTab}{Mod\+Tab}} mod\+Tab)
@@ -14,8 +12,8 @@ void \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI_a22cfb7b2e8644ce40e42fe2c371
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI}{WKLib\+API}} \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI_a6dc86c41a43cb6c73dcc11e3464f00b5}{Create}} (string display\+Name, string guid)
-\begin{DoxyCompactList}\small\item\em Create a new configurator. Use one instance throughout the session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI}{WKLib\+API}} \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI_a21fff6e7d686748381d1012b99449303}{Create}} (string display\+Name, string guid, string default\+Config\+File\+Name="{}Default\+Config"{})
+\begin{DoxyCompactList}\small\item\em Creates and registers a new \doxylink{namespaceWKLib_1_1API}{API} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,15 +33,6 @@ List$<$ \mbox{\hyperlink{classWKLib_1_1API_1_1UI_1_1WKLibWindow}{WKLib\+Window}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classWKLib_1_1API_1_1WKLibAPI_a7eaa1393e011f7fea5268b4359568534}\index{WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}!WKLibAPI@{WKLibAPI}}
-\index{WKLibAPI@{WKLibAPI}!WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}}
-\doxysubsubsection{\texorpdfstring{WKLibAPI()}{WKLibAPI()}}
-{\footnotesize\ttfamily \label{classWKLib_1_1API_1_1WKLibAPI_a7eaa1393e011f7fea5268b4359568534} 
-WKLib.\+API.\+WKLib\+API.\+WKLib\+API (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{, }\item[{string}]{guid}{, }\item[{string}]{default\+Config\+File\+Name}{ = {\ttfamily "{}DefaultConfig"{}}}\end{DoxyParamCaption})}
-
-
-
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classWKLib_1_1API_1_1WKLibAPI_a69d7212259014a5d2b53ec17e409759f}\index{WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}!AddToModList@{AddToModList}}
 \index{AddToModList@{AddToModList}!WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}}
@@ -57,23 +46,28 @@ void WKLib.\+API.\+WKLib\+API.\+Add\+To\+Mod\+List (\begin{DoxyParamCaption}\ite
 {\footnotesize\ttfamily \label{classWKLib_1_1API_1_1WKLibAPI_a16210bc3b801bdc2261640e0aef89655} 
 void WKLib.\+API.\+WKLib\+API.\+Add\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWKLib_1_1API_1_1UI_1_1WKLibWindow}{WKLib\+Window}}}]{window}{}\end{DoxyParamCaption})}
 
-\Hypertarget{classWKLib_1_1API_1_1WKLibAPI_a6dc86c41a43cb6c73dcc11e3464f00b5}\index{WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}!Create@{Create}}
+\Hypertarget{classWKLib_1_1API_1_1WKLibAPI_a21fff6e7d686748381d1012b99449303}\index{WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}!Create@{Create}}
 \index{Create@{Create}!WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}}
 \doxysubsubsection{\texorpdfstring{Create()}{Create()}}
-{\footnotesize\ttfamily \label{classWKLib_1_1API_1_1WKLibAPI_a6dc86c41a43cb6c73dcc11e3464f00b5} 
-static \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI}{WKLib\+API}} WKLib.\+API.\+WKLib\+API.\+Create (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{, }\item[{string}]{guid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classWKLib_1_1API_1_1WKLibAPI_a21fff6e7d686748381d1012b99449303} 
+static \mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI}{WKLib\+API}} WKLib.\+API.\+WKLib\+API.\+Create (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{, }\item[{string}]{guid}{, }\item[{string}]{default\+Config\+File\+Name}{ = {\ttfamily "{}DefaultConfig"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Create a new configurator. Use one instance throughout the session. 
+Creates and registers a new \doxylink{namespaceWKLib_1_1API}{API} instance. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em display\+Name} & Name of the plugin, display\+Name will be set to this\\
+{\em display\+Name} & The plugin display name.\\
 \hline
-{\em guid} & ID of the plugin, guid will be set to this\\
+{\em guid} & The plugin GUID.\\
+\hline
+{\em default\+Config\+File\+Name} & The default config file name.\\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created \doxylink{namespaceWKLib_1_1API}{API} instance.
+\end{DoxyReturn}
 \Hypertarget{classWKLib_1_1API_1_1WKLibAPI_a22cfb7b2e8644ce40e42fe2c371a06b6}\index{WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}!Destroy@{Destroy}}
 \index{Destroy@{Destroy}!WKLib.API.WKLibAPI@{WKLib.API.WKLibAPI}}
 \doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}

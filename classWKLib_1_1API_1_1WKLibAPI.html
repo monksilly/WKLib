@@ -109,8 +109,6 @@ $(function(){initNavTree('classWKLib_1_1API_1_1WKLibAPI.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7eaa1393e011f7fea5268b4359568534" id="r_a7eaa1393e011f7fea5268b4359568534"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eaa1393e011f7fea5268b4359568534">WKLibAPI</a> (string displayName, string guid, string defaultConfigFileName=&quot;DefaultConfig&quot;)</td></tr>
-<tr class="separator:a7eaa1393e011f7fea5268b4359568534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16210bc3b801bdc2261640e0aef89655" id="r_a16210bc3b801bdc2261640e0aef89655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16210bc3b801bdc2261640e0aef89655">AddWindow</a> (<a class="el" href="classWKLib_1_1API_1_1UI_1_1WKLibWindow.html">WKLibWindow</a> window)</td></tr>
 <tr class="separator:a16210bc3b801bdc2261640e0aef89655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69d7212259014a5d2b53ec17e409759f" id="r_a69d7212259014a5d2b53ec17e409759f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69d7212259014a5d2b53ec17e409759f">AddToModList</a> (<a class="el" href="classWKLib_1_1API_1_1UI_1_1ModTab.html">ModTab</a> modTab)</td></tr>
@@ -120,9 +118,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6dc86c41a43cb6c73dcc11e3464f00b5" id="r_a6dc86c41a43cb6c73dcc11e3464f00b5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classWKLib_1_1API_1_1WKLibAPI.html">WKLibAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dc86c41a43cb6c73dcc11e3464f00b5">Create</a> (string displayName, string guid)</td></tr>
-<tr class="memdesc:a6dc86c41a43cb6c73dcc11e3464f00b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new configurator. Use one instance throughout the session.  <br /></td></tr>
-<tr class="separator:a6dc86c41a43cb6c73dcc11e3464f00b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21fff6e7d686748381d1012b99449303" id="r_a21fff6e7d686748381d1012b99449303"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classWKLib_1_1API_1_1WKLibAPI.html">WKLibAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21fff6e7d686748381d1012b99449303">Create</a> (string displayName, string guid, string defaultConfigFileName=&quot;DefaultConfig&quot;)</td></tr>
+<tr class="memdesc:a21fff6e7d686748381d1012b99449303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and registers a new <a class="el" href="namespaceWKLib_1_1API.html">API</a> instance.  <br /></td></tr>
+<tr class="separator:a21fff6e7d686748381d1012b99449303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -141,33 +139,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ae74997a0006cc47b01392fe428ed6049" id="r_ae74997a0006cc47b01392fe428ed6049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWKLib_1_1API_1_1Assets_1_1AssetService.html">AssetService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae74997a0006cc47b01392fe428ed6049">AssetService</a> = null</td></tr>
 <tr class="separator:ae74997a0006cc47b01392fe428ed6049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7eaa1393e011f7fea5268b4359568534" name="a7eaa1393e011f7fea5268b4359568534"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7eaa1393e011f7fea5268b4359568534">&#9670;&#160;</a></span>WKLibAPI()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">WKLib.API.WKLibAPI.WKLibAPI </td>
-          <td>(</td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>displayName</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>guid</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>defaultConfigFileName</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;DefaultConfig&quot;</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a69d7212259014a5d2b53ec17e409759f" name="a69d7212259014a5d2b53ec17e409759f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69d7212259014a5d2b53ec17e409759f">&#9670;&#160;</a></span>AddToModList()</h2>
@@ -203,8 +174,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6dc86c41a43cb6c73dcc11e3464f00b5" name="a6dc86c41a43cb6c73dcc11e3464f00b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dc86c41a43cb6c73dcc11e3464f00b5">&#9670;&#160;</a></span>Create()</h2>
+<a id="a21fff6e7d686748381d1012b99449303" name="a21fff6e7d686748381d1012b99449303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21fff6e7d686748381d1012b99449303">&#9670;&#160;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +191,12 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>guid</em></span>&#160;)</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>guid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>defaultConfigFileName</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;DefaultConfig&quot;</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -230,14 +206,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create a new configurator. Use one instance throughout the session. </p>
+<p>Creates and registers a new <a class="el" href="namespaceWKLib_1_1API.html">API</a> instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayName</td><td>Name of the plugin, displayName will be set to this</td></tr>
-    <tr><td class="paramname">guid</td><td>ID of the plugin, guid will be set to this</td></tr>
+    <tr><td class="paramname">displayName</td><td>The plugin display name.</td></tr>
+    <tr><td class="paramname">guid</td><td>The plugin GUID.</td></tr>
+    <tr><td class="paramname">defaultConfigFileName</td><td>The default config file name.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The created <a class="el" href="namespaceWKLib_1_1API.html">API</a> instance.</dd></dl>
 
 </div>
 </div>
