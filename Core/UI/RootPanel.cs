@@ -1,6 +1,5 @@
 using Imui.Controls;
 using Imui.Core;
-using Imui.Examples;
 using Imui.IO.UGUI;
 using ImuiBepInEx.API;
 using UnityEngine;
@@ -9,6 +8,7 @@ using WKLib.API;
 using WKLib.API.Input;
 using WKLib.Core.Classes;
 using WKLib.Core.UI.Windows;
+using WKLib.Examples.UI;
 using static WKLib.Core.Config.ConfigManager;
 
 namespace WKLib.Core.UI;
@@ -86,7 +86,7 @@ internal class RootPanel : MonoSingleton<RootPanel>
         ConfigWindow.Draw(gui, IsOpen);
         if (EnableDemoWindow)
         {
-            ImDemoWindow.Draw(gui, ref isDemoOpen);
+            DemoWindow.Draw(gui, ref isDemoOpen);
         }
         ModListWindow.Draw(gui, IsOpen);
         
