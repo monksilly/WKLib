@@ -20,13 +20,13 @@ public class WKLibAPI
     
     public AssetService AssetService = null;
     
-    public WKLibAPI(string displayName, string guid)
+    public WKLibAPI(string displayName, string guid, string defaultConfigFileName = "DefaultConfig")
     {
         DisplayName = displayName;
         GUID = guid;
         
         ConfigFolder = new ConfigFolder(displayName);
-        DefaultConfigFile = ConfigFolder.GetOrCreateConfigFile(guid);
+        DefaultConfigFile = ConfigFolder.GetOrCreateConfigFile(defaultConfigFileName);
         AssetService = new AssetService(this);
     }
 
