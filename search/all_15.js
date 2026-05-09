@@ -19,7 +19,7 @@ var searchData=
   ['wklib_3a_3aexamples_16',['Examples',['../namespaceWKLib_1_1Examples.html',1,'WKLib']]],
   ['wklib_3a_3aexamples_3a_3aui_17',['UI',['../namespaceWKLib_1_1Examples_1_1UI.html',1,'WKLib::Examples']]],
   ['wklib_3a_3autilities_18',['Utilities',['../namespaceWKLib_1_1Utilities.html',1,'WKLib']]],
-  ['wklibapi_19',['WKLibAPI',['../classWKLib_1_1API_1_1WKLibAPI.html',1,'WKLib.API.WKLibAPI'],['../classWKLib_1_1API_1_1WKLibAPI.html#ac5c2ebdd4b7c4db8316d319740ab3f90',1,'WKLib.API.WKLibAPI.WKLibAPI()']]],
+  ['wklibapi_19',['WKLibAPI',['../classWKLib_1_1API_1_1WKLibAPI.html',1,'WKLib.API.WKLibAPI'],['../classWKLib_1_1API_1_1WKLibAPI.html#a7eaa1393e011f7fea5268b4359568534',1,'WKLib.API.WKLibAPI.WKLibAPI()']]],
   ['wklibapi_2ecs_20',['WKLibAPI.cs',['../WKLibAPI_8cs.html',1,'']]],
   ['wklibplugin_21',['WKLibPlugin',['../classWKLib_1_1WKLibPlugin.html',1,'WKLib']]],
   ['wklibwindow_22',['WKLibWindow',['../classWKLib_1_1API_1_1UI_1_1WKLibWindow.html',1,'WKLib::API::UI']]],
