@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_0',['Value',['../classWKLib_1_1API_1_1Config_1_1ConfigValue.html#a273f5caca61efbc8ca7b0bb749683eef',1,'WKLib::API::Config::ConfigValue']]]
+  ['guid_0',['GUID',['../classWKLib_1_1API_1_1WKLibAPI.html#a187c4bf6150f2c15cda019d262a4b4aa',1,'WKLib::API::WKLibAPI']]]
 ];

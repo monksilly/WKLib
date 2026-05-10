@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['key_0',['Key',['../classWKLib_1_1API_1_1Config_1_1ConfigValueBase.html#a131a6c4285dd9df61d17dd4c06918d7d',1,'WKLib::API::Config::ConfigValueBase']]],
-  ['keycode_1',['KeyCode',['../classWKLib_1_1API_1_1UI_1_1KeyBind.html#af934b0509469d1affcc0af76270a70d6',1,'WKLib::API::UI::KeyBind']]]
+  ['defaultconfigfile_0',['DefaultConfigFile',['../classWKLib_1_1API_1_1WKLibAPI.html#a76630c156761e3b45f0b901e9eacf780',1,'WKLib::API::WKLibAPI']]],
+  ['displayname_1',['DisplayName',['../classWKLib_1_1API_1_1UI_1_1ModTab.html#a952528fc49a9fea9ab5fc95a3e2db414',1,'WKLib.API.UI.ModTab.DisplayName'],['../classWKLib_1_1API_1_1WKLibAPI.html#a23594dcd9cab3cdcf6702398445c55f0',1,'WKLib.API.WKLibAPI.DisplayName']]]
 ];

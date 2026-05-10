@@ -3,8 +3,6 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFile_aa87bcae0fa35784491126c68e5bbfa7a}{Config\+File}} (string file\+Path)
-\item 
 \mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFile_a62cbaaf956476e74c7fdf9017352465d}{Config\+File}} (\mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFolder}{Config\+Folder}} config\+Folder, string file\+Name)
 \item 
 \mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFile_a5cadcb3200a63918856f835c93b1a8c9}{Config\+File}} (\mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI}{WKLib\+API}} API, string file\+Name)
@@ -12,8 +10,6 @@
 bool \mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFile_a17e733b4e36495ae15aac0996c9cd61a}{Try\+Get\+Parsed\+Token}} (string key, out JToken token)
 \item 
 bool \mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFile_a93c8e54c8fc8d4e7dde0968bafd9ee9e}{Try\+Get\+Parsed\+Value\+Object}} (string key, out object value)
-\item 
-void \mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFile_a52b0b976a40249777e4957b8ebea4503}{Register\+Config\+Value}} (\mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigValueBase}{Config\+Value\+Base}} config\+Value)
 \item 
 void \mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFile_a7b1d4d9764d43eedb84999a0d615e096}{Load\+From\+Disk}} ()
 \item 
@@ -33,21 +29,15 @@ string \mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFile_afffb8b7bbf8c9
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classWKLib_1_1API_1_1Config_1_1ConfigFile_aa87bcae0fa35784491126c68e5bbfa7a}\index{WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}!ConfigFile@{ConfigFile}}
-\index{ConfigFile@{ConfigFile}!WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}}
-\doxysubsubsection{\texorpdfstring{ConfigFile()}{ConfigFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily \label{classWKLib_1_1API_1_1Config_1_1ConfigFile_aa87bcae0fa35784491126c68e5bbfa7a} 
-WKLib.\+API.\+Config.\+Config\+File.\+Config\+File (\begin{DoxyParamCaption}\item[{string}]{file\+Path}{}\end{DoxyParamCaption})}
-
 \Hypertarget{classWKLib_1_1API_1_1Config_1_1ConfigFile_a62cbaaf956476e74c7fdf9017352465d}\index{WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}!ConfigFile@{ConfigFile}}
 \index{ConfigFile@{ConfigFile}!WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}}
-\doxysubsubsection{\texorpdfstring{ConfigFile()}{ConfigFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{ConfigFile()}{ConfigFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{classWKLib_1_1API_1_1Config_1_1ConfigFile_a62cbaaf956476e74c7fdf9017352465d} 
 WKLib.\+API.\+Config.\+Config\+File.\+Config\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigFolder}{Config\+Folder}}}]{config\+Folder}{, }\item[{string}]{file\+Name}{}\end{DoxyParamCaption})}
 
 \Hypertarget{classWKLib_1_1API_1_1Config_1_1ConfigFile_a5cadcb3200a63918856f835c93b1a8c9}\index{WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}!ConfigFile@{ConfigFile}}
 \index{ConfigFile@{ConfigFile}!WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}}
-\doxysubsubsection{\texorpdfstring{ConfigFile()}{ConfigFile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\doxysubsubsection{\texorpdfstring{ConfigFile()}{ConfigFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{classWKLib_1_1API_1_1Config_1_1ConfigFile_a5cadcb3200a63918856f835c93b1a8c9} 
 WKLib.\+API.\+Config.\+Config\+File.\+Config\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWKLib_1_1API_1_1WKLibAPI}{WKLib\+API}}}]{API}{, }\item[{string}]{file\+Name}{}\end{DoxyParamCaption})}
 
@@ -59,12 +49,6 @@ WKLib.\+API.\+Config.\+Config\+File.\+Config\+File (\begin{DoxyParamCaption}\ite
 \doxysubsubsection{\texorpdfstring{LoadFromDisk()}{LoadFromDisk()}}
 {\footnotesize\ttfamily \label{classWKLib_1_1API_1_1Config_1_1ConfigFile_a7b1d4d9764d43eedb84999a0d615e096} 
 void WKLib.\+API.\+Config.\+Config\+File.\+Load\+From\+Disk (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-\Hypertarget{classWKLib_1_1API_1_1Config_1_1ConfigFile_a52b0b976a40249777e4957b8ebea4503}\index{WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}!RegisterConfigValue@{RegisterConfigValue}}
-\index{RegisterConfigValue@{RegisterConfigValue}!WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}}
-\doxysubsubsection{\texorpdfstring{RegisterConfigValue()}{RegisterConfigValue()}}
-{\footnotesize\ttfamily \label{classWKLib_1_1API_1_1Config_1_1ConfigFile_a52b0b976a40249777e4957b8ebea4503} 
-void WKLib.\+API.\+Config.\+Config\+File.\+Register\+Config\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWKLib_1_1API_1_1Config_1_1ConfigValueBase}{Config\+Value\+Base}}}]{config\+Value}{}\end{DoxyParamCaption})}
 
 \Hypertarget{classWKLib_1_1API_1_1Config_1_1ConfigFile_a327704826c88b26cd144689209f46426}\index{WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}!SaveAsync@{SaveAsync}}
 \index{SaveAsync@{SaveAsync}!WKLib.API.Config.ConfigFile@{WKLib.API.Config.ConfigFile}}

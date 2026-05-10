@@ -9,6 +9,5 @@ var classWKLib_1_1API_1_1UI_1_1KeyBind =
     [ "IsDown", "classWKLib_1_1API_1_1UI_1_1KeyBind.html#a62b4190efd84a915edce0879e8eefefe", null ],
     [ "IsPressed", "classWKLib_1_1API_1_1UI_1_1KeyBind.html#ae52f7fd7863e75309c3f6848ede5f7a4", null ],
     [ "IsSet", "classWKLib_1_1API_1_1UI_1_1KeyBind.html#a9bc6af0970e86f85ef61d448afff237a", null ],
-    [ "SetToPressedKey", "classWKLib_1_1API_1_1UI_1_1KeyBind.html#a72e544447d2017401b6843003608240e", null ],
     [ "KeyCode", "classWKLib_1_1API_1_1UI_1_1KeyBind.html#af934b0509469d1affcc0af76270a70d6", null ]
 ];

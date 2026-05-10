@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modtab_0',['ModTab',['../classWKLib_1_1API_1_1WKLibAPI.html#a904a43cad7d4f690dcb8b1bd49f787b0',1,'WKLib::API::WKLibAPI']]]
+  ['version_0',['VERSION',['../classWKLib_1_1WKLibPlugin.html#abd9fe359792b6fdf4d779ab100b99608',1,'WKLib::WKLibPlugin']]]
 ];
