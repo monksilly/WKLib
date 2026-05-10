@@ -10,15 +10,15 @@ public class WKLibAPI
 {
     internal static List<WKLibAPI> internalAPIs = new List<WKLibAPI>();
 
-    public string DisplayName = string.Empty;
-    public string GUID = string.Empty;
+    public string DisplayName { get; internal set; } = string.Empty;
+    public string GUID { get; internal set; } = string.Empty;
 
-    public List<WKLibWindow> Windows = new List<WKLibWindow>();
-    public ModTab ModTab = null;
-    public ConfigFolder ConfigFolder = null;
-    public ConfigFile DefaultConfigFile = null;
-    
-    public AssetService AssetService = null;
+    public List<WKLibWindow> Windows { get; internal set; } = new List<WKLibWindow>();
+    public ModTab ModTab { get; internal set; } = null;
+    public ConfigFolder ConfigFolder { get; internal set; } = null;
+    public ConfigFile DefaultConfigFile { get; internal set; } = null;
+
+    public AssetService AssetService { get; internal set; } = null;
     
     private WKLibAPI(string displayName, string guid, string defaultConfigFileName)
     {

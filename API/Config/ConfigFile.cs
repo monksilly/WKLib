@@ -20,11 +20,6 @@ public class ConfigFile
     private List<ConfigValueBase> registeredValues = new List<ConfigValueBase>();
 
     #region Constructors
-    public ConfigFile(string filePath)
-    {
-        Initialize(filePath);
-    }
-
     public ConfigFile(ConfigFolder configFolder, string fileName)
     {
         if (configFolder == null)
@@ -136,7 +131,7 @@ public class ConfigFile
     }
     */
     
-    public void RegisterConfigValue(ConfigValueBase configValue)
+    internal void RegisterConfigValue(ConfigValueBase configValue)
     {
         if (string.IsNullOrEmpty(configValue.Key))
             return;

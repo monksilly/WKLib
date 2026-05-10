@@ -29,7 +29,7 @@ public class WKLibPlugin : BaseUnityPlugin
     {
         // Initialize Logger
         WKLog.Initialize(Logger);
-        gameObject.hideFlags = HideFlags.HideAndDontSave; // Hides the Plugin GameObject from Unity
+        gameObject.hideFlags = HideFlags.HideAndDontSave; // Hides the Manager GameObject from Unity
         
         harmony = new Harmony(GUID);
         

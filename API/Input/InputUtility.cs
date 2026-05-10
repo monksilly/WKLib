@@ -10,7 +10,7 @@ public static class InputUtility
 {
     private static Dictionary<KeyCode, bool> keysDictionary = new Dictionary<KeyCode, bool>();
         
-    public static void HandleInput(ImGui gui)
+    internal static void HandleInput(ImGui gui)
     {
         if (keysDictionary.Keys.Count <= 0)
         {
