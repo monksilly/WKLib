@@ -23,7 +23,7 @@ public class KeyBind : IEquatable<KeyBind>, ICloneable
         this.KeyCode = KeyCode;
     }
     
-    public bool SetToPressedKey(ImGui gui)
+    internal bool SetToPressedKey(ImGui gui)
     {
         for (int i = 0; i < gui.Input.KeyboardEventsCount; ++i)
         {

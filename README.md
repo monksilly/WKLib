@@ -22,11 +22,9 @@ _By the way, contributions are welcome ;)_
 
 
 ## Documentation
-**Code Documentation** can be found [_**here**_](https://github.com/monksilly/WKLib/wiki/Code-Documentation-Index)
+The **Documentation** can be found [_**here**_](https://github.com/monksilly/WKLib/wiki)
 
-**Auto Generated Documentation** can be found [_**here**_](https://monksilly.github.io/WKLib/)
-
-**Guides/Tutorials** can be found [_**here**_](https://github.com/monksilly/WKLib/wiki)
-
+The **Auto-Generated Documentation** can be found [_**here**_](https://monksilly.github.io/WKLib/)
+  
 ## Contact
 If you have any questions or want to help the development or improve the wiki, you can join [**our discord server**](https://discord.gg/EbHdwEhjgY)
