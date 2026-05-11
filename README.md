@@ -15,7 +15,7 @@ _By the way, contributions are welcome ;)_
 | Loading Custom Levels             |       ✅        |
 | Loading Custom Asset Bundles      |       ✅        |
 | Loading Custom Regions/Subregions |       ✅        |
-| Making Custom UI Elements         |       ➖        |
+| Making Custom UI Elements         |       ✅        |
 | Loading Custom Items              |       ❌        |
 
 <sub>✅ - Implemented | ➖ - Implemented, Not Tested | ❌ - Not Implemented<sub/>
