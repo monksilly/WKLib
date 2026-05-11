@@ -1,0 +1,3 @@
+<map id="WKLib.API.Assets.AssetService" name="WKLib.API.Assets.AssetService">
+<area shape="rect" id="Node000001" title="Loads and caches AssetBundles and assets, scoped by ModContext to avoid collisions." alt="" coords="5,5,205,234"/>
+</map>

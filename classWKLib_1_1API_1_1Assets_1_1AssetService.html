@@ -20,6 +20,7 @@
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript" src="darkmode_toggle.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -107,6 +108,13 @@ $(function(){initNavTree('classWKLib_1_1API_1_1Assets_1_1AssetService.html','');
 
 <p>Loads and caches AssetBundles and assets, scoped by ModContext to avoid collisions.  
  <a href="#details">More...</a></p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for WKLib.API.Assets.AssetService:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classWKLib_1_1API_1_1Assets_1_1AssetService__coll__graph.svg" width="211" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -144,6 +152,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Loads and caches AssetBundles and assets, scoped by ModContext to avoid collisions. </p>
+
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00019">19</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0c1cf661c98e22a8902a8692fac01933" name="a0c1cf661c98e22a8902a8692fac01933"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c1cf661c98e22a8902a8692fac01933">&#9670;&#160;</a></span>AssetService()</h2>
@@ -159,6 +169,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00029">29</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
 
 </div>
 </div>
@@ -179,6 +191,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns all M_Level instances whose prefab names contain the given substring. (Uses levelPrefabs from the combined asset database in CL_AssetManager) </p>
+
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00273">273</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
 
 </div>
 </div>
@@ -205,6 +219,8 @@ Public Member Functions</h2></td></tr>
  Also logs each M_Level found via WKLog.Debug("LevelName").<br  />
  If you want to register each prefab in a CL_AssetManager database this method will do it automatically. </p>
 
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00177">177</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
+
 </div>
 </div>
 <a id="afa95a7de993dc4a4765b2da88df1cb4a" name="afa95a7de993dc4a4765b2da88df1cb4a"></a>
@@ -229,6 +245,8 @@ Public Member Functions</h2></td></tr>
 <p>Loads an AssetBundle given a path relative to the mod assembly folder.<br  />
  Caches under a key combining ModID and bundle name. </p><dl class="section return"><dt>Returns</dt><dd>AssetBundle | null</dd></dl>
 </p>
+
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00049">49</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
 
 </div>
 </div>
@@ -259,6 +277,8 @@ Public Member Functions</h2></td></tr>
 <p>Loads a gamemode from an asset bundle. </p>
 <dl class="section return"><dt>Returns</dt><dd>M_Gamemode | null</dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00290">290</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
+
 </div>
 </div>
 <a id="aa7ac63cfc1051148f1c8cc9ca4cbe392" name="aa7ac63cfc1051148f1c8cc9ca4cbe392"></a>
@@ -277,6 +297,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Convenience: Create a Sprite from a PNG filename. </p>
+
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00374">374</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
 
 </div>
 </div>
@@ -298,6 +320,8 @@ Public Member Functions</h2></td></tr>
 <p>Loads a PNG as a Sprite relative to the mod folder. </p><dl class="section return"><dt>Returns</dt><dd>Sprite | null </dd></dl>
 </p>
 
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00351">351</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
+
 </div>
 </div>
 <a id="a35602774cc7a7ad476d6f9437a46bacf" name="a35602774cc7a7ad476d6f9437a46bacf"></a>
@@ -316,6 +340,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Unloads all bundles loaded by this mod. </p>
+
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00144">144</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
 
 </div>
 </div>
@@ -340,10 +366,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Unloads a specific bundle for this mod. </p>
 
+<p class="definition">Definition at line <a class="el" href="AssetService_8cs_source.html#l00122">122</a> of file <a class="el" href="AssetService_8cs_source.html">AssetService.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>API/Assets/<a class="el" href="AssetService_8cs.html">AssetService.cs</a></li>
+<li>API/Assets/<a class="el" href="AssetService_8cs_source.html">AssetService.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
