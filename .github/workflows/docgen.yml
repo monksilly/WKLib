@@ -20,6 +20,9 @@ jobs:
           working-directory: '.'
           doxyfile-path: 'Doxyfile'
           enable-latex: false
+      
+      - name: Create .nojekyll
+        run: touch ./docs/.nojekkyl
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -27,3 +30,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
           publish_branch: gh-pages
+          keep_files: false
