@@ -15,7 +15,7 @@ _By the way, contributions are welcome ;)_
 | Loading Custom Levels             |       ✅        |
 | Loading Custom Asset Bundles      |       ✅        |
 | Loading Custom Regions/Subregions |       ✅        |
-| Making Custom UI Elements         |       ➖        |
+| Making Custom UI Elements         |       ✅        |
 | Loading Custom Items              |       ❌        |
 
 <sub>✅ - Implemented | ➖ - Implemented, Not Tested | ❌ - Not Implemented<sub/>
@@ -24,5 +24,7 @@ _By the way, contributions are welcome ;)_
 ## Documentation
 The **Documentation** can be found [_**here**_](https://github.com/monksilly/WKLib/wiki)
 
+The **Auto-Generated Documentation** can be found [_**here**_](https://monksilly.github.io/WKLib/)
+  
 ## Contact
 If you have any questions or want to help the development or improve the wiki, you can join [**our discord server**](https://discord.gg/EbHdwEhjgY)
