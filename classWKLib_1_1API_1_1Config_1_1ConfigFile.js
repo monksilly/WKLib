@@ -1,5 +1,6 @@
 var classWKLib_1_1API_1_1Config_1_1ConfigFile =
 [
+    [ "ConfigFile", "classWKLib_1_1API_1_1Config_1_1ConfigFile.html#aa87bcae0fa35784491126c68e5bbfa7a", null ],
     [ "ConfigFile", "classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a62cbaaf956476e74c7fdf9017352465d", null ],
     [ "ConfigFile", "classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a5cadcb3200a63918856f835c93b1a8c9", null ],
     [ "LoadFromDisk", "classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a7b1d4d9764d43eedb84999a0d615e096", null ],

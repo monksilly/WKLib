@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html":[0,4,0,2,0,0],
+"classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html":[1,0,0,1,0,0],
 "classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a18e735bb6c4f8ff39d3d8e0c290ba410":[0,4,0,2,0,0,2],
 "classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a18e735bb6c4f8ff39d3d8e0c290ba410":[1,0,0,1,0,0,2],
 "classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a4d14dd1dfd10dec36ffd65e9b76fa4b3":[0,4,0,2,0,0,1],
