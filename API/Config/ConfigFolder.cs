@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using BepInEx;
 using UnityEngine;
 using WKLib.Core.Config;
 
@@ -21,7 +22,7 @@ public class ConfigFolder
             throw new ArgumentNullException(nameof(folderName));
         
         FolderName = folderName;
-        BasePath = Path.Combine(CoreSettings.Instance.BasePath, folderName);
+        BasePath = Path.Combine(Paths.ConfigPath, folderName); // Default bepinex config path
         if (!Directory.Exists(BasePath))
         {
             Directory.CreateDirectory(BasePath);

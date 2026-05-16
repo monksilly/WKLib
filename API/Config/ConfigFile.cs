@@ -20,11 +20,6 @@ public class ConfigFile
     private List<ConfigValueBase> registeredValues = new List<ConfigValueBase>();
 
     #region Constructors
-    public ConfigFile(string filePath)
-    {
-        Initialize(filePath);
-    }
-    
     public ConfigFile(ConfigFolder configFolder, string fileName)
     {
         if (configFolder == null)

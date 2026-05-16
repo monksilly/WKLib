@@ -20,21 +20,18 @@ internal class CoreSettings
             return instance;
         }
     }
-    
-    public string BasePath { get; }
+
+    internal ConfigFolder DefaultConfigFolder = null;
     internal ConfigFile DefaultConfigFile { get; private set; } // WKLib default config
     public JsonSerializerSettings JsonSerializerSettings { get; } = new JsonSerializerSettings();
+    
     private CoreSettings()
     {
         // Add converters
         JsonSerializerSettings.Converters.Add(new ColorJsonConverter());
         
-        // Set base path
-        BasePath = Paths.ConfigPath;
-        if (!Directory.Exists(BasePath)) 
-            Directory.CreateDirectory(BasePath);
-        
-        // Create default WKLib config
-        DefaultConfigFile = new ConfigFile(Path.Combine(BasePath, "WKLib", "DefaultConfig.json"));
+        // Create default WKLib folder and config
+        DefaultConfigFolder = new ConfigFolder("WKLib");
+        DefaultConfigFile = DefaultConfigFolder.GetOrCreateConfigFile("DefaultConfig.json");
     }   
 }
