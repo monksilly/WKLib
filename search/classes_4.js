@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keybind_0',['KeyBind',['../classWKLib_1_1API_1_1UI_1_1KeyBind.html',1,'WKLib::API::UI']]]
+  ['inpututility_0',['InputUtility',['../classWKLib_1_1API_1_1Input_1_1InputUtility.html',1,'WKLib::API::Input']]]
 ];

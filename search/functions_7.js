@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['isdown_0',['IsDown',['../classWKLib_1_1API_1_1UI_1_1KeyBind.html#a62b4190efd84a915edce0879e8eefefe',1,'WKLib::API::UI::KeyBind']]],
-  ['ispressed_1',['IsPressed',['../classWKLib_1_1API_1_1UI_1_1KeyBind.html#ae52f7fd7863e75309c3f6848ede5f7a4',1,'WKLib::API::UI::KeyBind']]],
-  ['isset_2',['IsSet',['../classWKLib_1_1API_1_1UI_1_1KeyBind.html#a9bc6af0970e86f85ef61d448afff237a',1,'WKLib::API::UI::KeyBind']]]
+  ['handleinput_0',['HandleInput',['../classWKLib_1_1API_1_1UI_1_1WKLibWindow.html#ac19194792e4ecada012ef4c2bd8ca55e',1,'WKLib::API::UI::WKLibWindow']]],
+  ['hasperks_1',['HasPerks',['../classWKLib_1_1API_1_1Gamemodes_1_1GamemodeBuilder.html#ac0030810ef6d03caca913edab57118e5',1,'WKLib::API::Gamemodes::GamemodeBuilder']]],
+  ['hasrevives_2',['HasRevives',['../classWKLib_1_1API_1_1Gamemodes_1_1GamemodeBuilder.html#a04caf057412f2ec95391632c5eeda832',1,'WKLib::API::Gamemodes::GamemodeBuilder']]]
 ];

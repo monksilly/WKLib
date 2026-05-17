@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['destroy_0',['Destroy',['../classWKLib_1_1API_1_1WKLibAPI.html#a22cfb7b2e8644ce40e42fe2c371a06b6',1,'WKLib::API::WKLibAPI']]],
-  ['dispose_1',['Dispose',['../structWKLib_1_1API_1_1UI_1_1UIUtility_1_1LabeledScope.html#aad8f5aa022cb7198ced5ba8d5487c90e',1,'WKLib::API::UI::UIUtility::LabeledScope']]],
-  ['draw_2',['Draw',['../classWKLib_1_1API_1_1UI_1_1WKLibWindow.html#a814dcd174cf48f92ea5e135c93232673',1,'WKLib.API.UI.WKLibWindow.Draw()'],['../classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#ab40aefbce0430dd0ce23979dc7d9d1fa',1,'WKLib.Examples.UI.DemoWindow.Draw(ImGui gui, ref bool open)']]],
-  ['drawbouncingball_3',['DrawBouncingBall',['../classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a4d14dd1dfd10dec36ffd65e9b76fa4b3',1,'WKLib::Examples::UI::DemoWindow']]],
-  ['drawsubmenu_4',['DrawSubMenu',['../classWKLib_1_1API_1_1UI_1_1ModTab.html#af9e7a914a69149d645c2aa92580d55e1',1,'WKLib::API::UI::ModTab']]]
+  ['clone_0',['Clone',['../classWKLib_1_1API_1_1UI_1_1KeyBind.html#a149b88607d130a900051eb96e682bfb3',1,'WKLib::API::UI::KeyBind']]],
+  ['configfile_1',['ConfigFile',['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a62cbaaf956476e74c7fdf9017352465d',1,'WKLib.API.Config.ConfigFile.ConfigFile(ConfigFolder configFolder, string fileName)'],['../classWKLib_1_1API_1_1Config_1_1ConfigFile.html#a5cadcb3200a63918856f835c93b1a8c9',1,'WKLib.API.Config.ConfigFile.ConfigFile(WKLibAPI API, string fileName)']]],
+  ['configfolder_2',['ConfigFolder',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#aafe74ef2fe0f808e2d3ad1b8a07d4b45',1,'WKLib.API.Config.ConfigFolder.ConfigFolder(string folderName)'],['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a813df771baa0c9393645fac15c433da5',1,'WKLib.API.Config.ConfigFolder.ConfigFolder(ConfigFolder parent, string folderName)']]],
+  ['configvalue_3',['ConfigValue',['../classWKLib_1_1API_1_1Config_1_1ConfigValue.html#ae65713e4eb8c2d83a9ffdba60c914c90',1,'WKLib.API.Config.ConfigValue.ConfigValue(ConfigFile file, string key, T currentValue, bool loadOnCreation=true)'],['../classWKLib_1_1API_1_1Config_1_1ConfigValue.html#a39bb16322002ab73175e5bd6a5d03614',1,'WKLib.API.Config.ConfigValue.ConfigValue(WKLibAPI API, string key, T currentValue, bool loadOnCreation=true)']]],
+  ['configvaluebase_4',['ConfigValueBase',['../classWKLib_1_1API_1_1Config_1_1ConfigValueBase.html#a6932b346a84aa6e6dc11648e74ee324c',1,'WKLib::API::Config::ConfigValueBase']]],
+  ['create_5',['Create',['../classWKLib_1_1API_1_1WKLibAPI.html#a6dc86c41a43cb6c73dcc11e3464f00b5',1,'WKLib.API.WKLibAPI.Create(string displayName, string guid)'],['../classWKLib_1_1API_1_1WKLibAPI.html#a23f9547a4632138a4bf89028ed4c4508',1,'WKLib.API.WKLibAPI.Create(string displayName, string guid, string defaultConfigFileName)']]],
+  ['createconfigfile_6',['CreateConfigFile',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#aba6a93712b13af83eede755457271d9b',1,'WKLib::API::Config::ConfigFolder']]],
+  ['createsubfolder_7',['CreateSubFolder',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#afcb707fb855126da8aec795b52487528',1,'WKLib::API::Config::ConfigFolder']]]
 ];

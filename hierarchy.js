@@ -13,6 +13,7 @@ var hierarchy =
       [ "WKLib.API.Config.ConfigValue< T >", "classWKLib_1_1API_1_1Config_1_1ConfigValue.html", null ]
     ] ],
     [ "WKLib.Examples.UI.DemoWindow", "classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html", null ],
+    [ "WKLib.API.Gamemodes.GamemodeBuilder", "classWKLib_1_1API_1_1Gamemodes_1_1GamemodeBuilder.html", null ],
     [ "ICloneable", null, [
       [ "WKLib.API.UI.KeyBind", "classWKLib_1_1API_1_1UI_1_1KeyBind.html", null ]
     ] ],
@@ -25,6 +26,8 @@ var hierarchy =
     [ "WKLib.API.Input.InputUtility", "classWKLib_1_1API_1_1Input_1_1InputUtility.html", null ],
     [ "WKLib.API.UI.ModTab", "classWKLib_1_1API_1_1UI_1_1ModTab.html", null ],
     [ "WKLib.API.UI.PopupSettings", "classWKLib_1_1API_1_1UI_1_1PopupSettings.html", null ],
+    [ "WKLib.API.Gamemodes.RegionBuilder", "classWKLib_1_1API_1_1Gamemodes_1_1RegionBuilder.html", null ],
+    [ "WKLib.API.Gamemodes.SubRegionBuilder", "classWKLib_1_1API_1_1Gamemodes_1_1SubRegionBuilder.html", null ],
     [ "WKLib.API.UI.UIUtility", "classWKLib_1_1API_1_1UI_1_1UIUtility.html", null ],
     [ "WKLib.API.WKLibAPI", "classWKLib_1_1API_1_1WKLibAPI.html", null ],
     [ "WKLib.API.UI.WKLibWindow", "classWKLib_1_1API_1_1UI_1_1WKLibWindow.html", null ]

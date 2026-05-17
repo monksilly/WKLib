@@ -1,0 +1,3 @@
+<map id="WKLib.API.Gamemodes.SubRegionBuilder" name="WKLib.API.Gamemodes.SubRegionBuilder">
+<area shape="rect" id="Node000001" title="Builds an M_Subregion from a name plus a list of M_Level instances &#160;This builder simplifies the creat..." alt="" coords="5,5,223,127"/>
+</map>
