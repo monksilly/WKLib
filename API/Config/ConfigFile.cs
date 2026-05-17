@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 using WKLib.Core.Config;
+using WKLib.Utilities;
 
 namespace WKLib.API.Config;
 
@@ -59,7 +60,7 @@ public class ConfigFile
         }
         catch (Exception ex)
         {
-            Debug.LogError($"Failed to load config file ({filePath}): {ex.Message}");
+            WKLog.Error($"Failed to load config file ({filePath}): {ex.Message}");
         }
     }
     #endregion
@@ -141,7 +142,7 @@ public class ConfigFile
             var exConfigValue = registeredValues.Find(cValue => string.Equals(cValue.Key, configValue.Key));
             if (exConfigValue != null)
             {
-                Debug.LogError($"Existing config key, {configValue.Key} is already registered.");
+                WKLog.Error($"Existing config key, {configValue.Key} is already registered.");
                 return;
             }
             
@@ -239,7 +240,7 @@ public class ConfigFile
         }
         catch (Exception e)
         {
-            Debug.LogError($"Error while saving config, {e.Message}");
+            WKLog.Error($"Error while saving config, {e.Message}");
         }
         finally
         {

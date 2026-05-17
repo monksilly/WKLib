@@ -4,6 +4,7 @@ using System.IO;
 using BepInEx;
 using UnityEngine;
 using WKLib.Core.Config;
+using WKLib.Utilities;
 
 namespace WKLib.API.Config;
 
@@ -188,7 +189,7 @@ public class ConfigFolder
             var exFile = files.Find(cFile => string.Equals(cFile.FullFileName, fileName));
             if (exFile != null)
             {
-                Debug.LogError($"Existing config file, {fileName} is already registered.");
+                WKLog.Error($"Existing config file, {fileName} is already registered.");
                 return false;
             }
             
