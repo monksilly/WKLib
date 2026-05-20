@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using WKLib.API.Assets;
-using WKLib.API.Config;
 using WKLib.API.UI;
 
 namespace WKLib.API;
@@ -15,8 +14,6 @@ public class WKLibAPI
 
     public List<WKLibWindow> Windows { get; internal set; } = new List<WKLibWindow>();
     public ModTab ModTab { get; internal set; } = null;
-    public ConfigFolder ConfigFolder { get; internal set; } = null;
-    public ConfigFile DefaultConfigFile { get; internal set; } = null;
 
     public AssetService AssetService { get; internal set; } = null;
     
@@ -25,8 +22,6 @@ public class WKLibAPI
         DisplayName = displayName;
         GUID = guid;
         
-        ConfigFolder = new ConfigFolder(displayName);
-        DefaultConfigFile = ConfigFolder.GetOrCreateConfigFile(defaultConfigFileName);
         AssetService = new AssetService(this);
     }
 
