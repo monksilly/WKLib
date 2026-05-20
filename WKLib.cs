@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using WKLib.Core.Attributes;
+using WKLib.Core.Config;
 using WKLib.Core.UI;
 using WKLib.Utilities;
 
@@ -38,6 +39,8 @@ public class WKLibPlugin : BaseUnityPlugin
             if (type.GetCustomAttribute<PatchOnEntryAttribute>() != null)
                 harmony.PatchAll(type);
         }
+        
+        ConfigManager.CreateEntries(Config);
         
         WKLog.Info($"Plugin {NAME} v{VERSION} is loaded!");
 

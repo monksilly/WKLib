@@ -15,7 +15,7 @@ internal static class CL_GameManagerPatch
         if (RootPanel.Instance == null)
             return;
 
-        if (!AutoCloseOverlay
+        if (!AutoCloseOverlay.Value
             || !RootPanel.Instance.IsOpen
             || __instance.isPaused)
             return;
