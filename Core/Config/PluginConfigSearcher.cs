@@ -8,6 +8,7 @@ using System.Reflection;
 using BepInEx.Bootstrap;
 using BepInEx.Configuration;
 using UnityEngine;
+using WKLib.API;
 using WKLib.Utilities;
 
 namespace WKLib.Core.Config;
@@ -32,34 +33,64 @@ internal static class PluginConfigSearcher
 
     // Key = Plugin Info
     // Values = Config entries
-    public static Dictionary<PluginInfo, ConfigEntryBase[]> GetPluginSettings()
+    public static List<PluginContainer> GetPluginSettings()
     {
-        var pluginSettings = new Dictionary<PluginInfo, ConfigEntryBase[]>();
+        var pluginContainers = new List<PluginContainer>();
         
         foreach (var plugin in FindPlugins())
         {
+            var GUID = plugin.Info.Metadata.GUID;
+            var WKLibAPIRef = WKLibAPI.internalAPIs.Find(api => string.Equals(api.GUID, GUID, StringComparison.Ordinal));
+            
             var type = plugin.GetType();
             if (type.GetCustomAttributes(typeof(BrowsableAttribute), false).Cast<BrowsableAttribute>()
-                .Any(x => !x.Browsable))
+                .Any(x => !x.Browsable)
+                && WKLibAPIRef == null)
                 continue;
             
-            var configEntries = new List<ConfigEntryBase>();
-            
-            foreach (var configEntryBase in plugin.Config.Select(configEntry => configEntry.Value))
+            PluginContainer pluginContainer = new()
             {
-                var tags = configEntryBase.Description?.Tags;
-                if (tags != null && tags.Contains("Hidden"))
-                    continue;
-
-                configEntries.Add(configEntryBase);
-            }
-
-            if (configEntries.Count <= 0)
-                continue;
+                PluginName = plugin.Info.Metadata.Name,
+                PluginInfo = plugin.Info,
+                APIReference = WKLibAPIRef
+            };
             
-            pluginSettings.TryAdd(plugin.Info, configEntries.ToArray());
+            if (WKLibAPIRef == null)
+            {
+                var sections = new Dictionary<string, List<ConfigEntryBase>>();
+                
+                foreach (var configEntryBase in plugin.Config.Select(configEntry => configEntry.Value))
+                {
+                    var tags = configEntryBase.Description?.Tags;
+                    if (tags != null && tags.Contains("Hidden"))
+                        continue;
+
+                    var sectionName = configEntryBase.Definition.Section;
+
+                    if (!sections.TryGetValue(sectionName, out var list))
+                    {
+                        list = [];
+                        sections[sectionName] = list;
+                    }
+
+                    list.Add(configEntryBase);
+                }
+                
+                pluginContainer.ConfigSection = sections
+                    .Select(section => new PluginContainer.ConfigEntrySection
+                    {
+                        Section = section.Key,
+                        ConfigEntries = section.Value.ToArray()
+                    })
+                    .ToArray();
+                
+                if (pluginContainer.ConfigSection.Length <= 0)
+                    continue;
+            }
+            
+            pluginContainers.Add(pluginContainer);
         }
         
-        return pluginSettings;
+        return pluginContainers;
     }
 }
