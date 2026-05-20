@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Text;
 using Imui.Controls;
 using Imui.Core;
+using Imui.IO.Events;
 using Imui.Rendering;
 using WKLib.Core.UI;
 using UnityEngine;
@@ -39,7 +40,8 @@ public static class UIUtility
         }
     }
 
-    public static bool SimpleKeybind(this ImGui gui, string label, ref KeyBind keyBind)
+    
+    public static bool Keybind(this ImGui gui, string label, ref KeyCode keyCode)
     {
         var changed = false;
         
@@ -56,13 +58,13 @@ public static class UIUtility
         {
             gui.Button("...");
 
-            if (keyBind.SetToPressedKey(gui))
+            if (SetToPressedKey(gui, ref keyCode))
             {
                 changed = true;
                 gui.ResetActiveControl();
             }
         }
-        else if (gui.Button(keyBind.KeyCode.ToString()))
+        else if (gui.Button(keyCode.ToString()))
         {
             gui.SetActiveControl(id);
         }
@@ -72,6 +74,28 @@ public static class UIUtility
         gui.PopId();
         
         return changed;
+        
+        bool SetToPressedKey(ImGui gui, ref KeyCode keyCode)
+        {
+            for (int i = 0; i < gui.Input.KeyboardEventsCount; ++i)
+            {
+                var keyboardEvent = gui.Input.GetKeyboardEvent(i);
+
+                if (keyboardEvent.Type != ImKeyboardEventType.Down)
+                    continue;
+
+                if (keyboardEvent.Key == KeyCode.Escape)
+                {
+                    keyCode = KeyCode.None;
+                    return true;
+                }
+
+                keyCode = keyboardEvent.Key;
+                return true;
+            }
+
+            return false;
+        }
     }
 
     public static void ShowPopupForTime(string text, float seconds = 2.5f)
