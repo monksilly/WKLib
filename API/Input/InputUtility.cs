@@ -8,16 +8,17 @@ namespace WKLib.API.Input;
 
 public static class InputUtility
 {
-    private static Dictionary<KeyCode, bool> keysDictionary = new Dictionary<KeyCode, bool>();
-        
+    private static Dictionary<KeyCode, bool> currentKeys = new();
+    private static Dictionary<KeyCode, bool> previousKeys = new();
+    
     internal static void HandleInput(ImGui gui)
     {
-        if (keysDictionary.Keys.Count <= 0)
+        previousKeys.Clear();
+
+        // Copy current state into previous state
+        foreach (var pair in currentKeys)
         {
-            foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
-            {
-                keysDictionary[keyCode] = false;
-            }
+            previousKeys[pair.Key] = pair.Value;
         }
         
         for (int i = 0; i < gui.Input.KeyboardEventsCount; ++i)
@@ -25,24 +26,38 @@ public static class InputUtility
             var keyboardEvent = gui.Input.GetKeyboardEvent(i);
             var key = keyboardEvent.Key;
 
-            bool isDown = keyboardEvent.Type == ImKeyboardEventType.Down;
-            bool isUp = keyboardEvent.Type == ImKeyboardEventType.Up;
+            switch (keyboardEvent.Type)
+            {
+                case ImKeyboardEventType.Down:
+                    currentKeys[key] = true;
+                    break;
 
-            if (isDown)
-            {
-                keysDictionary[key] = true;
-            }
-            else if (isUp)
-            {
-                keysDictionary[key] = false;
+                case ImKeyboardEventType.Up:
+                    currentKeys[key] = false;
+                    break;
             }
         }
+    }
+    
+    public static bool GetKey(KeyCode key)
+    {
+        return currentKeys.GetValueOrDefault(key, false);
     }
 
     public static bool GetKeyDown(KeyCode key)
     {
-        if (keysDictionary.TryGetValue(key, out var keyState))
-            return keyState;
-        throw new Exception($"No key ({key.ToString()}) could be found in {nameof(InputUtility)}.{nameof(keysDictionary)}.");
+        bool current = currentKeys.GetValueOrDefault(key, false);
+        bool previous = previousKeys.GetValueOrDefault(key, false);
+
+        return current && !previous;
     }
+
+    public static bool GetKeyUp(KeyCode key)
+    {
+        bool current = currentKeys.GetValueOrDefault(key, false);
+        bool previous = previousKeys.GetValueOrDefault(key, false);
+
+        return !current && previous;
+    }
+    
 }
