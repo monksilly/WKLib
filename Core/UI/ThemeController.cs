@@ -4,8 +4,8 @@ using Imui.IO.UGUI;
 using Imui.Style;
 using UnityEngine;
 using WKLib.Core.Config;
-using static WKLib.Core.Config.ConfigManager;
 using static WKLib.API.UI.UIUtility;
+using static WKLib.Core.Config.ConfigManager;
 
 namespace WKLib.Core.UI;
 

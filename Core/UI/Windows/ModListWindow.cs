@@ -1,25 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using BepInEx;
-using BepInEx.Bootstrap;
 using BepInEx.Configuration;
 using Imui.Controls;
 using Imui.Core;
 using UnityEngine;
-using UnityEngine.Diagnostics;
-using WKLib.API;
 using WKLib.API.UI;
-using WKLib.Core.Classes;
 using WKLib.Core.Config;
 
 namespace WKLib.Core.UI.Windows;
 
 internal static class ModListWindow
 {
-    public static bool isOpen = true;
+    public static bool isOpen = true;<
 
     private static PluginContainer[] pluginContainers = [];
     
