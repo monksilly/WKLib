@@ -109,7 +109,6 @@ internal class RootPanel : MonoSingleton<RootPanel>
         if (gui.BeginMenu("General"))
         {
             gui.Menu("Open mod list", ref ModListWindow.isOpen);
-            gui.Menu("Open config menu", ref ConfigWindow.isOpen);
 
             if (EnableDemoWindow.Value)
                 gui.Menu("Open demo menu", ref isDemoOpen);
@@ -132,9 +131,9 @@ internal class RootPanel : MonoSingleton<RootPanel>
         {
             if (gui.Menu("Close all windows"))
             {
-                ConfigWindow.isOpen = false;
                 ModListWindow.isOpen = false;
-
+                ModListWindow.CloseConfigWindows();
+                
                 CloseAPIWindows();
             }
 
