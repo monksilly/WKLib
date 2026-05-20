@@ -22,7 +22,7 @@ public class WKLibPlugin : BaseUnityPlugin
 {
     public const string GUID = "com.monksilly.WKLib";
     public const string NAME = "WKLib";
-    public const string VERSION = "0.2.3";
+    public const string VERSION = "0.3.0";
 
     private static Harmony harmony = null;
     
