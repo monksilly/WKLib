@@ -19,9 +19,9 @@ public static class ConfigManager
     {
         OverlayKey = Config.Bind(
             "General",
-            "Toggle Menu",
+            "Overlay Key",
             KeyCode.F6,
-            "Open/Close overlay menu"
+            "Keybind for opening and closing the overlay menu"
         );
         
         AutoCloseOverlay = Config.Bind(
