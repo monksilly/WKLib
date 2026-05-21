@@ -14,7 +14,7 @@ namespace WKLib.Core.UI.Windows;
 
 internal static class ModListWindow
 {
-    public static bool isOpen = true;<
+    public static bool isOpen = true;
 
     private static PluginContainer[] pluginContainers = [];
     
@@ -179,6 +179,46 @@ internal static class ModListWindow
             if (gui.Checkbox(ref v, label))
                 configEntry.BoxedValue = v;
         }
+        else if (type == typeof(byte))
+        {
+            byte v = (byte)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider))
+                    configEntry.BoxedValue = (byte)v;
+            }
+        }
+        else if (type == typeof(sbyte))
+        {
+            int v = (sbyte)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider, min: sbyte.MinValue, max: sbyte.MaxValue))
+                    configEntry.BoxedValue = (sbyte)v;
+            }
+        }
+        else if (type == typeof(short))
+        {
+            short v = (short)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider))
+                    configEntry.BoxedValue = (short)v;
+            }
+        }
+        else if (type == typeof(ushort))
+        {
+            int v = (ushort)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider, min: ushort.MinValue, max: ushort.MaxValue))
+                    configEntry.BoxedValue = (ushort)v;
+            }
+        }
         else if (type == typeof(int))
         {
             int v = (int)value;
@@ -186,9 +226,37 @@ internal static class ModListWindow
             using (new UIUtility.LabeledScope(gui, label))
             {
                 if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider))
-                {
+                    configEntry.BoxedValue = (int)v;
+            }
+        }
+        else if (type == typeof(uint))
+        {
+            long v = (uint)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider, min: uint.MinValue, max: uint.MaxValue))
+                    configEntry.BoxedValue = (uint)v;
+            }
+        }
+        else if (type == typeof(long))
+        {
+            long v = (long)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider))
                     configEntry.BoxedValue = v;
-                }                      
+            }
+        }
+        else if (type == typeof(ulong))
+        {
+            long v = (long)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider, min: 0)) // Compromise: Use Long limits on ULong since Imui doesnt handle ULong
+                    configEntry.BoxedValue = (ulong)v;
             }
         }
         else if (type == typeof(float))
@@ -198,9 +266,7 @@ internal static class ModListWindow
             using (new UIUtility.LabeledScope(gui, label))
             { 
                 if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider))
-                {
                     configEntry.BoxedValue = v;
-                }                     
             }
         }
         else if (type == typeof(double))
@@ -210,9 +276,17 @@ internal static class ModListWindow
             using (new UIUtility.LabeledScope(gui, label))
             {
                 if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider))
-                {
                     configEntry.BoxedValue = v;
-                }                        
+            }
+        }
+        else if (type == typeof(decimal))
+        {
+            double v = Convert.ToDouble((decimal)value);
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.NumericEdit(ref v, flags: ImNumericEditFlag.Slider))
+                    configEntry.BoxedValue = (decimal)v;
             }
         }
         else if (type == typeof(string))
@@ -222,9 +296,48 @@ internal static class ModListWindow
             using (new UIUtility.LabeledScope(gui, label))
             {
                 if (gui.TextEdit(ref v))
-                {
                     configEntry.BoxedValue = v;
-                }                        
+            }
+        }
+        else if (type == typeof(Vector2))
+        {
+            Vector2 v = (Vector2)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.Vector(ref v))
+                    configEntry.BoxedValue = v;
+            }
+        }
+        else if (type == typeof(Vector3))
+        {
+            Vector3 v = (Vector3)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.Vector(ref v))
+                    configEntry.BoxedValue = v;
+            }
+        }
+        else if (type == typeof(Vector4))
+        {
+            Vector4 v = (Vector4)value;
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.Vector(ref v))
+                    configEntry.BoxedValue = v;
+            }
+        }
+        else if (type == typeof(Quaternion))
+        {
+            var quat = (Quaternion)value;
+            Vector4 v = new Vector4(quat.x, quat.y, quat.z, quat.w);
+
+            using (new UIUtility.LabeledScope(gui, label))
+            {
+                if (gui.Vector(ref v))
+                    configEntry.BoxedValue = new Quaternion(v.x, v.y, v.z, v.w);
             }
         }
         else if (type == typeof(Color))
@@ -235,6 +348,11 @@ internal static class ModListWindow
                 if (gui.ColorEdit(ref tempValue))
                     configEntry.BoxedValue = tempValue;
             }
+        }
+        else if (type == typeof(KeyboardShortcut))
+        {
+            // Ignore
+            return;
         }
         else if (type == typeof(KeyCode))
         {
