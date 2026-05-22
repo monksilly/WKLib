@@ -11,6 +11,7 @@ using Imui.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
+using WKLib.API.Input;
 using WKLib.Core.UI;
 
 namespace WKLib.API.UI;
@@ -41,7 +42,6 @@ public static class UIUtility
             gui.PopId();
         }
     }
-
     
     public static bool Keybind(this ImGui gui, string label, ref KeyCode keyCode)
     {
@@ -79,24 +79,12 @@ public static class UIUtility
         
         bool SetToPressedKey(ImGui gui, ref KeyCode keyCode)
         {
-            for (int i = 0; i < gui.Input.KeyboardEventsCount; ++i)
-            {
-                var keyboardEvent = gui.Input.GetKeyboardEvent(i);
+            var key = InputUtility.GetFirstActiveKey();
+            if (key == null)
+                return false;
 
-                if (keyboardEvent.Type != ImKeyboardEventType.Down)
-                    continue;
-
-                if (keyboardEvent.Key == KeyCode.Escape)
-                {
-                    keyCode = KeyCode.None;
-                    return true;
-                }
-
-                keyCode = keyboardEvent.Key;
-                return true;
-            }
-
-            return false;
+            keyCode = key.Value;
+            return true;
         }
     }
     

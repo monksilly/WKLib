@@ -13,6 +13,8 @@ using static WKLib.Core.Config.ConfigManager;
 
 namespace WKLib.Core.UI;
 
+// Right after InputSystem executes
+[DefaultExecutionOrder(-999)]
 internal class RootPanel : MonoSingleton<RootPanel>
 {
     public ImGui gui = null;
@@ -66,13 +68,13 @@ internal class RootPanel : MonoSingleton<RootPanel>
         ThemeController.DetectChanges(gui);
 
         gui.BeginFrame();
+        InputUtility.HandleInput(gui);
 
         if (InputUtility.GetKeyDown(OverlayKey.Value))
         {
             IsOpen = !IsOpen;
         }
         
-        InputUtility.HandleInput(gui);
         HandleAPIInput();
         
         // Draw overlay warnings (like not being able to open)
