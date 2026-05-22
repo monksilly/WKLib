@@ -33,7 +33,7 @@ public static class InputUtility
                 case ImKeyboardEventType.Down:
                     currentKeys[key] = true;
                     break;
-¿                case ImKeyboardEventType.Up:
+                case ImKeyboardEventType.Up:
                     currentKeys[key] = false;
                     break;
             }
