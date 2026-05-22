@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using BepInEx;
 using BepInEx.Configuration;
 using Imui.Controls;
 using Imui.Core;
@@ -317,7 +318,8 @@ public static class UIUtility
             gui.Text($"{label}: Unsupported type ({type.Name})");
         }
 
-        gui.TooltipAtLastControl(description);
+        if (!description.IsNullOrWhiteSpace())
+            gui.TooltipAtLastControl(description);
         
         string InsertLineBreaks(string text, int maxLineLength)
         {
