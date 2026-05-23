@@ -55,7 +55,7 @@ internal static class PluginConfigSearcher
                 APIReference = WKLibAPIRef
             };
             
-            if (WKLibAPIRef == null)
+            if (WKLibAPIRef == null || (WKLibAPIRef != null && WKLibAPIRef.ModTab == null))
             {
                 var sections = new Dictionary<string, List<ConfigEntryBase>>();
                 

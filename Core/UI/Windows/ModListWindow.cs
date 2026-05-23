@@ -68,7 +68,7 @@ internal static class ModListWindow
                 continue;
             
             var API = pluginContainer.APIReference;
-            if (API == null)
+            if (API == null || (API != null && API.ModTab == null))
             {
                 var pluginName = pluginContainer.PluginInfo.Metadata.Name;
                 if (pluginName.IsNullOrWhiteSpace())
