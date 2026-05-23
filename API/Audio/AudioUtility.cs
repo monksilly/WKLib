@@ -16,9 +16,11 @@ public static class AudioUtility
         float reverbMix = 1f,
         bool bypassEffects = false,
         float minDistance = 0,
-        float maxDistance = 10,
-        float dopplerLevel = 1f,
-        float spread = 0f,
+        float? maxDistance = null,
+        float? dopplerLevel = null,
+        float? spread = null,
+        AudioRolloffMode? rolloffMode = null,
+        AnimationCurve customRolloffCurve = null,
         AudioMixerType mixerType = AudioMixerType.Sfx,
         string sourceType = "")
     {
@@ -39,6 +41,8 @@ public static class AudioUtility
             maxDistance,
             dopplerLevel, 
             spread, 
+            rolloffMode,
+            customRolloffCurve,
             mixerType, 
             sourceType);
     }

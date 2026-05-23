@@ -33,9 +33,11 @@ internal class AudioManager : MonoSingleton<AudioManager>
         float reverbMix = 1f,
         bool bypassEffects = false,
         float minDistance = 0,
-        float maxDistance = 10,
-        float dopplerLevel = 1f,
-        float spread = 0f,
+        float? maxDistance = null,
+        float? dopplerLevel = null,
+        float? spread = null,
+        AudioRolloffMode? rolloffMode = null,
+        AnimationCurve customRolloffCurve = null,
         AudioMixerType mixerType = AudioMixerType.Sfx,
         string sourceType = "")
     {
@@ -46,29 +48,45 @@ internal class AudioManager : MonoSingleton<AudioManager>
 
         var source = _audioSourcePool.Dequeue();
         source.clip = clip;
-        if(parent)
-            source.transform.parent = parent;
         source.transform.position = position;
+        if(parent)
+            source.transform.SetParent(parent, true);
         source.volume = volume;
         source.pitch = pitch;
         source.loop = loop;
         source.spatialBlend = spatial;
         source.reverbZoneMix = reverbMix;
         source.bypassEffects = bypassEffects;
-        source.dopplerLevel = dopplerLevel;
-        source.spread = spread;
         source.minDistance = minDistance;
-        source.maxDistance = maxDistance;
 
         if (!string.IsNullOrEmpty(sourceType) && global::AudioManager.sourceTypeDict.TryGetValue(sourceType, out var audioSourceType))
         {
             AudioSource audioSourcePrefab = audioSourceType.audioSourcePrefab;
-            source.dopplerLevel = audioSourcePrefab.dopplerLevel;
-            source.spread = audioSourcePrefab.spread;
-            source.maxDistance = audioSourcePrefab.maxDistance;
-            AnimationCurve customCurve = audioSourcePrefab.GetCustomCurve(AudioSourceCurveType.CustomRolloff);
-            source.SetCustomCurve(AudioSourceCurveType.CustomRolloff, customCurve);
+            source.dopplerLevel = dopplerLevel ?? audioSourcePrefab.dopplerLevel;
+            source.spread = spread ?? audioSourcePrefab.spread;
+            source.maxDistance = maxDistance ?? audioSourcePrefab.maxDistance;
+            if (rolloffMode == null)
+            {
+                AnimationCurve customCurve = audioSourcePrefab.GetCustomCurve(AudioSourceCurveType.CustomRolloff);
+                source.rolloffMode = AudioRolloffMode.Custom;
+                source.SetCustomCurve(AudioSourceCurveType.CustomRolloff, customRolloffCurve ?? customCurve);
+            }
         }
+        else
+        {
+            AudioSource defaultAudio = global::AudioManager.defaultAudio;
+            source.dopplerLevel = dopplerLevel ?? defaultAudio.dopplerLevel;
+            source.spread = spread ?? defaultAudio.spread;
+            source.maxDistance = maxDistance ?? defaultAudio.maxDistance;
+            if (rolloffMode == null)
+            {
+                AnimationCurve customCurve = defaultAudio.GetCustomCurve(AudioSourceCurveType.CustomRolloff);
+                source.rolloffMode = AudioRolloffMode.Custom;
+                source.SetCustomCurve(AudioSourceCurveType.CustomRolloff, customRolloffCurve ?? customCurve);
+            }
+        }
+        
+        source.rolloffMode = rolloffMode ?? source.rolloffMode;
 
         source.outputAudioMixerGroup = mixerType switch
         {
