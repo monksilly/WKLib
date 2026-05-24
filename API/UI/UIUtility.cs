@@ -82,7 +82,7 @@ public static class UIUtility
             var key = InputUtility.GetFirstActiveKey();
             if (key == null)
                 return false;
-
+            
             keyCode = key.Value;
             return true;
         }
@@ -97,6 +97,13 @@ public static class UIUtility
         object value = configEntry.BoxedValue;
         Type type = configEntry.SettingType;
 
+        var width = gui.Layout.GetAvailableWidth();
+        var height = gui.GetRowHeight(); 
+        var nextPosition = gui.Layout.GetNextPosition(height);
+        ImRect clickableArea = new ImRect(nextPosition.x, nextPosition.y, width, height);
+        var groupId = gui.GetNextControlId();
+        gui.RegisterGroup(groupId, clickableArea);
+        
         if (type == typeof(bool))
         {
             bool v = (bool)value;
@@ -305,9 +312,9 @@ public static class UIUtility
         {
             gui.Text($"{label}: Unsupported type ({type.Name})");
         }
-
-        if (!description.IsNullOrWhiteSpace())
-            gui.TooltipAtLastControl(description);
+        
+        if (!description.IsNullOrWhiteSpace() && gui.IsGroupHovered(groupId))
+            gui.Tooltip(description, gui.Input.MousePosition + gui.Style.Tooltip.OffsetPixels / gui.Canvas.ScreenScale);
         
         string InsertLineBreaks(string text, int maxLineLength)
         {
