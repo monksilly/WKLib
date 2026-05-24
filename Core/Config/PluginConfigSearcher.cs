@@ -6,7 +6,6 @@ using System.Reflection;
 using BepInEx;
 using BepInEx.Bootstrap;
 using BepInEx.Configuration;
-using BepInEx.Configuration;
 using UnityEngine;
 using WKLib.API;
 using WKLib.Utilities;
