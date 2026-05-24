@@ -5,6 +5,8 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using BepInEx;
+using BepInEx.Bootstrap;
 using UnityEngine;
 using UnityEngine.UIElements;
 using WKLib.API;
@@ -19,7 +21,7 @@ namespace WKLib.API.Assets;
 public class AssetService
 {
     private readonly WKLibAPI _wkLibAPI;
-    private readonly string _assemblyFolder;
+    public readonly string AssemblyFolder;
     private readonly Dictionary<string, AssetBundle> _bundleCache = new();
     private readonly Dictionary<string, Dictionary<string, M_Level>> _loadedLevelsCache = new();
     private readonly Dictionary<string, M_Gamemode> _gamemodeCache = new();
@@ -29,8 +31,11 @@ public class AssetService
     public AssetService(WKLibAPI API)
     {
         _wkLibAPI = API ?? throw new ArgumentNullException(nameof(API));
-        var assemblyPath = Assembly.GetExecutingAssembly().Location;
-        _assemblyFolder = Path.GetDirectoryName(assemblyPath) ?? string.Empty;
+        if (!Chainloader.PluginInfos.TryGetValue(API.GUID, out var pluginInfo))
+            throw new Exception($"WKLibAPI GUID Mistmatch with PluginInfo, {API.DisplayName}, {API.GUID}");
+        
+        var assemblyPath = pluginInfo.Location;
+        AssemblyFolder = Path.GetDirectoryName(assemblyPath) ?? string.Empty;
 
         Application.quitting += () =>
         {
@@ -66,7 +71,7 @@ public class AssetService
             return cached;
         }
 
-        var fullPath = Path.Combine(_assemblyFolder, relativePath);
+        var fullPath = Path.Combine(AssemblyFolder, relativePath);
         if (!File.Exists(fullPath))
         {
             WKLog.Error($"[AssetService] Bundle not found at {fullPath}");
@@ -350,7 +355,7 @@ public class AssetService
     /// </summary>
     public Sprite LoadPngAsSpriteRelative(string relativePngPath)
     {
-        var fullPath = Path.Combine(_assemblyFolder, relativePngPath);
+        var fullPath = Path.Combine(AssemblyFolder, relativePngPath);
         if (!File.Exists(fullPath))
         {
             WKLog.Error($"[AssetService] PNG not found at: {fullPath}");
@@ -391,7 +396,7 @@ public class AssetService
     /// </summary>
     private Texture2D LoadPngTexture(string pngFileName)
     {
-        var pngPath = Path.Combine(_assemblyFolder, "Assets", pngFileName);
+        var pngPath = Path.Combine(AssemblyFolder, "Assets", pngFileName);
         if (!File.Exists(pngPath))
         {
             WKLog.Error($"[AssetService] PNG not found at: {pngPath}");
