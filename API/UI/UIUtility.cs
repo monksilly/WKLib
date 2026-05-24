@@ -82,7 +82,16 @@ public static class UIUtility
             var key = InputUtility.GetFirstActiveKey();
             if (key == null)
                 return false;
+
+            if (key == KeyCode.Mouse0 || key == KeyCode.Mouse1)
+                return true;
             
+            if (key == KeyCode.Escape)
+            {
+                keyCode = KeyCode.None;
+                return true;
+            }
+
             keyCode = key.Value;
             return true;
         }

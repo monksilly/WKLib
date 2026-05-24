@@ -6,8 +6,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using WKLib.API.Input;
 using WKLib.Core.Attributes;
 using WKLib.Core.Config;
+using WKLib.Core.Reflection;
 using WKLib.Core.UI;
 using WKLib.Utilities;
 
@@ -30,6 +32,12 @@ public class WKLibPlugin : BaseUnityPlugin
     {
         // Initialize Logger
         WKLog.Initialize(Logger);
+        
+        WKLog.Debug($"Initalizing reflection...");
+        ReflectionUtility.Initialize();
+        WKLog.Debug($"Initalizing input utility...");
+        InputUtility.Initialize();
+        
         gameObject.hideFlags = HideFlags.HideAndDontSave; // Hides the Manager GameObject from Unity
         
         harmony = new Harmony(GUID);

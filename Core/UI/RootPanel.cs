@@ -68,8 +68,6 @@ internal class RootPanel : MonoSingleton<RootPanel>
         ThemeController.DetectChanges(gui);
 
         gui.BeginFrame();
-        InputUtility.HandleInput(gui);
-
         if (InputUtility.GetKeyDown(OverlayKey.Value))
         {
             IsOpen = !IsOpen;
