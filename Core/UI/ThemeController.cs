@@ -4,8 +4,8 @@ using Imui.IO.UGUI;
 using Imui.Style;
 using UnityEngine;
 using WKLib.Core.Config;
-using static WKLib.Core.Config.ConfigManager;
 using static WKLib.API.UI.UIUtility;
+using static WKLib.Core.Config.ConfigManager;
 
 namespace WKLib.Core.UI;
 
@@ -13,17 +13,17 @@ internal class ThemeController : MonoBehaviour
 {
     public ImTheme BaseTheme = SetBaseTheme(ImThemeBuiltin.Dark());
     
-    private Vector2 lastScreenSize = new Vector2(0f, 0f);
+    private bool changesDetected = false;
 
     public static ImTheme SetBaseTheme(ImTheme theme)
     {
         // Colors
         theme.Background = new Color(0f, 0f, 0f, 1f);
         theme.Foreground = new Color(1f, 1f, 1f, 1f);
-        theme.Accent = ThemeSettings.Value.AccentColor;
+        theme.Accent = AccentColor.Value;
         theme.Control = new Color(0.15f, 0.15f, 0.15f, 1f);
 
-        theme.Contrast = ThemeSettings.Value.HighContrast ? 1f : 0f;
+        theme.Contrast = HighContrast.Value ? 1f : 0f;
         theme.BorderContrast = 1f;
         
         // Values
@@ -33,31 +33,40 @@ internal class ThemeController : MonoBehaviour
 
         return theme;
     }
+
+    public void RegisterChanges()
+    {
+        changesDetected = true;
+        
+        BaseTheme.Contrast = HighContrast.Value ? 1f : 0f;
+        BaseTheme.Accent = AccentColor.Value;
+    }
     
     public void DetectChanges(ImGui gui)
     {
-        if (Screen.width == lastScreenSize.x && Screen.height == lastScreenSize.y)
-            return;
-        
-        lastScreenSize = new Vector2(Screen.width, Screen.height);
+        if (changesDetected)
+        {
+            changesDetected = false;
+            SetTheme(gui);
+        }
     }
 
     public void DrawAppearanceEditor(ImGui gui)
     {
-        if (gui.Checkbox(ref ThemeSettings.RefValue.HighContrast, "High contrast"))
+        var tempValue = HighContrast.Value;
+        if (gui.Checkbox(ref tempValue, "High contrast"))
         {
-            BaseTheme.Contrast = ThemeSettings.Value.HighContrast ? 1f : 0f;
+            HighContrast.Value = tempValue;
+            BaseTheme.Contrast = HighContrast.Value ? 1f : 0f;
             SetTheme(gui);
-            
-            CoreSettings.Instance.DefaultConfigFile.SaveAsync();
         }
 
-        if (gui.ColorEdit(ref ThemeSettings.RefValue.AccentColor))
+        var tempValue1 = AccentColor.Value;
+        if (gui.ColorEdit(ref tempValue1))
         {
-            BaseTheme.Accent = ThemeSettings.Value.AccentColor;
+            AccentColor.Value = tempValue1;
+            BaseTheme.Accent = AccentColor.Value;
             SetTheme(gui);
-            
-            CoreSettings.Instance.DefaultConfigFile.SaveAsync();
         }
     }
     

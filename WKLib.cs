@@ -6,7 +6,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using WKLib.API.Input;
 using WKLib.Core.Attributes;
+using WKLib.Core.Config;
+using WKLib.Core.Reflection;
 using WKLib.Core.UI;
 using WKLib.Utilities;
 
@@ -21,7 +24,7 @@ public class WKLibPlugin : BaseUnityPlugin
 {
     public const string GUID = "com.monksilly.WKLib";
     public const string NAME = "WKLib";
-    public const string VERSION = "0.2.3";
+    public const string VERSION = "0.3.0";
 
     private static Harmony harmony = null;
     
@@ -29,6 +32,12 @@ public class WKLibPlugin : BaseUnityPlugin
     {
         // Initialize Logger
         WKLog.Initialize(Logger);
+        
+        WKLog.Debug($"Initalizing reflection...");
+        ReflectionUtility.Initialize();
+        WKLog.Debug($"Initalizing input utility...");
+        InputUtility.Initialize();
+        
         gameObject.hideFlags = HideFlags.HideAndDontSave; // Hides the Manager GameObject from Unity
         
         harmony = new Harmony(GUID);
@@ -38,6 +47,8 @@ public class WKLibPlugin : BaseUnityPlugin
             if (type.GetCustomAttribute<PatchOnEntryAttribute>() != null)
                 harmony.PatchAll(type);
         }
+        
+        ConfigManager.CreateEntries(Config);
         
         WKLog.Info($"Plugin {NAME} v{VERSION} is loaded!");
 

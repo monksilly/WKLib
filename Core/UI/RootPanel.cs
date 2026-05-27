@@ -13,6 +13,8 @@ using static WKLib.Core.Config.ConfigManager;
 
 namespace WKLib.Core.UI;
 
+// Right after InputSystem executes
+[DefaultExecutionOrder(-999)]
 internal class RootPanel : MonoSingleton<RootPanel>
 {
     public ImGui gui = null;
@@ -33,7 +35,7 @@ internal class RootPanel : MonoSingleton<RootPanel>
     {
         void OnSceneChange(Scene scene, LoadSceneMode loadSceneMode)
         {
-            if (AutoCloseOverlay)
+            if (AutoCloseOverlay.Value)
                 IsOpen = false;
         }
         
@@ -58,6 +60,7 @@ internal class RootPanel : MonoSingleton<RootPanel>
             ThemeController = gameObject.AddComponent<ThemeController>();
         
         ThemeController.SetTheme(gui);
+        ModListWindow.Initialize();
     }
 
     private void Update()
@@ -65,13 +68,11 @@ internal class RootPanel : MonoSingleton<RootPanel>
         ThemeController.DetectChanges(gui);
 
         gui.BeginFrame();
-
-        if (OverlayKey.Value.IsPressed(gui))
+        if (InputUtility.GetKeyDown(OverlayKey.Value))
         {
             IsOpen = !IsOpen;
         }
         
-        InputUtility.HandleInput(gui);
         HandleAPIInput();
         
         // Draw overlay warnings (like not being able to open)
@@ -83,8 +84,7 @@ internal class RootPanel : MonoSingleton<RootPanel>
         }
 
         ChangeLogWindow.Draw(gui, IsOpen);
-        ConfigWindow.Draw(gui, IsOpen);
-        if (EnableDemoWindow)
+        if (EnableDemoWindow.Value)
         {
             DemoWindow.Draw(gui, ref isDemoOpen);
         }
@@ -109,9 +109,8 @@ internal class RootPanel : MonoSingleton<RootPanel>
         if (gui.BeginMenu("General"))
         {
             gui.Menu("Open mod list", ref ModListWindow.isOpen);
-            gui.Menu("Open config menu", ref ConfigWindow.isOpen);
 
-            if (EnableDemoWindow)
+            if (EnableDemoWindow.Value)
                 gui.Menu("Open demo menu", ref isDemoOpen);
             
             gui.Separator();
@@ -132,9 +131,9 @@ internal class RootPanel : MonoSingleton<RootPanel>
         {
             if (gui.Menu("Close all windows"))
             {
-                ConfigWindow.isOpen = false;
                 ModListWindow.isOpen = false;
-
+                ModListWindow.CloseConfigWindows();
+                
                 CloseAPIWindows();
             }
 

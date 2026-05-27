@@ -18,6 +18,14 @@ internal class ChangeLogWindow
         
         gui.Separator("Versions");
 
+        if (gui.BeginTreeNode("Version 0.3.0"))
+        {
+            gui.Text("+ Rework Input system to work with more keys");
+            gui.Text("- Remove old config system and adapted BepInEx config system");
+            gui.Text("- Remove config window, now found in Mod List");
+            gui.EndTreeNode();
+        }
+        
         if (gui.BeginTreeNode("Version 0.2.3"))
         {
             gui.Text("+ Change config system default saving folder location, dont use WKLib as the default");
