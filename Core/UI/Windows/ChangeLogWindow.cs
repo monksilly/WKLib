@@ -20,8 +20,9 @@ internal class ChangeLogWindow
 
         if (gui.BeginTreeNode("Version 0.3.0"))
         {
-            gui.Text("+ Remove old config system and adapted BepInEx config system");
-            gui.Text("+ Remove config window, now found in Mod List");
+            gui.Text("+ Rework Input system to work with more keys");
+            gui.Text("- Remove old config system and adapted BepInEx config system");
+            gui.Text("- Remove config window, now found in Mod List");
             gui.EndTreeNode();
         }
         
