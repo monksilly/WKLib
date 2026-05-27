@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['popupsettings_0',['PopupSettings',['../classWKLib_1_1API_1_1UI_1_1PopupSettings.html',1,'WKLib::API::UI']]]
+  ['regionbuilder_0',['RegionBuilder',['../classWKLib_1_1API_1_1Gamemodes_1_1RegionBuilder.html',1,'WKLib::API::Gamemodes']]]
 ];

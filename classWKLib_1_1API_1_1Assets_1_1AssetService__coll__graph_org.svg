@@ -14,7 +14,8 @@
 <g id="a_Node000001"><a xlink:title="Loads and caches AssetBundles and assets, scoped by ModContext to avoid collisions.">
 <polygon fill="#999999" stroke="none" points="149.75,-171.75 0,-171.75 0,0 149.75,0 149.75,-171.75"/>
 <text text-anchor="start" x="4" y="-158.25" font-family="Helvetica,sans-Serif" font-size="10.00">WKLib.API.Assets.AssetService</text>
-<text text-anchor="start" x="73.38" y="-143" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<text text-anchor="start" x="4.31" y="-143" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="14.62" y="-143" font-family="Helvetica,sans-Serif" font-size="10.00">AssemblyFolder</text>
 <text text-anchor="start" x="4.31" y="-127.75" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="14.62" y="-127.75" font-family="Helvetica,sans-Serif" font-size="10.00">AssetService()</text>
 <text text-anchor="start" x="4.31" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
@@ -34,7 +35,8 @@
 <text text-anchor="start" x="4.31" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="14.62" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">LoadPngAsSprite()</text>
 <polygon fill="#666666" stroke="#666666" points="0,-154.5 0,-154.5 149.75,-154.5 149.75,-154.5 0,-154.5"/>
-<polygon fill="#666666" stroke="#666666" points="0,-139.25 0,-139.25 149.75,-139.25 149.75,-139.25 0,-139.25"/>
+<polygon fill="#666666" stroke="#666666" points="0,-139.25 0,-139.25 12.62,-139.25 12.62,-139.25 0,-139.25"/>
+<polygon fill="#666666" stroke="#666666" points="12.62,-139.25 12.62,-139.25 149.75,-139.25 149.75,-139.25 12.62,-139.25"/>
 <polygon fill="none" stroke="#666666" points="0,0 0,-171.75 149.75,-171.75 149.75,0 0,0"/>
 </a>
 </g>

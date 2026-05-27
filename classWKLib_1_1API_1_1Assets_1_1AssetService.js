@@ -8,5 +8,6 @@ var classWKLib_1_1API_1_1Assets_1_1AssetService =
     [ "LoadPngAsSprite", "classWKLib_1_1API_1_1Assets_1_1AssetService.html#aa7ac63cfc1051148f1c8cc9ca4cbe392", null ],
     [ "LoadPngAsSpriteRelative", "classWKLib_1_1API_1_1Assets_1_1AssetService.html#a68372d60047bc045eef80ab5c2c03dd1", null ],
     [ "UnloadAllBundles", "classWKLib_1_1API_1_1Assets_1_1AssetService.html#a35602774cc7a7ad476d6f9437a46bacf", null ],
-    [ "UnloadBundleRelative", "classWKLib_1_1API_1_1Assets_1_1AssetService.html#a4c5a67b85c1d5efc67645a531221c85b", null ]
+    [ "UnloadBundleRelative", "classWKLib_1_1API_1_1Assets_1_1AssetService.html#a4c5a67b85c1d5efc67645a531221c85b", null ],
+    [ "AssemblyFolder", "classWKLib_1_1API_1_1Assets_1_1AssetService.html#ad5ef084ee74bb86c24131a9e3bf236f1", null ]
 ];

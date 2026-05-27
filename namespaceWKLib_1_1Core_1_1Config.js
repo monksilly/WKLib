@@ -1,4 +1,5 @@
 var namespaceWKLib_1_1Core_1_1Config =
 [
-    [ "Converters", "namespaceWKLib_1_1Core_1_1Config_1_1Converters.html", null ]
+    [ "ConfigManager", "classWKLib_1_1Core_1_1Config_1_1ConfigManager.html", "classWKLib_1_1Core_1_1Config_1_1ConfigManager" ],
+    [ "PluginContainer", "classWKLib_1_1Core_1_1Config_1_1PluginContainer.html", "classWKLib_1_1Core_1_1Config_1_1PluginContainer" ]
 ];

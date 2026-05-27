@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['NAME',['../classWKLib_1_1WKLibPlugin.html#a02e069171edfb6d27faaa5d57eb7e462',1,'WKLib::WKLibPlugin']]]
+  ['enabledemowindow_0',['EnableDemoWindow',['../classWKLib_1_1Core_1_1Config_1_1ConfigManager.html#ad550efd43667346b598d29492066051f',1,'WKLib::Core::Config::ConfigManager']]]
 ];

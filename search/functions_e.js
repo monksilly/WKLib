@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['registerconfigfile_0',['RegisterConfigFile',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a42f834764761133121cafa33ac92d30a',1,'WKLib::API::Config::ConfigFolder']]],
-  ['registerconfigfolder_1',['RegisterConfigFolder',['../classWKLib_1_1API_1_1Config_1_1ConfigFolder.html#a9608a314a7a8e45ca67506c993697708',1,'WKLib::API::Config::ConfigFolder']]]
+  ['unloadallbundles_0',['UnloadAllBundles',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html#a35602774cc7a7ad476d6f9437a46bacf',1,'WKLib::API::Assets::AssetService']]],
+  ['unloadbundlerelative_1',['UnloadBundleRelative',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html#a4c5a67b85c1d5efc67645a531221c85b',1,'WKLib::API::Assets::AssetService']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['isopen_0',['isOpen',['../classWKLib_1_1API_1_1UI_1_1WKLibWindow.html#ac20b0839b374c76351abacf21f68d412',1,'WKLib::API::UI::WKLibWindow']]]
+  ['configentries_0',['ConfigEntries',['../classWKLib_1_1Core_1_1Config_1_1PluginContainer_1_1ConfigEntrySection.html#afc31fa39f7721f193fed48ee764acb4d',1,'WKLib::Core::Config::PluginContainer::ConfigEntrySection']]],
+  ['configsection_1',['ConfigSection',['../classWKLib_1_1Core_1_1Config_1_1PluginContainer.html#a6a0637ddbbc99982840bce41b2a4bf2f',1,'WKLib::Core::Config::PluginContainer']]]
 ];

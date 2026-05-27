@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['assetservice_0',['AssetService',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html',1,'WKLib::API::Assets']]]
+  ['assetservice_0',['AssetService',['../classWKLib_1_1API_1_1Assets_1_1AssetService.html',1,'WKLib::API::Assets']]],
+  ['audioutility_1',['AudioUtility',['../classWKLib_1_1API_1_1Audio_1_1AudioUtility.html',1,'WKLib::API::Audio']]]
 ];

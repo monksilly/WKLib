@@ -6,8 +6,6 @@ var classWKLib_1_1API_1_1WKLibAPI =
     [ "Create", "classWKLib_1_1API_1_1WKLibAPI.html#a23f9547a4632138a4bf89028ed4c4508", null ],
     [ "Destroy", "classWKLib_1_1API_1_1WKLibAPI.html#a22cfb7b2e8644ce40e42fe2c371a06b6", null ],
     [ "AssetService", "classWKLib_1_1API_1_1WKLibAPI.html#ae74997a0006cc47b01392fe428ed6049", null ],
-    [ "ConfigFolder", "classWKLib_1_1API_1_1WKLibAPI.html#a82f4cde966393e457d31bd6f3641bab5", null ],
-    [ "DefaultConfigFile", "classWKLib_1_1API_1_1WKLibAPI.html#a76630c156761e3b45f0b901e9eacf780", null ],
     [ "DisplayName", "classWKLib_1_1API_1_1WKLibAPI.html#a23594dcd9cab3cdcf6702398445c55f0", null ],
     [ "GUID", "classWKLib_1_1API_1_1WKLibAPI.html#a187c4bf6150f2c15cda019d262a4b4aa", null ],
     [ "ModTab", "classWKLib_1_1API_1_1WKLibAPI.html#a904a43cad7d4f690dcb8b1bd49f787b0", null ],

@@ -30,7 +30,11 @@ var NAVTREE =
       [ "Key Features", "index.html#key-features", null ],
       [ "Documentation", "index.html#documentation", null ],
       [ "Contact", "index.html#contact", null ],
-      [ "Package List", "namespaces.html", "namespaces_dup" ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
+      [ "Package Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -56,7 +60,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AssetService_8cs.html",
-"classWKLib_1_1API_1_1UI_1_1PopupSettings.html#a573019c011fbfb0ade0ecd0c448f1366"
+"dir_10439c4b1f28a1623a26cf1619699420.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
