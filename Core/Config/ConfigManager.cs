@@ -4,7 +4,7 @@ using WKLib.Core.UI;
 
 namespace WKLib.Core.Config;
 
-public static class ConfigManager
+internal static class ConfigManager
 {
     public static ConfigEntry<KeyCode> OverlayKey;
 
