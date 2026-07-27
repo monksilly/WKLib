@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using WKLib.API.Assets;
+using WKLib.API.Events;
 using WKLib.API.UI;
 
 namespace WKLib.API;
@@ -16,13 +17,15 @@ public class WKLibAPI
     public ModTab ModTab { get; internal set; } = null;
 
     public AssetService AssetService { get; internal set; } = null;
-    
+    public EventService EventService { get; internal set; } = null;
+
     private WKLibAPI(string displayName, string guid, string defaultConfigFileName)
     {
         DisplayName = displayName;
         GUID = guid;
         
         AssetService = new AssetService(this);
+        EventService = new EventService(this);
     }
 
     /// <summary>
