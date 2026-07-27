@@ -1,28 +1,30 @@
 ﻿using HarmonyLib;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 
 namespace WKLib.API.Items
 {
     public static class Items
     {
-        public static void AddItemIntoBag(Item item) {
+        public static void AddItemIntoBag(Item item)
+        {
             Traverse.Create(ENT_Player.GetInventory()).Method("LoadItemsIntoBag", new List<Item> { item }).GetValue();
         }
+
         public static void AddItemIntoBag(string itemId)
         {
             Item item = GetItemByItemId(itemId);
             AddItemIntoBag(item);
         }
 
-        public static void AddItemsIntoBag(IEnumerable<Item> items) {
+        public static void AddItemsIntoBag(IEnumerable<Item> items)
+        {
             foreach (Item item in items)
             {
                 AddItemIntoBag(item);
             }
         }
+
         public static void AddItemsIntoBag(IEnumerable<string> itemIds)
         {
             foreach (string itemId in itemIds)
@@ -41,20 +43,25 @@ namespace WKLib.API.Items
             return clone;
         }
 
-        public static Item_Object _LoadItemObject(string itemId) {
+        public static Item_Object _LoadItemObject(string itemId)
+        {
             return CL_AssetManager.GetItemObjectPrefab(itemId, "");
-         }
+        }
 
         public static class ItemIds
         {
             //public const string DenizenRat = "Denizen_Rat";
             public const string DenizenRoachGold = "Denizen_Roach_Gold";
+
             //public const string DenizenRoachGoldNavmesh = "Denizen_Roach_Gold_Navmesh";
             public const string DenizenRoachLemon = "Denizen_Roach_Lemon";
+
             public const string DenizenRoachPlatinum = "Denizen_Roach_Platinum";
+
             //public const string DenizenRoachPlatinumNavmesh = "Denizen_Roach_Platinum_Navmesh";
             //public const string DenizenSpider = "Denizen_Spider";
             public const string DenizenRoachFlyingRuby = "Denizen_Roach_Flying_Ruby";
+
             public const string ItemArtifactEVAGlove = "Item_Artifact_EVAGlove";
             public const string ItemArtifactRapier = "Item_Artifact_Rapier";
             public const string ItemArtifactRemote = "Item_Artifact_Remote";
@@ -144,6 +151,5 @@ namespace WKLib.API.Items
             public const string ItemTrinketPhotoOfHome = "Item_Trinket_PhotoOfHome";
             public const string ItemTrinketPouch = "Item_Trinket_Pouch";
         }
-
     }
 }
