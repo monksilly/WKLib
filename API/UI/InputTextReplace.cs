@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Rewired;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,15 +23,9 @@ public class InputTextReplace : MonoBehaviour
     public string forceSchemeName = string.Empty;
 
     private TMP_Text _text;
-    private PlayerInput _input;
     private string _originalText;
     private bool _lastIsGamepad;
-
-    private void Awake()
-    {
-        _input = InputManager.GetPlayerInput();
-    }
-
+    
     private void OnEnable()
     {
         _lastIsGamepad = InputManager.IsGamepad();
@@ -99,17 +94,30 @@ public class InputTextReplace : MonoBehaviour
                 break;
             
             case 'a':
-                InputUser user = _input.user;
-                if (!user.valid)
-                    return "Unknown Key";
+                var playerInput = InputManager.GetPlayerInput();
+                if (playerInput == null)
+                    break;
                 
-                string scheme = forceSchemeName == string.Empty ? _input.currentControlScheme : forceSchemeName;
+                int actionId = ReInput.mapping.GetActionId(tag);
+                if (actionId < 0)
+                    break;
                 
-                var action = user.actions.FirstOrDefault(a => a.name == tag);
-                if (action != null)
-                    return InputManager.QuickGetBindingDisplayString(scheme, action);
+                foreach (ControllerMap map in playerInput.controllers.maps.GetAllMaps())
+                {
+                    if (!string.IsNullOrEmpty(forceSchemeName) &&
+                        !string.Equals(map.name, forceSchemeName, StringComparison.OrdinalIgnoreCase))
+                        continue;
+                    
+                    foreach (ActionElementMap elementMap in map.AllMaps)
+                    {
+                        if (elementMap.actionId != actionId)
+                            continue;
+
+                        return elementMap.elementIdentifierName;
+                    }
+                }
+
                 break;
-            
             case 'k':
                 if (Enum.TryParse(tag, out KeyCode keycode))
                 {
