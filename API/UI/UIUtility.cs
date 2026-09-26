@@ -360,4 +360,9 @@ public static class UIUtility
     {
         OverlayState.Popups.Add(new PopupSettings(text, seconds));
     }
+
+    public static void CloseRootPanel()
+    {
+        RootPanel.Instance?.IsOpen = false;
+    }
 }
