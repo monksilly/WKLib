@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using WKLib.API.Events;
 using WKLib.Core.Attributes;
 using WKLib.Core.UI;
 using static WKLib.Core.Config.ConfigManager;
@@ -21,5 +22,11 @@ internal static class CL_GameManagerPatch
             return;
 
         RootPanel.Instance.IsOpen = false;
+    }
+
+    [HarmonyPatch(typeof(CL_GameManager), nameof(CL_GameManager.LoadIn)), HarmonyPostfix]
+    private static void CL_GameManager_LoadIn(CL_GameManager __instance)
+    {
+        GameEvents.Raise(HookId.GamemodeStart);
     }
 }
