@@ -336,23 +336,29 @@ $(function(){initNavTree('InputUtility_8cs_source.html',''); initResizable(true)
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        { <span class="stringliteral">&quot;BackQuote&quot;</span>, <span class="stringliteral">&quot;Backquote&quot;</span> }</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    };</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">private</span> <span class="keyword">enum</span> KeyCodeDeviceType</div>
+<div class="foldopen" id="foldopen00233" data-start="{" data-end="};">
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">  233</a></span>    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">KeyCodeDeviceType</a></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        None,</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        Keyboard,</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        Mouse,</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        Gamepad</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <a class="code hl_enumvalue" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27da6adf97f83acf6453d4a6a4b1070f3754">None</a>,</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <a class="code hl_enumvalue" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27da6ce4d85a628a88bbdb3ac24a8e5a9c2e">Keyboard</a>,</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <a class="code hl_enumvalue" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27daf2a47c6809d88e175dade0ef7b16aa13">Mouse</a>,</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <a class="code hl_enumvalue" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27da221f6781b4faa2d321ca0d928f518d6e">Gamepad</a></div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
+</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsJoystickKeyCode(KeyCode key)</div>
+<div class="foldopen" id="foldopen00241" data-start="{" data-end="}">
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a83dd828311192799dc5da02dcc63eacf">  241</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a83dd828311192799dc5da02dcc63eacf">IsJoystickKeyCode</a>(KeyCode key)</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    {</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">return</span> key &gt;= KeyCode.JoystickButton0 &amp;&amp; key &lt;= KeyCode.JoystickButton19;</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
+</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsMouseKeyCode(KeyCode key)</div>
+<div class="foldopen" id="foldopen00246" data-start="{" data-end="}">
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8a7d38129d02aae1c26f34fbf78c77b8">  246</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8a7d38129d02aae1c26f34fbf78c77b8">IsMouseKeyCode</a>(KeyCode key)</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    {</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="keywordflow">return</span> key &gt;= KeyCode.Mouse0 &amp;&amp; key &lt;= KeyCode.Mouse6;</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
+</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">object</span>? KeyCodeToKeyEnum(KeyCode key)</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    {</div>
@@ -451,38 +457,42 @@ $(function(){initNavTree('InputUtility_8cs_source.html',''); initResizable(true)
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        };</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    }</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keyword">private</span> <span class="keyword">static</span> KeyCodeDeviceType GetDeviceType(KeyCode key)</div>
+<div class="foldopen" id="foldopen00348" data-start="{" data-end="}">
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno"><a class="line" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a1505a60945c941b4f4b4662e9d818309">  348</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_enumeration" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">KeyCodeDeviceType</a> <a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a1505a60945c941b4f4b4662e9d818309">GetDeviceType</a>(KeyCode key)</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    {</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">if</span> (IsMouseKeyCode(key))</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            <span class="keywordflow">return</span> KeyCodeDeviceType.Mouse;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8a7d38129d02aae1c26f34fbf78c77b8">IsMouseKeyCode</a>(key))</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">KeyCodeDeviceType</a>.Mouse;</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keywordflow">if</span> (IsJoystickKeyCode(key))</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordflow">return</span> KeyCodeDeviceType.Gamepad;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a83dd828311192799dc5da02dcc63eacf">IsJoystickKeyCode</a>(key))</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">KeyCodeDeviceType</a>.Gamepad;</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="keywordflow">return</span> KeyCodeDeviceType.Keyboard;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="keywordflow">return</span> <a class="code hl_enumeration" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">KeyCodeDeviceType</a>.Keyboard;</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    }</div>
+</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">object</span>? KeyCodeToControl(KeyCode key)</div>
+<div class="foldopen" id="foldopen00359" data-start="{" data-end="}">
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno"><a class="line" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a004264a2ac2fa59319d86a2fdc5e6fa6">  359</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">object</span>? <a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a004264a2ac2fa59319d86a2fdc5e6fa6">KeyCodeToControl</a>(KeyCode key)</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    {</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <span class="keywordtype">object</span>? control = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordflow">switch</span> (GetDeviceType(key))</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordflow">switch</span> (<a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a1505a60945c941b4f4b4662e9d818309">GetDeviceType</a>(key))</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        {</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keywordflow">case</span> KeyCodeDeviceType.Mouse:</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">KeyCodeDeviceType</a>.Mouse:</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                control = KeyCodeToMouseControl(key);</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            <span class="keywordflow">case</span> KeyCodeDeviceType.Gamepad:</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">KeyCodeDeviceType</a>.Gamepad:</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                control = KeyCodeToGamepadControl(key);</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span> </div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>            <span class="keywordflow">case</span> KeyCodeDeviceType.Keyboard:</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>            <span class="keywordflow">case</span> <a class="code hl_enumeration" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">KeyCodeDeviceType</a>.Keyboard:</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                control = KeyCodeToKeyboardControl(key);</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        }</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        </div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>        <span class="keywordflow">return</span> control;</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    }</div>
+</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> TryGetControlState(<span class="keywordtype">object</span>? control, PropertyInfo? stateProperty, out <span class="keywordtype">bool</span> state)</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    {</div>
@@ -515,7 +525,7 @@ $(function(){initNavTree('InputUtility_8cs_source.html',''); initResizable(true)
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>        <span class="keywordflow">if</span> (!Initialized || p_btnWasPressed is <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span> </div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        <span class="keywordtype">object</span>? control = KeyCodeToControl(key);</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        <span class="keywordtype">object</span>? control = <a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a004264a2ac2fa59319d86a2fdc5e6fa6">KeyCodeToControl</a>(key);</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        <span class="keywordflow">return</span> TryGetControlState(control, p_btnWasPressed, out <span class="keywordtype">bool</span> state) &amp;&amp; state;</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    }</div>
 </div>
@@ -526,7 +536,7 @@ $(function(){initNavTree('InputUtility_8cs_source.html',''); initResizable(true)
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        <span class="keywordflow">if</span> (!Initialized || p_btnIsPressed is <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        <span class="keywordtype">object</span>? control = KeyCodeToControl(key);</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        <span class="keywordtype">object</span>? control = <a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a004264a2ac2fa59319d86a2fdc5e6fa6">KeyCodeToControl</a>(key);</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        <span class="keywordflow">return</span> TryGetControlState(control, p_btnIsPressed, out <span class="keywordtype">bool</span> state) &amp;&amp; state;</div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    }</div>
 </div>
@@ -537,7 +547,7 @@ $(function(){initNavTree('InputUtility_8cs_source.html',''); initResizable(true)
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        <span class="keywordflow">if</span> (!Initialized || p_btnWasReleased is <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span> </div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        <span class="keywordtype">object</span>? control = KeyCodeToControl(key);</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        <span class="keywordtype">object</span>? control = <a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a004264a2ac2fa59319d86a2fdc5e6fa6">KeyCodeToControl</a>(key);</div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        <span class="keywordflow">return</span> TryGetControlState(control, p_btnWasReleased, out <span class="keywordtype">bool</span> state) &amp;&amp; state;</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>    }</div>
 </div>
@@ -550,7 +560,7 @@ $(function(){initNavTree('InputUtility_8cs_source.html',''); initResizable(true)
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span> </div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>        <span class="keywordflow">foreach</span> (KeyCode key <span class="keywordflow">in</span> Enum.GetValues(typeof(KeyCode)))</div>
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        {</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>            <span class="keywordtype">object</span>? control = KeyCodeToControl(key);</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>            <span class="keywordtype">object</span>? control = <a class="code hl_function" href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a004264a2ac2fa59319d86a2fdc5e6fa6">KeyCodeToControl</a>(key);</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>            <span class="keywordflow">if</span> (TryGetControlState(control, p_btnIsPressed, out <span class="keywordtype">bool</span> state) &amp;&amp; state)</div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>                <span class="keywordflow">return</span> key;</div>
 <div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>        }</div>
@@ -562,10 +572,19 @@ $(function(){initNavTree('InputUtility_8cs_source.html',''); initResizable(true)
 </div>
 </div>
 <div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html">WKLib.API.Input.InputUtility</a></div><div class="ttdef"><b>Definition</b> <a href="#l00012">InputUtility.cs:13</a></div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a004264a2ac2fa59319d86a2fdc5e6fa6"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a004264a2ac2fa59319d86a2fdc5e6fa6">WKLib.API.Input.InputUtility.KeyCodeToControl</a></div><div class="ttdeci">static ? object KeyCodeToControl(KeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="#l00359">InputUtility.cs:359</a></div></div>
 <div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a093358e76780fd87e8a9657f9bc132e9"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a093358e76780fd87e8a9657f9bc132e9">WKLib.API.Input.InputUtility.GetKeyUp</a></div><div class="ttdeci">static bool GetKeyUp(KeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="#l00424">InputUtility.cs:424</a></div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a1505a60945c941b4f4b4662e9d818309"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a1505a60945c941b4f4b4662e9d818309">WKLib.API.Input.InputUtility.GetDeviceType</a></div><div class="ttdeci">static KeyCodeDeviceType GetDeviceType(KeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="#l00348">InputUtility.cs:348</a></div></div>
 <div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a2887d3cbead319c86cc85e7742251343"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a2887d3cbead319c86cc85e7742251343">WKLib.API.Input.InputUtility.GetKeyDown</a></div><div class="ttdeci">static bool GetKeyDown(KeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="#l00406">InputUtility.cs:406</a></div></div>
 <div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a52c5b828ea424a7a0d91df0cbfd73c22"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a52c5b828ea424a7a0d91df0cbfd73c22">WKLib.API.Input.InputUtility.GetKey</a></div><div class="ttdeci">static bool GetKey(KeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="#l00415">InputUtility.cs:415</a></div></div>
 <div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a70720105b31e6ba0caa3923b20844f84"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a70720105b31e6ba0caa3923b20844f84">WKLib.API.Input.InputUtility.GetFirstActiveKey</a></div><div class="ttdeci">static ? KeyCode GetFirstActiveKey()</div><div class="ttdef"><b>Definition</b> <a href="#l00433">InputUtility.cs:433</a></div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a83dd828311192799dc5da02dcc63eacf"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a83dd828311192799dc5da02dcc63eacf">WKLib.API.Input.InputUtility.IsJoystickKeyCode</a></div><div class="ttdeci">static bool IsJoystickKeyCode(KeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="#l00241">InputUtility.cs:241</a></div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a8a7d38129d02aae1c26f34fbf78c77b8"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8a7d38129d02aae1c26f34fbf78c77b8">WKLib.API.Input.InputUtility.IsMouseKeyCode</a></div><div class="ttdeci">static bool IsMouseKeyCode(KeyCode key)</div><div class="ttdef"><b>Definition</b> <a href="#l00246">InputUtility.cs:246</a></div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a8d1ac9473958862fc6e7a3139f5de27d"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27d">WKLib.API.Input.InputUtility.KeyCodeDeviceType</a></div><div class="ttdeci">KeyCodeDeviceType</div><div class="ttdef"><b>Definition</b> <a href="#l00233">InputUtility.cs:234</a></div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a8d1ac9473958862fc6e7a3139f5de27da221f6781b4faa2d321ca0d928f518d6e"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27da221f6781b4faa2d321ca0d928f518d6e">WKLib.API.Input.InputUtility.KeyCodeDeviceType.Gamepad</a></div><div class="ttdeci">@ Gamepad</div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a8d1ac9473958862fc6e7a3139f5de27da6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27da6adf97f83acf6453d4a6a4b1070f3754">WKLib.API.Input.InputUtility.KeyCodeDeviceType.None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a8d1ac9473958862fc6e7a3139f5de27da6ce4d85a628a88bbdb3ac24a8e5a9c2e"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27da6ce4d85a628a88bbdb3ac24a8e5a9c2e">WKLib.API.Input.InputUtility.KeyCodeDeviceType.Keyboard</a></div><div class="ttdeci">@ Keyboard</div></div>
+<div class="ttc" id="aclassWKLib_1_1API_1_1Input_1_1InputUtility_html_a8d1ac9473958862fc6e7a3139f5de27daf2a47c6809d88e175dade0ef7b16aa13"><div class="ttname"><a href="classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27daf2a47c6809d88e175dade0ef7b16aa13">WKLib.API.Input.InputUtility.KeyCodeDeviceType.Mouse</a></div><div class="ttdeci">@ Mouse</div></div>
 <div class="ttc" id="anamespaceWKLib_1_1API_1_1Input_html"><div class="ttname"><a href="namespaceWKLib_1_1API_1_1Input.html">WKLib.API.Input</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">InputUtility.cs:8</a></div></div>
 <div class="ttc" id="anamespaceWKLib_1_1Core_1_1Reflection_html"><div class="ttname"><a href="namespaceWKLib_1_1Core_1_1Reflection.html">WKLib.Core.Reflection</a></div><div class="ttdef"><b>Definition</b> <a href="ReflectionUtility_8cs_source.html#l00005">ReflectionUtility.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

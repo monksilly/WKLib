@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['regionbuilder_0',['RegionBuilder',['../classWKLib_1_1API_1_1Gamemodes_1_1RegionBuilder.html',1,'WKLib::API::Gamemodes']]]
+  ['subregionbuilder_0',['SubRegionBuilder',['../classWKLib_1_1API_1_1Gamemodes_1_1SubRegionBuilder.html',1,'WKLib::API::Gamemodes']]]
 ];

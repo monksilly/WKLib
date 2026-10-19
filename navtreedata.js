@@ -44,6 +44,7 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ],
@@ -60,7 +61,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AssetService_8cs.html",
-"dir_10439c4b1f28a1623a26cf1619699420.html"
+"dir_cb61873d24f3e71ca82716b837806f91.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

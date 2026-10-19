@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inpututility_0',['InputUtility',['../classWKLib_1_1API_1_1Input_1_1InputUtility.html',1,'WKLib::API::Input']]]
+  ['labeledscope_0',['LabeledScope',['../structWKLib_1_1API_1_1UI_1_1UIUtility_1_1LabeledScope.html',1,'WKLib::API::UI::UIUtility']]]
 ];

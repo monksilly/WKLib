@@ -20,23 +20,13 @@ var annotated_dup =
           [ "InputUtility", "classWKLib_1_1API_1_1Input_1_1InputUtility.html", "classWKLib_1_1API_1_1Input_1_1InputUtility" ]
         ] ],
         [ "UI", "namespaceWKLib_1_1API_1_1UI.html", [
+          [ "InputTextReplace", "classWKLib_1_1API_1_1UI_1_1InputTextReplace.html", "classWKLib_1_1API_1_1UI_1_1InputTextReplace" ],
           [ "ModTab", "classWKLib_1_1API_1_1UI_1_1ModTab.html", "classWKLib_1_1API_1_1UI_1_1ModTab" ],
           [ "PopupSettings", "classWKLib_1_1API_1_1UI_1_1PopupSettings.html", "classWKLib_1_1API_1_1UI_1_1PopupSettings" ],
           [ "UIUtility", "classWKLib_1_1API_1_1UI_1_1UIUtility.html", "classWKLib_1_1API_1_1UI_1_1UIUtility" ],
           [ "WKLibWindow", "classWKLib_1_1API_1_1UI_1_1WKLibWindow.html", "classWKLib_1_1API_1_1UI_1_1WKLibWindow" ]
         ] ],
         [ "WKLibAPI", "classWKLib_1_1API_1_1WKLibAPI.html", "classWKLib_1_1API_1_1WKLibAPI" ]
-      ] ],
-      [ "Core", "namespaceWKLib_1_1Core.html", [
-        [ "Config", "namespaceWKLib_1_1Core_1_1Config.html", [
-          [ "ConfigManager", "classWKLib_1_1Core_1_1Config_1_1ConfigManager.html", "classWKLib_1_1Core_1_1Config_1_1ConfigManager" ],
-          [ "PluginContainer", "classWKLib_1_1Core_1_1Config_1_1PluginContainer.html", "classWKLib_1_1Core_1_1Config_1_1PluginContainer" ]
-        ] ]
-      ] ],
-      [ "Examples", "namespaceWKLib_1_1Examples.html", [
-        [ "UI", "namespaceWKLib_1_1Examples_1_1UI.html", [
-          [ "DemoWindow", "classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html", "classWKLib_1_1Examples_1_1UI_1_1DemoWindow" ]
-        ] ]
       ] ],
       [ "WKLibPlugin", "classWKLib_1_1WKLibPlugin.html", "classWKLib_1_1WKLibPlugin" ]
     ] ]

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sfx_0',['Sfx',['../namespaceWKLib_1_1Core_1_1Classes.html#a76ae324257870cae136423394b1835b0a8e74cb085887902ba25fcf109de2f7a3',1,'WKLib::Core::Classes']]]
+  ['keyboard_0',['Keyboard',['../classWKLib_1_1API_1_1Input_1_1InputUtility.html#a8d1ac9473958862fc6e7a3139f5de27da6ce4d85a628a88bbdb3ac24a8e5a9c2e',1,'WKLib::API::Input::InputUtility']]]
 ];

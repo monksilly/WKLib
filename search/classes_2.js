@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['demowindow_0',['DemoWindow',['../classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html',1,'WKLib::Examples::UI']]]
+  ['gamemodebuilder_0',['GamemodeBuilder',['../classWKLib_1_1API_1_1Gamemodes_1_1GamemodeBuilder.html',1,'WKLib::API::Gamemodes']]]
 ];

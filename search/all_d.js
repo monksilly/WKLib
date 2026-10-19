@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['object_0',['Object',['../AssetService_8cs.html#aef19bab18b9814edeef255c43e4f6bbc',1,'AssetService.cs']]],
-  ['operator_3c_1',['operator&lt;',['../structWKLib_1_1API_1_1Common_1_1WKVersion.html#a5f24d404672ada7a3e4a4b3cc11cc4ac',1,'WKLib::API::Common::WKVersion']]],
-  ['operator_3c_3d_2',['operator&lt;=',['../structWKLib_1_1API_1_1Common_1_1WKVersion.html#a3c6996604bd9213d2246040a6dcce78b',1,'WKLib::API::Common::WKVersion']]],
-  ['operator_3e_3',['operator&gt;',['../structWKLib_1_1API_1_1Common_1_1WKVersion.html#a57d4b1b7c1576163ce96819524f47f05',1,'WKLib::API::Common::WKVersion']]],
-  ['operator_3e_3d_4',['operator&gt;=',['../structWKLib_1_1API_1_1Common_1_1WKVersion.html#a5dbd6874593ebc76b4c8c4e9018358d3',1,'WKLib::API::Common::WKVersion']]],
-  ['overlaykey_5',['OverlayKey',['../classWKLib_1_1Core_1_1Config_1_1ConfigManager.html#a3b6921e907155d90ccd377653174df9e',1,'WKLib::Core::Config::ConfigManager']]],
-  ['overlaystate_2ecs_6',['OverlayState.cs',['../OverlayState_8cs.html',1,'']]]
+  ['patchonentry_2ecs_0',['PatchOnEntry.cs',['../PatchOnEntry_8cs.html',1,'']]],
+  ['playsound_1',['PlaySound',['../classWKLib_1_1API_1_1Audio_1_1AudioUtility.html#a1f88283ecf9768968eb199303e4280a6',1,'WKLib::API::Audio::AudioUtility']]],
+  ['pluginconfigsearcher_2ecs_2',['PluginConfigSearcher.cs',['../PluginConfigSearcher_8cs.html',1,'']]],
+  ['plugincontainer_2ecs_3',['PluginContainer.cs',['../PluginContainer_8cs.html',1,'']]],
+  ['popupsettings_4',['PopupSettings',['../classWKLib_1_1API_1_1UI_1_1PopupSettings.html',1,'WKLib.API.UI.PopupSettings'],['../classWKLib_1_1API_1_1UI_1_1PopupSettings.html#a89dc83af526d6e7909d6cd7f97a7b453',1,'WKLib.API.UI.PopupSettings.PopupSettings()'],['../classWKLib_1_1API_1_1UI_1_1PopupSettings.html#a947ee6d35e0f515e8664a06adec7ecb7',1,'WKLib.API.UI.PopupSettings.PopupSettings(string text, float seconds=2.5f)']]],
+  ['popupsettings_2ecs_5',['PopupSettings.cs',['../PopupSettings_8cs.html',1,'']]],
+  ['popuptext_6',['PopupText',['../classWKLib_1_1API_1_1UI_1_1PopupSettings.html#a573019c011fbfb0ade0ecd0c448f1366',1,'WKLib::API::UI::PopupSettings']]],
+  ['popuptime_7',['PopupTime',['../classWKLib_1_1API_1_1UI_1_1PopupSettings.html#a3c500c6366b4f0f993b96076eac9e56d',1,'WKLib::API::UI::PopupSettings']]],
+  ['project_20description_8',['Project Description',['../index.html#project-description',1,'']]]
 ];

@@ -1,0 +1,5 @@
+<map id="WKLib.API.UI.InputTextReplace" name="WKLib.API.UI.InputTextReplace">
+<area shape="rect" id="Node000001" title="Once placed on a TextMeshPro text it will be able to replace special tags into proper input names/sym..." alt="" coords="5,120,201,186"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="53,5,154,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,87,106,120,100,120,100,87"/>
+</map>

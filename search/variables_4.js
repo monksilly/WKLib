@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['highcontrast_0',['HighContrast',['../classWKLib_1_1Core_1_1Config_1_1ConfigManager.html#a5c9ed4028b978fea4dd69774f0295834',1,'WKLib::Core::Config::ConfigManager']]]
+  ['isopen_0',['isOpen',['../classWKLib_1_1API_1_1UI_1_1WKLibWindow.html#ac20b0839b374c76351abacf21f68d412',1,'WKLib::API::UI::WKLibWindow']]]
 ];

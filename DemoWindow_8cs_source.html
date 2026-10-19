@@ -135,8 +135,7 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html">   33</a></span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code hl_class" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html">DemoWindow</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">internal</span> <span class="keyword">static</span> <span class="keyword">class </span>DemoWindow</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">char</span>[] formatBuffer = <span class="keyword">new</span> <span class="keywordtype">char</span>[256];</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -194,8 +193,7 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">private</span> <span class="keyword">static</span> HashSet&lt;int&gt; selectedValues = <span class="keyword">new</span> HashSet&lt;int&gt;(values.Length);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#ab40aefbce0430dd0ce23979dc7d9d1fa">   91</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#ab40aefbce0430dd0ce23979dc7d9d1fa">Draw</a>(ImGui gui, ref <span class="keywordtype">bool</span> open)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> Draw(ImGui gui, ref <span class="keywordtype">bool</span> open)</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (!gui.BeginWindow(<span class="stringliteral">&quot;Demo&quot;</span>, ref open, (700, 700), ImWindowFlag.HasMenuBar))</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        {</div>
@@ -238,7 +236,6 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        gui.EndWindow();</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
-</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> DrawControlsPage(ImGui gui, ref <span class="keywordtype">bool</span> open)</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
@@ -340,7 +337,7 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        DrawTreeDemo(gui);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        gui.Separator(<span class="stringliteral">&quot;Nested Foldout&quot;</span>);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <a class="code hl_function" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a18e735bb6c4f8ff39d3d8e0c290ba410">NestedFoldout</a>(gui, 0, ref nestedFoldouts);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        NestedFoldout(gui, 0, ref nestedFoldouts);</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        gui.Separator(<span class="stringliteral">&quot;Floating menu&quot;</span>);</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        var rect = gui.AddLayoutRect(gui.GetLayoutWidth(), gui.GetRowHeight());</div>
@@ -457,7 +454,7 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> DrawSlidersDemo(ImGui gui)</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    {</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        <a class="code hl_function" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a4d14dd1dfd10dec36ffd65e9b76fa4b3">DrawBouncingBall</a>(gui);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        DrawBouncingBall(gui);</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        gui.SliderHeader(<span class="stringliteral">&quot;Size&quot;</span>, bouncingBallSize, <span class="stringliteral">&quot;0.00 px&quot;</span>);</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        gui.Slider(ref bouncingBallSize, 1f, gui.GetRowHeight());</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        gui.TooltipAtLastControl(<span class="stringliteral">&quot;Size of the circles in pixels&quot;</span>);</div>
@@ -614,13 +611,13 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>            gui.Checkbox(ref largeTableResizable, <span class="stringliteral">&quot;Resizable Columns&quot;</span>);</div>
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>            gui.Checkbox(ref largeTableScrollable, <span class="stringliteral">&quot;Scrollable&quot;</span>);</div>
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span> </div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>            var size = largeTableScrollable ? <span class="keyword">new</span> ImSize(gui.GetLayoutWidth(), 300) : new ImSize(ImSizeMode.Auto);</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>            var size = largeTableScrollable ? <span class="keyword">new</span> ImSize(gui.GetLayoutWidth(), 300) : <span class="keyword">new</span> ImSize(ImSizeMode.Auto);</div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>            var flags = largeTableResizable ? ImTableFlag.ResizableColumns : ImTableFlag.None;</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span> </div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>            ref var state = ref gui.BeginTable(largeTableColumns, size, flags);</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span> </div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>            gui.TableSetRowsHeight(gui.GetTextLineHeight() + gui.Style.Table.CellPadding.Vertical);</div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>            for (<span class="keywordtype">int</span> i = 0; i &lt; largeTableColumns; ++i)</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; largeTableColumns; ++i)</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>            {</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>                gui.TableSetColumnWidth(i, largeTableColumnSize);</div>
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>            }</div>
@@ -664,8 +661,7 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>        gui.EndHorizontal();</div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>    }</div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span> </div>
-<div class="foldopen" id="foldopen00559" data-start="{" data-end="}">
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno"><a class="line" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a4d14dd1dfd10dec36ffd65e9b76fa4b3">  559</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a4d14dd1dfd10dec36ffd65e9b76fa4b3">DrawBouncingBall</a>(ImGui gui)</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> DrawBouncingBall(ImGui gui)</div>
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    {</div>
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        <span class="keywordtype">float</span> mod(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y)</div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        {</div>
@@ -690,10 +686,8 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>            gui.Canvas.Circle(p, bouncingBallSize * 0.5f, c);</div>
 <div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>        }</div>
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>    }</div>
-</div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span> </div>
-<div class="foldopen" id="foldopen00585" data-start="{" data-end="}">
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno"><a class="line" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a18e735bb6c4f8ff39d3d8e0c290ba410">  585</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a18e735bb6c4f8ff39d3d8e0c290ba410">NestedFoldout</a>(ImGui gui, <span class="keywordtype">int</span> current, ref <span class="keywordtype">int</span> total)</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> NestedFoldout(ImGui gui, <span class="keywordtype">int</span> current, ref <span class="keywordtype">int</span> total)</div>
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>    {</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> MAX = 8;</div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>
@@ -707,7 +701,7 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        gui.BeginIndent();</div>
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        <span class="keywordflow">if</span> (current &lt; total)</div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>        {</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            <a class="code hl_function" href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a18e735bb6c4f8ff39d3d8e0c290ba410">NestedFoldout</a>(gui, current + 1, ref total);</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>            NestedFoldout(gui, current + 1, ref total);</div>
 <div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>        }</div>
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (current == total)</div>
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>        {</div>
@@ -728,7 +722,6 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span> </div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>        gui.EndFoldout();</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    }</div>
-</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>    <span class="keyword">private</span> <span class="keyword">static</span> ReadOnlySpan&lt;char&gt; Format(ReadOnlySpan&lt;char&gt; prefix, <span class="keywordtype">float</span> value, ReadOnlySpan&lt;char&gt; format = <span class="keywordflow">default</span>)</div>
 <div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>    {</div>
@@ -739,11 +732,6 @@ $(function(){initNavTree('DemoWindow_8cs_source.html',''); initResizable(true); 
 <div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>    }</div>
 <div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>}</div>
 </div>
-</div>
-<div class="ttc" id="aclassWKLib_1_1Examples_1_1UI_1_1DemoWindow_html"><div class="ttname"><a href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html">WKLib.Examples.UI.DemoWindow</a></div><div class="ttdef"><b>Definition</b> <a href="#l00033">DemoWindow.cs:34</a></div></div>
-<div class="ttc" id="aclassWKLib_1_1Examples_1_1UI_1_1DemoWindow_html_a18e735bb6c4f8ff39d3d8e0c290ba410"><div class="ttname"><a href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a18e735bb6c4f8ff39d3d8e0c290ba410">WKLib.Examples.UI.DemoWindow.NestedFoldout</a></div><div class="ttdeci">static void NestedFoldout(ImGui gui, int current, ref int total)</div><div class="ttdef"><b>Definition</b> <a href="#l00585">DemoWindow.cs:585</a></div></div>
-<div class="ttc" id="aclassWKLib_1_1Examples_1_1UI_1_1DemoWindow_html_a4d14dd1dfd10dec36ffd65e9b76fa4b3"><div class="ttname"><a href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#a4d14dd1dfd10dec36ffd65e9b76fa4b3">WKLib.Examples.UI.DemoWindow.DrawBouncingBall</a></div><div class="ttdeci">static void DrawBouncingBall(ImGui gui)</div><div class="ttdef"><b>Definition</b> <a href="#l00559">DemoWindow.cs:559</a></div></div>
-<div class="ttc" id="aclassWKLib_1_1Examples_1_1UI_1_1DemoWindow_html_ab40aefbce0430dd0ce23979dc7d9d1fa"><div class="ttname"><a href="classWKLib_1_1Examples_1_1UI_1_1DemoWindow.html#ab40aefbce0430dd0ce23979dc7d9d1fa">WKLib.Examples.UI.DemoWindow.Draw</a></div><div class="ttdeci">static void Draw(ImGui gui, ref bool open)</div><div class="ttdef"><b>Definition</b> <a href="#l00091">DemoWindow.cs:91</a></div></div>
 <div class="ttc" id="anamespaceWKLib_1_1Examples_1_1UI_html"><div class="ttname"><a href="namespaceWKLib_1_1Examples_1_1UI.html">WKLib.Examples.UI</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">DemoWindow.cs:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

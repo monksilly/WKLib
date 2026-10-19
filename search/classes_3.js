@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gamemodebuilder_0',['GamemodeBuilder',['../classWKLib_1_1API_1_1Gamemodes_1_1GamemodeBuilder.html',1,'WKLib::API::Gamemodes']]]
+  ['inputtextreplace_0',['InputTextReplace',['../classWKLib_1_1API_1_1UI_1_1InputTextReplace.html',1,'WKLib::API::UI']]],
+  ['inpututility_1',['InputUtility',['../classWKLib_1_1API_1_1Input_1_1InputUtility.html',1,'WKLib::API::Input']]]
 ];

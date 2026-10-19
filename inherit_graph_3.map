@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classWKLib_1_1API_1_1Assets_1_1AssetService.html" title="Loads and caches AssetBundles and assets, scoped by ModContext to avoid collisions." alt="" coords="5,5,216,31"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" id="Node000001" href="$classWKLib_1_1API_1_1UI_1_1InputTextReplace.html" title="Once placed on a TextMeshPro text it will be able to replace special tags into proper input names/sym..." alt="" coords="165,5,371,31"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="132,16,164,16,164,21,132,21"/>
 </map>
