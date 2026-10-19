@@ -18,6 +18,13 @@ internal class ChangeLogWindow
         
         gui.Separator("Versions");
 
+        if (gui.BeginTreeNode("Version 0.3.1"))
+        {
+            gui.Text("+ Update to Unity 6");
+            gui.Text("+ Fix Text replacing");
+            gui.EndTreeNode();
+        }
+        
         if (gui.BeginTreeNode("Version 0.3.0"))
         {
             gui.Text("+ Rework Input system to work with more keys");

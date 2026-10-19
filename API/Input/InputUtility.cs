@@ -230,7 +230,7 @@ public static class InputUtility
         { "BackQuote", "Backquote" }
     };
 
-    private enum KeyCodeDeviceType
+    public enum KeyCodeDeviceType
     {
         None,
         Keyboard,
@@ -238,12 +238,12 @@ public static class InputUtility
         Gamepad
     }
 
-    private static bool IsJoystickKeyCode(KeyCode key)
+    public static bool IsJoystickKeyCode(KeyCode key)
     {
         return key >= KeyCode.JoystickButton0 && key <= KeyCode.JoystickButton19;
     }
 
-    private static bool IsMouseKeyCode(KeyCode key)
+    public static bool IsMouseKeyCode(KeyCode key)
     {
         return key >= KeyCode.Mouse0 && key <= KeyCode.Mouse6;
     }
@@ -345,7 +345,7 @@ public static class InputUtility
         };
     }
     
-    private static KeyCodeDeviceType GetDeviceType(KeyCode key)
+    public static KeyCodeDeviceType GetDeviceType(KeyCode key)
     {
         if (IsMouseKeyCode(key))
             return KeyCodeDeviceType.Mouse;
@@ -356,7 +356,7 @@ public static class InputUtility
         return KeyCodeDeviceType.Keyboard;
     }
 
-    private static object? KeyCodeToControl(KeyCode key)
+    public static object? KeyCodeToControl(KeyCode key)
     {
         object? control = null;
 

@@ -30,7 +30,7 @@ internal struct DemoTreeNode
     }
 }
 
-public static class DemoWindow
+internal static class DemoWindow
 {
     private static char[] formatBuffer = new char[256];
 

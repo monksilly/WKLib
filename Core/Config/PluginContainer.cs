@@ -4,7 +4,7 @@ using WKLib.API;
 
 namespace WKLib.Core.Config;
 
-public class PluginContainer
+internal class PluginContainer
 {
     public class ConfigEntrySection
     {
