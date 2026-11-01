@@ -92,12 +92,6 @@ internal class RootPanel : MonoSingleton<RootPanel>
         
         DrawAPIWindows();
 
-        // Check if enter is down
-        if (InputUtility.GetKeyDown(KeyCode.Return))
-        {
-            gui.ResetActiveControl();
-        }
-
         gui.EndFrame();
         gui.Render();
     }
